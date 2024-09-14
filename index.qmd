@@ -1,0 +1,14 @@
+---
+page-layout: full
+comments: false
+---
+
+::: grid
+::: g-col-6
+![](images/IMG-removebg-preview.png)
+:::
+
+::: g-col-6
+# Hi, I'm Elias Nelson.
+:::
+:::

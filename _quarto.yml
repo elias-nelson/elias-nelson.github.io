@@ -1,0 +1,42 @@
+project:
+  type: website
+
+website:
+  title: "Elias Nelson Kaunda"
+  description: "This is Elias Nelson's personal Blog."
+  search:
+      location: navbar
+      type: textbox
+  comments: 
+    utterances: 
+      repo: elias-nelson/blogComments
+      theme: github-light
+      issue-term: title
+  navbar:
+    background: primary
+    right:
+      - text: Home
+        href: index.qmd
+      - text: Blog
+        href: blog.qmd
+      - text: Resources
+        menu: 
+          - text: Adentures with Rayshader
+      - text: Archive
+        href: archive.qmd
+      - icon: github
+        href: https://github.com/elias-nelson/
+      - icon: twitter
+        href: https://x.com/iamelias_nelson
+      - icon: instagram
+        href: https://www.instagram.com/iamelias_nelson/
+  #google-analytics: 
+  #cookie-consent: 
+format:
+  html:
+    include-after-body: footer.html
+    theme: minty
+    css: styles.css
+
+editor: visual
+
