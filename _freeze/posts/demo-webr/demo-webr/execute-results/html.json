@@ -1,0 +1,15 @@
+{
+  "hash": "5646d9015a3c950bb6d52dda2b08fcce",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"demo-webr\"\nformat: html\nengine: knitr\nfilters: \n  - webr\n---\n\n\n## Quarto\n\n```{webr-r}\n1 + 1\n```\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

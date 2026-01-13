@@ -1,0 +1,206 @@
+---
+title: "<i class='bi bi-card-image'></i> Gallery"
+description: "A collection of my visualizations. Some of them are based on popular challenges such as #TidyTuesday and #30DayMapChallenge. The collection is not restricted to those, as I find from time to time interesting datasets to work with."
+lang: en
+link-external-newwindow: true
+page-layout: full
+comments: false
+title-block-banner: true
+css: ../assets/styles/custom-style.css
+lightbox: true
+format:
+  html:
+    smooth-scroll: true
+---
+
+## {{< fa universal-access >}} Interactive charts {{< fa arrow-pointer >}}
+
+{{< lif ./assets/animations/wired.json style=width:50px;height:50px;border:0; trigger=loop delay=3000 >}}
+
+```{=html}
+<div class ="button_wrapper_gallery">
+<a href="./interactive-charts"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> Explore my interactive charts</button></a>
+</div>
+```
+
+## 30 Day Chart Challenge
+
+The 30 Day Chart Challenge is a global challenge held every April and invites data analysts and visualization enthusiasts to create a chart every day for 30 days. Each day has a different theme or chart type, encouraging creativity, data exploration and practicing analysis and design techniques.
+
+```{=html}
+<div class ="button_wrapper_gallery">
+<a href="https://github.com/elias-nelson/3d-nyika-national-park/tree/main/R"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> Explore my code</button></a>
+</div>
+```
+
+::::::::: {.grid .pt-3}
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/day1-2024-cc-en-drk.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/day4-2024-cc-en.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/day15_dark-2024-cc.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/day23-2024-cc.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/day26-2024-cc.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/day28-2024-cc.png){group="plot"}
+:::
+:::::::::
+
+## Tidy Tuesday
+
+```{=html}
+<div class ="button_wrapper_gallery">
+<a href="https://github.com/stesiam/tidytuesday"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> See Code</button></a>
+</div>
+```
+
+:::::::: {.grid .pt-3}
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/w06-2023-tt.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/w15-2023-tt.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/w17-2023-tt.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/w41-2023-tt.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](https://cdn.stesiam.com/w9-2025-tt.png){group="plot"}
+:::
+::::::::
+
+## 30 Day Map Challenge
+
+```{=html}
+<div class ="button_wrapper_gallery">
+<a href="https://github.com/stesiam/30DayMapChallenge"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> Explore my code</button></a>
+</div>
+```
+
+::::::: {.grid .pt-3}
+::: {.g-col-12 .g-col-md-4}
+![Public Music Schools in Greece](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day01/d1-2022-30dmc.png?raw=true){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Railway Network of Greece](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day02/d2-2022-30dmc.png?raw=true){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Public Buildings, Lamia city](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day08/d8-2022-30dmc.png?raw=true){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Starmap of Athens](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day09/d9-2022-30dmc.png?raw=true){group="plot"}
+:::
+:::::::
+
+## Inforgraphics
+
+```{=html}
+<div class ="button_wrapper_gallery">
+<a href="https://github.com/stesiam/Greece-In-Figures"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> See Code</button></a>
+</div>
+```
+
+⛏️⛏️⛏️
+
+## Greece in Figures
+
+```{=html}
+<div class ="button_wrapper_gallery">
+<a href="https://github.com/stesiam/Greece-In-Figures"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> See Code</button></a>
+</div>
+```
+
+::::::::: {.grid .pt-3}
+::: {.g-col-12 .g-col-md-4}
+![Pharmacies in Greece](https://cdn.stesiam.com/GIF-0.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![GDP per capita](https://cdn.stesiam.com/GIF-1.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Dentists per Region](https://cdn.stesiam.com/GIF-2.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Heating Oil Consumption](https://cdn.stesiam.com/GIF-5.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Electricity consumption, 2012](https://cdn.stesiam.com/GIF-6.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Household Size, 2021](https://cdn.stesiam.com/GIF-9.png){group="plot"}
+:::
+:::::::::
+
+## EU in Figures
+
+```{=html}
+<div class ="button_wrapper_gallery">
+<a href="https://github.com/stesiam/EU-In-Figures"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> See Code</button></a>
+</div>
+```
+
+::::: {.grid .pt-3}
+::: {.g-col-12 .g-col-md-4}
+![Unemployment, 2022](https://cdn.stesiam.com/EIF-1.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![R&D, 2021](https://cdn.stesiam.com/EIF-2.png){group="plot"}
+:::
+:::::
+
+## Other Visualizations
+
+::::::::: {.grid .pt-3}
+::: {.g-col-12 .g-col-md-6}
+![Most elected MPs](https://raw.githubusercontent.com/stesiam/Rest-ggplots/refs/heads/main/R4/r4-en-dark.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![Women Participation in DS](https://raw.githubusercontent.com/stesiam/Rest-ggplots/refs/heads/main/R2/Women-in-DS/r2a-kaggle-women-ds-en-dark.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![Age Distribution (GR & Rest of World)](https://raw.githubusercontent.com/stesiam/Rest-ggplots/refs/heads/main/R2/Age-Distribution/r2a-kaggle-women-ds-en-dark.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![Statistics Depts minimum admission score](https://raw.githubusercontent.com/stesiam/Rest-ggplots/refs/heads/main/R1/R1-Adm-Minimum-Grades/r1-adm-grades-en-dark.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![Admissions through Panhellenic Exams](https://raw.githubusercontent.com/stesiam/Rest-ggplots/refs/heads/main/R3/R3-Panhellenic-Exams/r3b-en-dark.png){group="plot"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![Structure of Student Population](https://raw.githubusercontent.com/stesiam/Rest-ggplots/refs/heads/main/R3/R3-Students/r3-en-dark.png){group="plot"}
+:::
+:::::::::

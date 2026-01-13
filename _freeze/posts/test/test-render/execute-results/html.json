@@ -1,0 +1,15 @@
+{
+  "hash": "9b337af18ce605fcca39ffafaaa7edf7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Analysis in R\"\ndate: \"2024-09-15\"\ncategories: [code, analysis]\nimage: \"img.png\"\ncopyright: \n  holder: Elias Nelson Kaunda\n  year: 2024\nengine: knitr\n---\n\n::: {.cell}\n<style type=\"text/css\">\n.justify {\n  text-align: justify !important\n}\n</style>\n:::\n\n\n::: justify\n## Data Preparation and Loading Necessary Packages\n\nPrior to modelling and any analyses the data ought to be prepared in such a manner and form recognizable and capable for making some analyses. The data is imported as a `.csv` file with the variables as columns and observations as rows. Later on since the analysis approach will employ two approaches the first being analyzing the data for each weekly record with the interest of understanding the effect of each treatment at specific stages of pest infestation or plant development by fitting a generalized linear model (GLM) to the data. The second will be to account for the temporal aspect of the data, allowing us to model trends, patterns and change over time helping to understand the dynamics of pest infestation in relation to treatment effects with a Generalized Linear Mixed Model (GLMM) with a binomial distribution (since infestation is recorded as binary: infested or not infested). This model includes:\n\n-   **Fixed effects** for treatments (Neem, Tobacco, etc.) to estimate the overall effect of each treatment.\n\n-   **Random effects** for time (weeks) and possibly other factors such as blocks or individual plants to account for repeated measures and potential correlation in the data.\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

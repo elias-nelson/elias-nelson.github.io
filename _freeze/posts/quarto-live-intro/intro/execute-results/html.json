@@ -1,0 +1,15 @@
+{
+  "hash": "b4af2adbef898140fc7b0c9dafb378d6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Quarto Live: Running Code on the Web\"\nauthor: \"Elias Nelson Kaunda\"\nformat: live-html\nengine: knitr\neditor: visual\n---\n::: {.cell}\n\n:::\n\n\n::: {.cell}\n```{webr}\nfor (x in 1:5) {\n  print(x ** 2)\n}\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

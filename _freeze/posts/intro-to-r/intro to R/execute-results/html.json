@@ -1,0 +1,15 @@
+{
+  "hash": "114f50bebdf8d6d89d5ad6831e479b74",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Introduction to R: The Statistical Programming Language\"\nformat: live-html\nengine: knitr\n---\n\n\n```         \n::: {.cell}\n\n:::\n\n```\n\n\n::: {.cell autorun='false'}\n```{webr}\n#| autorun: false\nfor (x in 1:5) {\n  print(10 + x)\n}\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
