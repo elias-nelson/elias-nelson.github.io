@@ -1182,7 +1182,7 @@ mtcars_summary <- mtcars %>%
 2.  here I'm computing 3 variables, the averages of `mpg`, `hp` and `wt`
 
 ::: column-margin
-- **Hover over the** **`circled numbers`** for additional context.
+-   **Hover over the** **`circled numbers`** for additional context.
 :::
 
 Here is an example.
@@ -1273,7 +1273,7 @@ In the next sections, we’ll explore the essential steps for setting up VS Code
 
 ## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
 
-After a likely tedious installation of {{< fa brands r-project >}} and any IDE(RStudio or VSCode or Positron), as well as a somewhat detailed introduction to the different IDE options for {{< fa brands r-project >}} and how to operate their interfaces. We are now ready to do a little more coding and understand the basics of {{< fa brands r-project >}}. Here we will explore the basics of {{< fa brands r-project >}} which will build a precedence and the foundation for what everyone needs to run even more complex analyses in {{< fa brands r-prject >}}.
+After a likely tedious installation of {{< fa brands r-project >}} and any IDE (RStudio or VSCode or Positron), as well as a somewhat detailed introduction to the different IDE options for {{< fa brands r-project >}} and how to operate their interfaces. We are now ready to do a little more coding and understand the basics of {{< fa brands r-project >}}. Here we will explore the basics of {{< fa brands r-project >}} which will build a precedence and the foundation for what everyone needs to run even more complex analyses in {{< fa brands r-prject >}}.
 
 ### Commands, Expressions, Assignments, Operators, and Objects
 
@@ -1287,9 +1287,8 @@ As discussed earlier the most basic computations you can perform in {{< fa brand
 ```
 
 ::: column-margin
-- **Click** **`Run Code`** to execute the examples.
+-   **Click** **`Run Code`** to execute the examples.
 :::
-
 
 ```{webr-r}
 # Subtraction
@@ -1319,6 +1318,35 @@ sqrt(9)
 Most of these arithmetic operations are fairly straightforward except for the extraction of roots instead of the root symbol, to compute square root in {{< fa brands r-project >}}, we have to use the `sqrt()` function.
 
 Now in your IDE for example `RStudio` you can enter all these operations in an {{< fa brands r-project >}} script and with your cursor click `Run` or simply use the keyboard shortcut `Ctrl + Enter`. This tells {{< fa brands r-project >}} to evaluate each operation and give us the output just as above in your Console.
+
+One starkly observation you may notice is that after evaluation of every command above the printed output starts with `[1]`, which is simply the position of the adjacent element in the output—this will make some sense later.
+
+For the above arithmetic commands, the result is printed to the screen and lost—there is no assignment involved. In order to do anything other than the simplest analyses , you must be able tore and recall data. In {{< fa brands r-project >}} you can assign the results of commands to symbolic variables (as in other programming languages) using the assignment operator `<-`. When a command is used for assignment, the result is no longer automatically printed to the `Console`.
+
+```{webr-r}
+x <- 1 + 1
+x
+```
+
+::: column-margin
+-   **Run** the object name  **`x`** print the output.
+:::
+
+```{webr-r}
+print(x)
+```
+
+::: column-margin
+-   You can also use the  **`print()`** function to get output.
+:::
+
+In RStudio you can see the stored object `x` in the workspace panel (top right panel).
+
+In VSCode you can see the object in the workspace as below
+
+While in Positron similarly you can see the object as below
+
+
 
 ## Unlocking {{< iconify logos:r-lang >}}'s Hidden Power: Getting Started with {{< iconify logos:r-lang >}} Packages
 
