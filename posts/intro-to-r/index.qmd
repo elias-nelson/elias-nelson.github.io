@@ -34,8 +34,6 @@ bibliography: references.bib
 webr:
   show-startup-message: false
   packages:
-    - tidyverse
-    - ggplot2
     - dplyr
     - readr
   cell-options:
@@ -50,8 +48,6 @@ format:
     toc: true
     toc-title: "On this page"
     toc-location: left
-    toc-expand: true
-    toc-depth: 4
     number-sections: true
 
     code-copy: hover
@@ -69,6 +65,8 @@ format:
 
 #css: style.css
 ---
+
+![AI Generated](thumbnail_wide.png)
 
 ```{css}
 /*| echo: false */
@@ -131,9 +129,9 @@ invisible(
 
 -   Know where to find additional help and resources to improve your {{< fa brands r-project >}} coding skills.
 
-## Overview of {{< fa brands r-project >}}
+## Overview of {{< iconify logos:r-lang >}}
 
-### *What is* {{< fa brands r-project >}}*?*
+### *What is* {{< iconify logos:r-lang >}}*?*
 
 At first glance, "What is {{< fa brands r-project >}}?" may seem like a simple question, but as @zuur2009; point out, it’s not so easily answered—and I agree. Broadly defined, {{< fa brands r-project >}} is a computer language that allows users to program algorithms and use tools that others have developed. This is a fairly generalized description and could apply to the plethora of programming languages, but {{< fa brands r-project >}} stands out because it’s often defined as a powerful environment specifically designed for statistical computing and graphics—or more simply, a statistical programming language.
 
@@ -155,7 +153,7 @@ A more practical way to understand {{< fa brands r-project >}}, however, is by l
 
 Perhaps one of the most significant, nontrivial reasons for its widespread use is that {{< fa brands r-project >}} is free of charge, supported by a vast, active user community.
 
-*So Why Isn’t Everyone Using* {{< fa brands r-project >}}*?*
+*So Why Isn’t Everyone Using* {{< iconify logos:r-lang >}}*?*
 
 This question is easier to answer: {{< fa brands r-project >}} has a notoriously steep learning curve. Since it relies heavily on programming, even though there are graphical user interfaces (GUIs) available, none are advanced enough to fully eliminate the need for coding. But once you get the hang of {{< fa brands r-project >}}, I reckon you’ll find it hard to return to any other software for statistical computing.
 
@@ -163,7 +161,7 @@ From my own experience—and from hearing others share theirs—learning both {{
 
 That’s why this post focuses primarily on providing basic {{< fa brands r-project >}} instructions and not diving too deeply into statistics. However, I will demonstrate some fundamental statistical procedures you can perform in {{< fa brands r-project >}} later in the post. If your goal is to learn both R and statistics, this guide will provide the foundation you need to master {{< fa brands r-project >}}, equipping you with the skills to explore its powerful statistical tools and the vast range of packages that extend its capabilities.
 
-### *Historical Background of* {{< fa brands r-project >}}
+### *Historical Background of* {{< iconify logos:r-lang >}}
 
 {{< fa brands r-project >}} is a modern implementation, or dialect, of an earlier programming language called [S](https://link.springer.com/book/10.1007/978-0-387-21856-4) [@becker2018]. It also incorporates lexical scoping semantics inspired by [Scheme](https://www.scheme.org/) The development of {{< fa brands r-project >}} began in 1991, when Professors Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, recognized the need for a better software environment for their Macintosh teaching laboratory. Their journey into developing {{< fa brands r-project >}} is detailed in a 1996 paper in the *Journal of Computational and Graphical Statistics* [@ihaka1996].
 
@@ -179,23 +177,23 @@ The *Comprehensive R Archive Network* ([CRAN](https://cran.r-project.org/mirrors
 
 Since its humble beginnings, {{< fa brands r-project >}} has grown into a global force in statistical computing and data science. Thanks to its open-source nature and a thriving community, it remains one of the most widely used and rapidly evolving tools for data analysis. As the field of data science expands, {{< fa brands r-project >}}’s importance continues to grow, cementing its place as an indispensable resource for statisticians, data scientists, and researchers alike.
 
-## Getting Started With {{< fa brands r-project >}} Programming
+## Getting Started With {{< iconify logos:r-lang >}} Programming
 
 Every journey begins with gathering the right tools, and your adventure into {{< fa brands r-project >}} programming is no different. The first essential step for any {{< fa brands r-project >}} novice is setting up the environment to start coding. Essentially, you have two main options:
 
-1.  **Install [R](https://www.r-project.org/ "R") and an IDE such as [RStudio](https://www.rstudio.com/ "RStudio"), [VS Code](https://code.visualstudio.com/) or [Positron](https://github.com/posit-dev/positron)**
+1.  **Install** [{{< iconify logos:r-lang >}}](https://www.r-project.org/ "R") **and an IDE such as [RStudio](https://www.rstudio.com/ "RStudio"), [VS Code](https://code.visualstudio.com/) or [Positron](https://github.com/posit-dev/positron)**
 
-2.  **Run** {{< fa brands r-project >}} **in a browser,** for example, via [RStudio Cloud](https://rstudio.cloud/ "RStudio Cloud").
+2.  **Run** {{< iconify logos:r-lang >}} **in a browser,** for example, via [RStudio Cloud](https://rstudio.cloud/ "RStudio Cloud").
 
-While installing [**R**](https://www.r-project.org/ "R") along with an IDE like [**RStudio**](https://www.rstudio.com/ "RStudio"), [**VS Code**](https://code.visualstudio.com/)or [**Positron**](https://github.com/posit-dev/positron) requires a little more time and effort, it offers a more robust setup—allowing offline work and leveraging your computer’s CPU—I highly recommend this approach, especially for those committed to diving deep into {{< fa brands r-project >}}. However, if you're just exploring or testing the waters, running {{< fa brands r-project >}} online through platforms like [RStudio Cloud](https://rstudio.cloud/ "RStudio Cloud") may be more convenient (provided you have a reliable internet connection).
+While installing [{{< fa brands r-project >}}](https://www.r-project.org/ "R") along with an IDE like [**RStudio**](https://www.rstudio.com/ "RStudio"), [**VS Code**](https://code.visualstudio.com/)or [**Positron**](https://github.com/posit-dev/positron) requires a little more time and effort, it offers a more robust setup—allowing offline work and leveraging your computer’s CPU—I highly recommend this approach, especially for those committed to diving deep into {{< fa brands r-project >}}. However, if you're just exploring or testing the waters, running {{< fa brands r-project >}} online through platforms like [RStudio Cloud](https://rstudio.cloud/ "RStudio Cloud") may be more convenient (provided you have a reliable internet connection).
 
 Whichever path you choose, this post is designed to accommodate you. Whether you install {{< fa brands r-project >}} locally or use an online platform, the examples and instructions provided here will guide you seamlessly through your {{< fa brands r-project >}} programming journey.
 
-### *Downloading and Installing `R`*
+### *Downloading and Installing* {{< iconify logos:r-lang >}}
 
 Now that we’ve covered an overview of {{< fa brands r-project >}} and some of its history, it's time to get your own copy of {{< fa brands r-project >}} so you can start using it. The easiest way to do this is by downloading a precompiled binary distribution of R, which includes the base system and contributed packages, and installing it on your computer. While it's also possible to install [{{< fa brands r-project >}} from source](https://docs.posit.co/resources/install-r-source.html), this is more complex and generally not necessary for most users. I recommend sticking to the precompiled binaries, which are easy to install and are available for a range of operating systems, including Windows, macOS, and Linux. In this guide, we’ll focus on installing R on Windows and macOS.
 
-#### Installing {{< fa brands r-project >}} on Windows
+#### Installing {{< iconify logos:r-lang >}} on Windows
 
 Installing {{< fa brands r-project >}} on Windows is a straightforward process. Here's a step-by-step guide:
 
@@ -247,13 +245,13 @@ Installing {{< fa brands r-project >}} on Windows is a straightforward process. 
 
 Congratulations, you've successfully installed {{< fa brands r-project >}} on your Windows system!
 
-#### Installing {{< fa brands r-project >}} on macOS
+#### Installing {{< iconify logos:r-lang >}} on macOS
 
 The installation process for macOS is very similar to that of Windows, but with a few differences in file format. Follow these steps:
 
 1.  **Go to the [CRAN](https://cran.r-project.org/) website**: Head over to <https://cran.r-project.org/>.
 
-2.  **Download `R` for macOS**: Click on "Download R for macOS".
+2.  **Download R for macOS**: Click on "Download R for macOS".
 
 3.  **Choose the latest release**: In the "Latest release" section, download the appropriate version of {{< fa brands r-project >}} for your macOS system.
 
@@ -269,9 +267,9 @@ You now have {{< fa brands r-project >}} installed on your macOS system!
 
 With these steps completed, you’re ready to start programming in {{< fa brands r-project >}}! Next, we’ll move on to setting up a suitable Integrated Development Environment (IDE) to enhance your experience with {{< fa brands r-project >}}.
 
-### *Exploring IDE Options for `R`: Elevate Your `R` Programming with RStudio, VS Code, or Positron*
+### *Exploring IDE Options for* {{< iconify logos:r-lang >}}*: Elevate Your* {{< iconify logos:r-lang >}} *Programming with RStudio, VS Code, or Positron*
 
-#### Getting Started With the {{< fa brands r-project >}} Interface
+#### Getting Started With the {{< iconify logos:r-lang >}} Interface
 
 When working with {{< fa brands r-project >}}, several user interfaces (UIs) are available, but every installation of {{< fa brands r-project >}} includes a basic/standard interface—sometimes called the "R Console." While you may eventually prefer using an advanced IDE like RStudio, it's important to familiarize yourself with this standard interface. Not only can it be helpful when using a machine without your preferred or favorite interfaces, but it also serves as a good foundation for understanding how other interfaces are organized. You may even come to appreciate and enjoy the simplicity of the standard interface.
 
@@ -286,7 +284,7 @@ When opened, the main window, labeled "R Console," will appear. This is where yo
 The main window of `RGUI` is the "R Console," which automatically opens when you launch {{< fa brands r-project >}}. This Console is where you enter {{< fa brands r-project >}} commands one at a time. Depending on the command, the output will be displayed in the Console, and this is also where any error messages will appear. The Console is unique and it's the primary space for interacting with {{< fa brands r-project >}}—keep in mind, closing the Console will end your {{< fa brands r-project >}} session.
 
 ::: callout-note
-## **Isn’t** {{< fa brands r-project >}} **a Language?**
+## **Isn’t** {{< iconify logos:r-lang >}} **a Language?**
 
 You might hear me refer to {{< fa brands r-project >}} as if it were a person, saying things like “Tell {{< fa brands r-project >}} to do this” or “Tell {{< fa brands r-project >}} to do that.” But, of course, {{< fa brands r-project >}} can’t *do* anything—it’s just a language. This is simply shorthand for saying, “Instruct your computer to perform a task by writing a command in the {{< fa brands r-project >}} language in the R console.” It’s your computer, not {{< fa brands r-project >}} itself, that does the heavy lifting.
 
@@ -295,7 +293,7 @@ Is this shorthand a bit imprecise and lazy? Yes. But does everyone still use it?
 
 For new users, the easiest way to save the Console’s contents is to navigate to **File** → **Save to file** from the menu. However, note that the Console only retains the last few thousand lines written to it, so it's wise to save important work elsewhere. You may also find it helpful to clear the Console to start fresh. To do this, simply press `Ctrl + L` or select **Edit** → **Clear console** from the menu.
 
-*Ready to Write Your First Program in* {{< fa brands r-project >}}*?*
+*Ready to Write Your First Program in* {{< iconify logos:r-lang >}}*?*
 
 Now that we have {{< fa brands r-project >}} installed and running, let’s dive right in by writing our first simple computer program. To do this, open {{< fa brands r-project >}} (if it’s not already open), and in the "R Console" type the following code after the `>` prompt symbol, then press **Enter**:
 
@@ -450,7 +448,7 @@ To save your workspace, either click **File** → **Save workspace** in the menu
 
 So far, we’ve successfully interacted with base {{< fa brands r-project >}}—we’ve written our first "Hello, World!" program, performed basic arithmetic, and even plotted a graph (how cool is that?). While `RGUI` is functional, it can feel somewhat basic and limited compared to modern integrated development environments (IDEs), which offer enhanced features for coding, debugging, and data visualization. In the next section, we will explore the powerful capabilities provided by IDEs.
 
-#### RStudio IDE for {{< fa brands r-project >}} and Python
+#### RStudio IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
 One of the most popular ways to interface with {{< fa brands r-project >}}, beyond the basic `RGUI`, is through RStudio, a powerful Integrated Development Environment (IDE) designed primarily for {{< fa brands r-project >}}. RStudio offers an intuitive and interactive environment, making coding, data analysis, and project management significantly easier. However, it’s important to note that before using RStudio, you must first install {{< fa brands r-project >}} on your computer.
 
@@ -581,7 +579,7 @@ While RStudio is mainly known for its support of {{< fa brands r-project >}}, it
 You’re now fully set up and ready to start working with {{< fa brands r-project >}} **using the RStudio IDE**.
 
 ::: callout-important
-## **Do I Still Need to Download** {{< fa brands r-project >}}**?**
+## **Do I Still Need to Download** {{< iconify logos:r-lang >}}**?**
 
 **Yes.** Even if you plan to use RStudio, you must install {{< fa brands r-project >}} on your computer.
 
@@ -847,7 +845,7 @@ While working directories control **where R reads and writes files**, R also use
 
 These files do not replace good project organization, but they strongly influence how R behaves when it starts—what objects appear in memory, what commands are remembered, and what settings or environment variables are applied. Understanding them helps explain *why R sometimes behaves differently across sessions or directories*, especially for beginners.
 
-###### `R` Startup and Session Files
+###### {{< iconify logos:r-lang >}} Startup and Session Files
 
 As you begin using R, you may notice several files with names that start with a dot (.), such as:
 
@@ -1118,7 +1116,7 @@ Once your project is set up, you’ll notice a few changes in RStudio:
 
 This setup ensures that all your scripts, data, and output are stored together in one place. While you could configure all this manually using `setwd()`, R Projects make the process much more intuitive and efficient.
 
-##### Organizing Your `R` Projects and Structuring Your Working Directories
+##### Organizing Your {{< iconify logos:r-lang >}} Projects and Structuring Your Working Directories
 
 This section is not about the technical aspects of RStudio, R, or data analysis per se. Instead, it's about the often overlooked yet crucial habit of organizing your work through a solid folder structure. Like good coding practices, setting up a clear, logical folder structure can significantly boost your productivity and reduce frustration. A well-structured project directory will help you quickly locate files, avoid clutter, and make your work easier to share or revisit later. This is especially important when working with R projects in RStudio.
 
@@ -1152,7 +1150,7 @@ It’s also a good practice to use **lowercase** for folder names, as shown in t
 
 By adopting this structure early on, you’ll streamline your workflow, improve the reproducibility of your work, and make it easier to share or revisit your projects with confidence.
 
-##### Creating R Scripts in RStudio
+##### Writing {{< iconify logos:r-lang >}} Scripts in RStudio
 
 Code quickly becomes long and complex. Thus, it is not very convenient to write it in the console. So, instead, we can write code into an R Script. Remember the "R Editor" window we encountered in the base `RGUI`—well the R Script in RStudio could be considered as it's equivalent, but much better. An `R` Script is a document that RStudio recognizes as R programming code. Files that are not `R` Scripts, like `.txt`, `.rtf` or `.md`, can also be opened in RStudio, but any code written in it will not be automatically recognized.
 
@@ -1183,6 +1181,10 @@ mtcars_summary <- mtcars %>%
 1.  `dplyr` is one of the cornerstone of the tidyverse, really useful for data wrangling.
 2.  here I'm computing 3 variables, the averages of `mpg`, `hp` and `wt`
 
+::: column-margin
+- **Hover over the** **`circled numbers`** for additional context.
+:::
+
 Here is an example.
 
 ```{r}
@@ -1210,7 +1212,7 @@ boxplot(mpg ~ cyl,            # Formula notation indicating mpg by cyl
 
 All examples in this post can easily be copied and pasted into your own `R` script. Let’s try it with the following code. The plot this code creates reveals which car manufacturer produces the most efficient cars. Copy and paste this code into your `R` script.
 
-##### Updating R and RStudio: Staying on the Cutting Edge
+##### Updating {{< iconify logos:r-lang >}} and RStudio: Staying on the Cutting Edge
 
 While regularly updating your software might not directly improve your programming skills, it can certainly save you from unnecessary frustration down the road. It’s important to remember that R and RStudio are separate programs, meaning you need to update them individually. Although they work closely together, updating RStudio won’t automatically update R itself, and vice versa.
 
@@ -1237,7 +1239,7 @@ To run R in VSCode, as with RStudio, you first need to have R (version 3.4.0 or 
 After installing R, you’ll need to install certain R packages from CRAN to enable seamless integration with VS Code.
 
 ::: callout-important
-## R Packages
+## {{< iconify logos:r-lang >}} Packages
 
 Before we dive into the details, let me give you a brief overview of R packages. Think of this as a quick primer to get you familiar with them. In essence, packages in R are collections of R functions, compiled code, and sample data organized in a standard structure. They are fundamental units of reproducible R code and greatly enhance the capabilities of your R environment. A package is essentially a toolkit, containing functions, data, and documentation that extend the base R installation, which itself includes many essential packages that you’ll use frequently. As your projects become more diverse, you’ll inevitably reach a point where you need additional packages to perform specialized tasks.
 :::
@@ -1257,7 +1259,7 @@ These packages are crucial for creating a smooth development experience when wor
 
 In the next sections, we’ll explore the essential steps for setting up VS Code for R development, including installing extensions and configuring your environment for optimal use.
 
-##### Installing and integrating VSCode with `R`
+##### Installing and integrating VSCode with {{< iconify logos:r-lang >}}
 
 -   Step one, obviously, is downloading Visual Studio Code, which you can find on the [Visual Studio Code website](https://visualstudio.microsoft.com/downloads/).
 
@@ -1265,10 +1267,59 @@ In the next sections, we’ll explore the essential steps for setting up VS Code
 
 -   
 
-#### Positron: A New, Yet Familiar IDE for R and Python
+#### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
 ![](positron.gif){fig-align="left" width="70%"}
 
-## Unlocking {{< fa brands r-project >}}'s Hidden Power: Getting Started with {{< fa brands r-project >}} Packages
+## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
+
+After a likely tedious installation of {{< fa brands r-project >}} and any IDE(RStudio or VSCode or Positron), as well as a somewhat detailed introduction to the different IDE options for {{< fa brands r-project >}} and how to operate their interfaces. We are now ready to do a little more coding and understand the basics of {{< fa brands r-project >}}. Here we will explore the basics of {{< fa brands r-project >}} which will build a precedence and the foundation for what everyone needs to run even more complex analyses in {{< fa brands r-prject >}}.
+
+### Commands, Expressions, Assignments, Operators, and Objects
+
+Previously after installing {{< fa brands r-project >}} we wrote our first "Hello, World!" program and also tried some simple arithmetic calculations as we would with a handheld/pocket calculator. We've also covered why it is important to organize your code into {{< fa brands r-project >}} scripts for reproducibility. Here we use most of what we've already learnt while learning more.
+
+As discussed earlier the most basic computations you can perform in {{< fa brands r-project >}} are arithmetic operations. Let's take a look at a few more examples:
+
+```{webr-r}
+# Addition
+20 + 4
+```
+
+::: column-margin
+- **Click** **`Run Code`** to execute the examples.
+:::
+
+
+```{webr-r}
+# Subtraction
+20 - 4
+```
+
+```{webr-r}
+# Multiplication
+20 + 4
+```
+
+```{webr-r}
+# Divition
+20 + 4
+```
+
+```{webr-r}
+# Exponentiation
+2 ^ 4
+```
+
+```{webr-r}
+# Square root
+sqrt(9)
+```
+
+Most of these arithmetic operations are fairly straightforward except for the extraction of roots instead of the root symbol, to compute square root in {{< fa brands r-project >}}, we have to use the `sqrt()` function.
+
+Now in your IDE for example `RStudio` you can enter all these operations in an {{< fa brands r-project >}} script and with your cursor click `Run` or simply use the keyboard shortcut `Ctrl + Enter`. This tells {{< fa brands r-project >}} to evaluate each operation and give us the output just as above in your Console.
+
+## Unlocking {{< iconify logos:r-lang >}}'s Hidden Power: Getting Started with {{< iconify logos:r-lang >}} Packages
 
 {{< fa brands r-project >}} packages

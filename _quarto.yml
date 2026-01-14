@@ -31,7 +31,7 @@ website:
       View the source at <i class="fab fa-github"></i> GitHub
         </a>
       </div>
-  title: "Elias Nelson Kaunda"
+  title: "ENK"
   description: "This is Elias Nelson's personal Blog."
   favicon: "images/logo2.png"
   open-graph: true
@@ -47,7 +47,9 @@ website:
       theme: github-light
       issue-term: title
   navbar:
-    logo: "/images/elias_logo4.png"
+    logo: 
+      light: "/images/nav_bar_light.png"
+      dark: "/images/nav_bar_dark.png"
     background: primary
     right:
       - text: "Home"
