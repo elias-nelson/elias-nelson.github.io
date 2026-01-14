@@ -59,7 +59,7 @@ format:
     code-link: true
 
     code-tools:
-      source: https://github.com/stesiam/stesiam.github.io/blob/gh-pages/posts/list-of-quarto-sites/index.qmd
+      source: https://github.com/elias-nelson/Quarto-Blog/blob/main/posts/intro-to-r/index.qmd
 
     link-external-icon: true
     link-external-newwindow: true
