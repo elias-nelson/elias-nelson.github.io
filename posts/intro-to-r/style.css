@@ -17,3 +17,8 @@
   --rt-highlight: rgba(56, 139, 253, 0.25);
   --rt-header-bg: #161b22;
 }
+
+/* Hide ONLY the "View R History" button */
+.webr-toolbar button:last-child {
+  display: none !important;
+}

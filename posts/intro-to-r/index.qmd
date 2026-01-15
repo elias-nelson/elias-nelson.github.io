@@ -76,6 +76,7 @@ p {
 ```
 
 ```{webr-r}
+#| startover: true
 f1 <- function(x) x
 f1("This prints")
 ```
@@ -1273,13 +1274,17 @@ In the next sections, we’ll explore the essential steps for setting up VS Code
 
 ## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
 
-After a likely tedious installation of {{< fa brands r-project >}} and any IDE (RStudio or VSCode or Positron), as well as a somewhat detailed introduction to the different IDE options for {{< fa brands r-project >}} and how to operate their interfaces. We are now ready to do a little more coding and understand the basics of {{< fa brands r-project >}}. Here we will explore the basics of {{< fa brands r-project >}} which will build a precedence and the foundation for what everyone needs to run even more complex analyses in {{< fa brands r-prject >}}.
+After a likely tedious installation of {{< fa brands r-project >}} and an IDE such as RStudio, VS Code or Positron, as well as a detailed familiarization with their interfaces, We are now ready to do a little more coding and explore the fundamentals of {{< fa brands r-project >}} programming. 
+
+In this section, we introduce the core building blocks of {{< fa brands r-project >}} programming. These fundamentals form the foundation for everything you will do in {{< fa brands r-prject >}}, from simple calculations to more advanced analyses. Developing a strong understanding of these basics early on will make your {{fa brands r-project}} learning experience smoother and more intuitive as you progress to topics such as data manipulation, visualization, and statistical modeling.
 
 ### Commands, Expressions, Assignments, Operators, and Objects
 
-Previously after installing {{< fa brands r-project >}} we wrote our first "Hello, World!" program and also tried some simple arithmetic calculations as we would with a handheld/pocket calculator. We've also covered why it is important to organize your code into {{< fa brands r-project >}} scripts for reproducibility. Here we use most of what we've already learnt while learning more.
+At this point, you have already written your first **`"Hello, World!"`** program and performed some basic arithmetic in {{< fa brands r-project >}}, much like using a handheld calculator. You have also learned why organizing code into scripts is essential for reproducibility. Here, we build directly on this acquired knowledge by introducing the core concepts that govern how {{< fa brands r-project >}} evaluates and executes code.
 
-As discussed earlier the most basic computations you can perform in {{< fa brands r-project >}} are arithmetic operations. Let's take a look at a few more examples:
+A command in {{< fa brands r-project >}} is an instruction you give to the interpreter. Most commands are expressions, meaning they are pieces of code that {{< fa brands r-project >}} evaluates to produce a result.
+
+As earlier discussed, the simplest  expressions in {{< fa brands r-project >}} are arithmetic operations. 
 
 ```{webr-r}
 # Addition
@@ -1315,13 +1320,15 @@ As discussed earlier the most basic computations you can perform in {{< fa brand
 sqrt(9)
 ```
 
-Most of these arithmetic operations are fairly straightforward except for the extraction of roots instead of the root symbol, to compute square root in {{< fa brands r-project >}}, we have to use the `sqrt()` function.
+Most of these operations behave exactly as expected. However, one notable difference is that there is no square-root symbol in {{< fa brands r-project >}}. Instead, {fa brands r-project} uses functions such as **`sqrt()`** to compute roots.
 
-Now in your IDE for example `RStudio` you can enter all these operations in an {{< fa brands r-project >}} script and with your cursor click `Run` or simply use the keyboard shortcut `Ctrl + Enter`. This tells {{< fa brands r-project >}} to evaluate each operation and give us the output just as above in your Console.
+When you run these expressions, {{< fa brands r-project >}}, R evaluates them and prints the result to the Console. If you type them into a script and  click **`Run`** (or press **`Ctrl + Enter`** the same evaluation happens line by line. 
 
-One starkly observation you may notice is that after evaluation of every command above the printed output starts with `[1]`, which is simply the position of the adjacent element in the output—this will make some sense later.
+You may notice that each printed result with `[1]`. This indicates the position (index) of the first element in the output. While this may seem odd now, it will make much more sense once we discuss vectors and indexing later on.
 
-For the above arithmetic commands, the result is printed to the screen and lost—there is no assignment involved. In order to do anything other than the simplest analyses , you must be able tore and recall data. In {{< fa brands r-project >}} you can assign the results of commands to symbolic variables (as in other programming languages) using the assignment operator `<-`. When a command is used for assignment, the result is no longer automatically printed to the `Console`.
+At this stage, the output results produced by your commands above are only temporary—once printed to the screen, they are lost (i.e., they are not stored anywhere). In order to perform anything beyond trivial calculations, you must be able to store results and reuse them when the need arises. In {{< fa brands r-project >}} this is done through assignment.
+
+An assignment takes the result of an expression and stores it as an object, using the assignment operator `<-`. The `=` operator can also be used for assignments, but it is less preferred for this purpose. Instead, it is mainly used for specifying arguments inside function calls. When an expression is assigned to an object, its value is no longer printed automatically to the `Console`.
 
 ```{webr-r}
 x <- 1 + 1
@@ -1329,7 +1336,7 @@ x
 ```
 
 ::: column-margin
--   **Run** the object name **`x`** to print the output.
+-   **Run** the object name **`x`** to display its stored value.
 :::
 
 ```{webr-r}
@@ -1337,36 +1344,40 @@ print(x)
 ```
 
 ::: column-margin
--   You can also use the **`print()`** function to get output.
+-   You can also explicitly use the **`print()`** function to display output.
 :::
 
-Note that this is very different from:
+Once assigned, **`x`** becomes an object in your workspace. Objects are central to {{< fa brands r-project>}}—they are how data, results, functions, and models are represented and manipulated.
+
+::: column-margin
+- In {{< fa brands r-project >}} almost everything is an object.
+:::
+
+Be careful with spacing when using operators. for example:
 
 ```{webr-r}
 x < -1 + 1
 x
 ```
 
-In this case, putting a space between the two characters that make up the assignment operator causes {{< fa brands r-project >}} to interpret the command as an expression that asks if x is less than zero. However spaces usually do not matter in {{< fa brands r-project >}}, as long as they do not separate a single operator or a variable name. This, for example, is fine:
+This code does not assign a value to **`x`**. Instead, because of the space between the two characters that make up the assignment operator, {{< fa brands r-project >}} interprets **`<`** as a logical comparison operator, that asks if **`x`** is less than **`-1 + 1`** (i.e., zero). Although R generally ignores extra spaces, spaces must not split operators or object names. This, for example, is perfectly valid:
 
 ```{webr-r}
 x <- 1
 x
 ```
 
-In RStudio you can see the stored object `x` in the workspace panel (top right panel).
+In RStudio, assigned objects appear in the **`Environment`** pane (top right).
 
-In VSCode you can see the object in the workspace as below
+In VS Code and Positron, similar workspace panels show stored objects as below:
 
-While in Positron similarly you can see the object as below
-
-Alternatively, you can use the `ls()` function to also check what object(s) is stored in the workspace.
+You can also list all stored objects programatically using:
 
 ```{webr-r}
 ls()
 ```
 
-To remove an object from your workspace, use the `rm()` or `remove()` functions
+To remove an object from the workspace, use **`rm()`** or **`remove()`**:
 
 ```{webr-r}
 rm(x)
@@ -1375,7 +1386,7 @@ x
 ```
 
 ::: column-margin
--   As you can see, you will get an **`error`** if you try to evaluate what **`x`** is.
+-   Attempting to access a removed object results in an **`error`**.
 :::
 
 ```{webr-r}
@@ -1385,19 +1396,17 @@ x
 ```
 
 ::: column-margin
--   The **`remove()`** function can also be used to remove an object from the workspace.
+-   **`remove()`** can also be used to remove a stored object from the workspace.
 :::
 
-If you want to remove all the objects from the workspace you can use:
+To clear all the objects from the workspace, which is usually advised when starting a new anlaysis worflow, you can use:
 
 ```{r}
 #| eval: false
 remove(list = ls())
-
-ls()
 ```
 
-If you want to assign the same value to several symbolic variables , you can use the following syntax.
+If you want to assign the same value to multiple objects in a single statement:
 
 ```{webr-r}
 x <- y <- z <- 1
@@ -1405,7 +1414,9 @@ x <- y <- z <- 1
 ls()
 ```
 
-{{< fa brands r-project >}} is a case-sensitive language. This is true for symbolic variable names, function names, and everything else in {{< fa brands r-project >}}. For example if I create an object with lowercase x and want to print the output, referring to it in it's uppercase form will give an error:
+{{< fa brands r-project >}} is a **case-sensitive** language. This applies to object names, function names, and other identifiers in {{< fa brands r-project >}}. If you create an object using a lowercase name, referring to it with a different case will result in an **`error`**.
+
+For example, if an object is assigned to lowercase **`x`**, attempting to access it using uppercase **`X`** will give an error:
 
 ```{webr-r}
 x <- 1 + 1
@@ -1413,15 +1424,58 @@ x <- 1 + 1
 X
 ```
 
-The same applies to functions. I cannot use the `print()` function in uppercase
+Similarly, function names must use the exact correct casing:
 
 ```{webr-r}
 PRINT(x)
 ```
 
-In {{< fa brands r-project >}}, commands can be separated by moving onto a new line (i.e., hitting ennter) or by typing a semicolon `";"`, which can be handy in scripts for codensing code. If a command is not completed in one line (by design or error), the typical prompt `>` symbol in the Console is replaced with a +.
+In {{< fa brands r-project >}}, commands can be separated in two ways:
 
-There are several operators that are used in the {{< fa brands r-project >}} language. Below are tables for some of the most common.
+- By starting a new line (i.e., hitting **`Enter`**) or 
+
+- By using a semicolon **`;`**
+
+Using semicolons can be useful for condensing code in scripts, although placing each command on its own line is generally clearer and more readable. If a command is incomplete on a line, either by design or due to a syntax error, the Console prompt changes from **`>`** to **`+`**, indicating that {{< fa brands r-project >}} is waiting for additional input before it can evaluate the command.
+
+Besides arithmetic operations there are also logical queries you can perform. Logical queries always evaluate either **`TRUE`** or **`FALSE`**. Here are a few examples to illustrate this.
+
+```{webr-r}
+# 1. Is 1 equal to 1?
+1 == 1
+```
+
+```{webr-r}
+# 2. Is 35 greater than 55?
+35 > 55
+```
+
+```{webr-r}
+# 3. Is 2627 greater than or equal to 2627?
+2627 >= 2627
+```
+
+```{webr-r}
+# 4. Are these two words different?
+"Babu" != "babu"
+```
+
+::: column-margin
+-   ***`Babu`*** is a Hindu honorific to show respect or endearment.
+:::
+
+```{webr-r}
+# 5. Are these two sentences the same?
+"Masoyiyata has beautiful eyes" == "Masoyiyata has beautiful eyes"
+```
+
+::: column-margin
+-   ***`Masoyiyata`*** is a Hausa term of endearment meaning **`"my love"`** or **`"my beloved"`**.
+:::
+
+Logical comparisons play a crucial role in filtering data, making decisions, and controlling program flow.
+
+The {{< fa brands r-project >}} language provides a rich set of operators including those for arithmetic, comparison, logical evaluation, indexing, and model specification. The interactive table below summarizes some of the most commonly used operators. Feel free to explore them and their example usages.
 
 ```{r}
 #| echo: false
@@ -1500,6 +1554,15 @@ reactable(
 )
 ```
 
+To bring everything together, commands in {{< fa brands r-project >}} operate on objects. An object is anything that can be assigned a name using the assignment operator **`<-`**. Objects can store values, data, or even behavior.
+
+Common object types include vectors, matrices, factors, lists, data frames, and functions. With the exception of functions, these are often referred to as data structures or data objects. Each object type behaves differently, and operators interact with them in specific ways.
+
+Understanding how objects are created, stored, and manipulated, and how operators act on them, is central to effective {{< fa brands r-project >}} programming. This foundation prepares you to work confidently with data types and data structures, which we explore next.
+
+### {{< iconify logos:r-lang >}} Data types
+
+### {{< iconify logos:r-lang >}} Data structures
 
 ## Unlocking {{< iconify logos:r-lang >}}'s Hidden Power: Getting Started with {{< iconify logos:r-lang >}} Packages
 
