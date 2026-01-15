@@ -1301,7 +1301,7 @@ As discussed earlier the most basic computations you can perform in {{< fa brand
 ```
 
 ```{webr-r}
-# Divition
+# Division
 20 + 4
 ```
 
