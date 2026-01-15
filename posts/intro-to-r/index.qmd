@@ -63,7 +63,7 @@ format:
     #code-block-bg: true
     #code-block-border-left: "#31BAE9"
 
-#css: style.css
+css: style.css
 ---
 
 ![AI Generated](thumbnail_wide.png)
@@ -1329,7 +1329,7 @@ x
 ```
 
 ::: column-margin
--   **Run** the object name  **`x`** print the output.
+-   **Run** the object name **`x`** to print the output.
 :::
 
 ```{webr-r}
@@ -1337,8 +1337,22 @@ print(x)
 ```
 
 ::: column-margin
--   You can also use the  **`print()`** function to get output.
+-   You can also use the **`print()`** function to get output.
 :::
+
+Note that this is very different from:
+
+```{webr-r}
+x < -1 + 1
+x
+```
+
+In this case, putting a space between the two characters that make up the assignment operator causes {{< fa brands r-project >}} to interpret the command as an expression that asks if x is less than zero. However spaces usually do not matter in {{< fa brands r-project >}}, as long as they do not separate a single operator or a variable name. This, for example, is fine:
+
+```{webr-r}
+x <- 1
+x
+```
 
 In RStudio you can see the stored object `x` in the workspace panel (top right panel).
 
@@ -1346,6 +1360,145 @@ In VSCode you can see the object in the workspace as below
 
 While in Positron similarly you can see the object as below
 
+Alternatively, you can use the `ls()` function to also check what object(s) is stored in the workspace.
+
+```{webr-r}
+ls()
+```
+
+To remove an object from your workspace, use the `rm()` or `remove()` functions
+
+```{webr-r}
+rm(x)
+
+x
+```
+
+::: column-margin
+-   As you can see, you will get an **`error`** if you try to evaluate what **`x`** is.
+:::
+
+```{webr-r}
+remove(x)
+
+x
+```
+
+::: column-margin
+-   The **`remove()`** function can also be used to remove an object from the workspace.
+:::
+
+If you want to remove all the objects from the workspace you can use:
+
+```{r}
+#| eval: false
+remove(list = ls())
+
+ls()
+```
+
+If you want to assign the same value to several symbolic variables , you can use the following syntax.
+
+```{webr-r}
+x <- y <- z <- 1
+
+ls()
+```
+
+{{< fa brands r-project >}} is a case-sensitive language. This is true for symbolic variable names, function names, and everything else in {{< fa brands r-project >}}. For example if I create an object with lowercase x and want to print the output, referring to it in it's uppercase form will give an error:
+
+```{webr-r}
+x <- 1 + 1
+
+X
+```
+
+The same applies to functions. I cannot use the `print()` function in uppercase
+
+```{webr-r}
+PRINT(x)
+```
+
+In {{< fa brands r-project >}}, commands can be separated by moving onto a new line (i.e., hitting ennter) or by typing a semicolon `";"`, which can be handy in scripts for codensing code. If a command is not completed in one line (by design or error), the typical prompt `>` symbol in the Console is replaced with a +.
+
+There are several operators that are used in the {{< fa brands r-project >}} language. Below are tables for some of the most common.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(reactable)
+library(tibble)
+
+operators_tbl <- tribble(
+  ~Category, ~Operator, ~Description, ~Example,
+
+  # Arithmetic
+  "Arithmetic", "+", "Addition", "a + b",
+  "Arithmetic", "-", "Subtraction", "a - b",
+  "Arithmetic", "*", "Multiplication", "a * b",
+  "Arithmetic", "/", "Division", "a / b",
+  "Arithmetic", "^", "Power", "a ^ b",
+
+  # Relational
+  "Relational", "==", "Equal to (do not confuse with =)", "a == b",
+  "Relational", "!=", "Not equal to", "a != b",
+  "Relational", "<", "Less than", "a < b",
+  "Relational", ">", "Greater than", "a > b",
+  "Relational", "<=", "Less than or equal to", "a <= b",
+  "Relational", ">=", "Greater than or equal to", "a >= b",
+
+  # Logical
+  "Logical", "!", "Logical NOT", "!a",
+  "Logical", "&", "Logical AND", "a & b",
+  "Logical", "|", "Logical OR", "a | b",
+  
+  # Indexing
+  "Indexing", "$", "Extract a component from a data frame", "df$column",
+  "Indexing", "[]", "Subset a data frame, vector, array, or list", "x[1]",
+  "Indexing", "[[]]", "Extract a single element from a list", "lst[[1]]",
+
+  # Grouping / control
+  "Grouping", "{}", "Define code blocks (functions, loops, conditionals)", "{ ... }",
+
+  # Sequences
+  "Sequences", "a:b", "Generate a sequence from a to b", "1:10",
+
+  # Others
+  "Others", "#", "Commenting (ignored by R)", "# this is a comment",
+  "Others", ";", "Alternative way to separate commands", "x <- 1; y <- 2",
+  "Others", "~", "Model formula specification", "y ~ x1 + x2",
+  "Others", "()", "Function arguments / order of operations", "mean(x)"
+)
+
+reactable(
+  operators_tbl,
+  striped = TRUE,
+  highlight = TRUE,
+  
+  theme = reactableTheme(
+    borderColor = "var(--rt-border)",
+    stripedColor = "var(--rt-striped)",
+    highlightColor = "var(--rt-highlight)",
+    cellPadding = "8px 12px",
+    style = list(
+      fontFamily = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto",
+      background = "var(--rt-bg)",
+      color = "var(--rt-text)"
+    ),
+    headerStyle = list(
+      backgroundColor = "var(--rt-header-bg)",
+      fontWeight = "600",
+      borderBottom = "2px solid var(--rt-border)"
+    )
+  ),
+
+  searchable = TRUE,
+  filterable = TRUE,
+  width = "100%"
+)
+```
 
 
 ## Unlocking {{< iconify logos:r-lang >}}'s Hidden Power: Getting Started with {{< iconify logos:r-lang >}} Packages

@@ -1,27 +1,19 @@
-/* style.css */
-
-h1.title {
-    background-image: url(logos/Rlogo.png);
-    background-repeat: no-repeat;
-    background-position: 35% 35%;
-    background-size: auto 35px; /* Adjust the size as needed */
+/* Light mode (default) */
+:root {
+  --rt-bg: #ffffff;
+  --rt-text: #24292f;
+  --rt-border: #e1e4e8;
+  --rt-striped: #f6f8fa;
+  --rt-highlight: rgba(76, 201, 240, 0.25);
+  --rt-header-bg: #f3f4f6;
 }
 
-.styled-output .cell-output {
-  background-color: #edf5a7;
-  border-radius: 4px;
-  border: black 1px solid; 
-  padding: 10px;
-  font-family: monospace;
-}
-
-.cell-output {
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  padding: 10px;
-  font-family: monospace;
-}
-
-img.shadowed {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+/* Dark mode (Quarto uses .dark) */
+.dark {
+  --rt-bg: #0d1117;
+  --rt-text: #c9d1d9;
+  --rt-border: #30363d;
+  --rt-striped: #161b22;
+  --rt-highlight: rgba(56, 139, 253, 0.25);
+  --rt-header-bg: #161b22;
 }
