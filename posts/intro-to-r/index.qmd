@@ -1367,6 +1367,20 @@ x <- 1
 x
 ```
 
+One important caveat to keep in mind is that {{< fa brands r-project >}} silently overwrites any previous information stored in an object when you assign a new value to the same object name. For this reason, it's a good practice to avoid reusing object names unless you intentionally want to replace their contents.
+
+```{webr-r}
+y <- 27
+y
+
+y <- 541
+y
+```
+
+::: column-margin
+- Notice the value stored in object **`y`** changes because the second assignment replaces the first one.
+:::
+
 In RStudio, assigned objects appear in the **`Environment`** pane (top right).
 
 In VS Code and Positron, similar workspace panels show stored objects as below:
@@ -1420,7 +1434,6 @@ For example, if an object is assigned to lowercase **`x`**, attempting to access
 
 ```{webr-r}
 x <- 1 + 1
-
 X
 ```
 
@@ -1554,6 +1567,8 @@ reactable(
 )
 ```
 
+&nbsp;
+
 To bring everything together, commands in {{< fa brands r-project >}} operate on objects. An object is anything that can be assigned a name using the assignment operator **`<-`**. Objects can store values, data, or even behavior.
 
 Common object types include vectors, matrices, factors, lists, data frames, and functions. With the exception of functions, these are often referred to as data structures or data objects. Each object type behaves differently, and operators interact with them in specific ways.
@@ -1561,6 +1576,95 @@ Common object types include vectors, matrices, factors, lists, data frames, and 
 Understanding how objects are created, stored, and manipulated, and how operators act on them, is central to effective {{< fa brands r-project >}} programming. This foundation prepares you to work confidently with data types and data structures, which we explore next.
 
 ### {{< iconify logos:r-lang >}} Data types
+A **`"data type"`** describes the kind of values stored in an object, not the structure that holds them. For example, a vector, data frame or list can store different data types. In {{< fa brands r-project >}}, the most commonly encountered data types are **`numeric`**, **`character`**, **`logical`**, and **`complex`**. These basic types are sometimes referred to as **`modes`**.
+
+Numeric data represent numbers and are used in calculations.
+
+```{webr-r}
+# 1. Numerical data
+x <- 10.2
+x
+```
+
+By default, numbers in {{< fa brands r-project >}} are stored as numeric (double-precision) values. There is also an integer type, which we revisit later, but for most practical purposes numeric values behave the same in calculations.
+
+Character data are used to store text.
+
+```{webr-r}
+# 2. Character data
+name <- "John Doe"
+name
+```
+
+When you enter character data directly in {{< fa brands r-project >}}, you must enclose individual elements with either single or double quotes. If quotes are omitted, {{< fa brands r-project >}} assumes you are referring to an existing object.
+
+```{webr-r}
+name <- John
+name
+```
+
+::: column-margin
+- An **`error`** occurs because **`John`** is interpreted as an object name rather than text.  
+:::
+
+Single or double quotes are interchangeable but they must be used consistently. When character data are imported from files such as **`CSVs`**, quotes are typically handled automatically and do not need to be added manually. 
+
+Logical data represent truth values and can take only three possible values: **`TRUE`**, **`FALSE`**, and **`NA`**. The value **`NA`** indicates missing data, which is handled explicitly in {< fa brands r-project >}.
+
+```{webr-r}
+a <- TRUE
+a
+```
+
+::: column-margin
+- Note that logical values are not enclosed in quotes. Quoting them would convert them to **`character`** data.
+
+- The same is also true for numeric values.
+:::
+
+Although {{< fa brands r-project >}} recognizes **`T`** and **`F`** as short forms for **`TRUE`** and **`FALSE`** respectively, these are not reserved keywords and can therefore be reassigned by the user. For this reason, it is generally safer to use the full logical values.
+
+As already illustrated in the previous section, logical values often arise as the result of comparisons and relational expressions.
+
+```{webr-r}
+4 < 2
+```
+
+Complex numbers consist of a real and an imaginary part and are written using **`i`** to denote the imaginary unit.
+
+
+```{webr-r}
+cnum <- 10 + (0 + 3i)
+
+cnum
+```
+
+Complex data are less common in everyday data analysis, but they are supported natively by {{< fa brands r-project >}}
+
+You can examine the type of data stored in an object using the **`class()`** or **`mode()`** functions.
+
+
+```{webr-r}
+class(name)
+```
+
+```{webr-r}
+class(a)
+```
+
+```{webr-r}
+class(x)
+```
+
+```{webr-r}
+mode(x)
+```
+
+```{webr-r}
+mode(cnum)
+```
+
+The **`class()`** function is generally preferred in modern {{< fa brands r-project >}} programming because it reflects how objects behave in practice, especially for more complex data structures. The **`mode()`** function reports the underlying storage type and is mostly useful for low-level inspection.
 
 ### {{< iconify logos:r-lang >}} Data structures
 
