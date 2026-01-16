@@ -1233,7 +1233,7 @@ Visual Studio Code (VS Code) is a powerful and flexible code editor that support
 
 Setting up Visual Studio Code (VS Code) for R isn’t as straightforward as installing RStudio. This is mainly because VS Code is designed to support a vast range of programming languages, while RStudio is specifically tailored for R. Including built-in support for all of VS Code’s potential languages would make it overly complex and resource-heavy. Instead, VS Code takes a modular approach, allowing users to customize their setup by installing specific extensions that cater to their unique programming needs. This flexibility is powerful, but it does mean that configuring VS Code for R requires a few additional steps compared to the streamlined experience of RStudio.
 
-To run R in VSCode, as with RStudio, you first need to have R (version 3.4.0 or later) installed on your machine. I recommend installing R using a precompiled binary for simplicity, though building from source is also an option, as discussed previously. Since we've already discussed the steps for installing R on windows and MacOS we skip all of this and proceed to show how to install VScode and configuring it to run R.
+To run R in VS Code, as with RStudio, you first need to have R (version 3.4.0 or later) installed on your machine. I recommend installing R using a precompiled binary for simplicity, though building from source is also an option, as discussed previously. Since we've already discussed the steps for installing R on windows and MacOS we skip all of this and proceed to show how to install VS Code and configuring it to run R.
 
 ##### Setting Up R Packages for VS Code Integration
 
@@ -1276,7 +1276,7 @@ In the next sections, we’ll explore the essential steps for setting up VS Code
 
 After a likely tedious installation of {{< fa brands r-project >}} and an IDE such as RStudio, VS Code or Positron, as well as a detailed familiarization with their interfaces, We are now ready to do a little more coding and explore the fundamentals of {{< fa brands r-project >}} programming. 
 
-In this section, we introduce the core building blocks of {{< fa brands r-project >}} programming. These fundamentals form the foundation for everything you will do in {{< fa brands r-prject >}}, from simple calculations to more advanced analyses. Developing a strong understanding of these basics early on will make your {{fa brands r-project}} learning experience smoother and more intuitive as you progress to topics such as data manipulation, visualization, and statistical modeling.
+In this section, we introduce the core building blocks of {{< fa brands r-project >}} programming. These fundamentals form the foundation for everything you will do in {{< fa brands r-prject >}}, from simple calculations to more advanced analyses. Developing a strong understanding of these basics early on will make your {{< fa brands r-project >}} learning experience smoother and more intuitive as you progress to topics such as data manipulation, visualization, and statistical modeling.
 
 ### Commands, Expressions, Assignments, Operators, and Objects
 
@@ -1413,12 +1413,24 @@ x
 -   **`remove()`** can also be used to remove a stored object from the workspace.
 :::
 
-To clear all the objects from the workspace, which is usually advised when starting a new anlaysis worflow, you can use:
+To remove all existing objects from the workspace, which is often recommended when starting a new analysis workflow, you can use the following command:
 
 ```{r}
 #| eval: false
-remove(list = ls())
+rm(list = ls())
+
+ls()
 ```
+
+::: column-margin
+
+- **`ls()`** lists all objects currently in the workspace.
+- **`rm()`** removes objects.
+- **`rm(list = ls())`** removes everything that **`ls()`** finds.
+- Running **`ls()`** afterward confirms that the workspace is empty.
+:::
+
+This helps ensure that your analysis starts from a clean environment and is not influenced by leftover objects from previous work.
 
 If you want to assign the same value to multiple objects in a single statement:
 
@@ -1667,7 +1679,235 @@ mode(cnum)
 The **`class()`** function is generally preferred in modern {{< fa brands r-project >}} programming because it reflects how objects behave in practice, especially for more complex data structures. The **`mode()`** function reports the underlying storage type and is mostly useful for low-level inspection.
 
 ### {{< iconify logos:r-lang >}} Data structures
+In {{< fa brands r-project >}}, data are stored in data structures, sometimes also called data objects. These are the containers that hold your data and that you perform operations on, such as calculations, plotting and statistical analysis. Every object you create in {{< fa brands r-project >}} exists in one of these structures.
+
+The most common data structures in {{< fa brands r-project >}} are **`vectors`**, **`matrices`**, **`arrays`**, **`data frames`**, **`lists`**, and **`factors`**. Each has a specific purpose and is suited to different kinds of tasks. In later sections, you will learn how to work with them in more depth. For now, the goal is to understand what they look like and how they differ.
+
+Vectors are perhaps the most fundamental data structure in {{< fa brands r-project >}}. A vector is an ordered collection of elements, such as numbers, characters, or logical values.
+
+```{webr-r}
+x <- 1:12
+x
+```
+
+::: column-margin
+- **`1:12`** creates a sequence of integers from 1 to 12.
+
+- All elements in a vector must be of the same data type.
+:::
+
+Vectors are the building blocks for many other data structures.
+
+Matrices are similar to vectors, but they have two dimensions, rows and columns. Like vectors, matrices can only store one type of data at a time.
+
+```{webr-r}
+y <- matrix(1:12, nrow = 3)
+y
+```
+
+::: column-margin
+- The **`matrix()`** function reshapes a vector into rows and columns.
+
+- **`nrow = 3`** tells {{< fa brands r-project >}} how many rows the matrix should have.
+
+- Values are filled column by column by default.
+:::
+
+Arrays extend the idea of matrices by allowing more than two dimensions. They are useful when working with multidimensional data.
+
+```{webr-r}
+z <- array(1:30, dim = c(2, 5, 3))
+z
+```
+
+::: column-margin
+- **`dim = c(2, 5, 3)`** defines rows, columns, and layers.
+
+- Arrays still store only one data type.
+:::
+
+Arrays are less common for beginners but appear in advanced applications.
+
+Vectors, matrices, and arrays share the same rule: they can only store one data type at a time. This means that all elements must be numeric, character, or logical. This property is often referred to as having a single mode.
+
+Data frames are one of the most commonly used data structures in {{< fa brands r-project >}}. Like matrices, they are two-dimensional, but unlike matrices, each column can store a different data type.
+
+Data frames resemble tables used in spreadsheets or other statistical software. Each column typically represents a variable, and each row usually represents an “observation”, or “record”, or “experimental unit”.
+
+```{webr-r}
+students <- data.frame(
+student_id = c("S001", "S002", "S003"),
+name       = c("Alice", "Brian", "Chipo"),
+age        = c(21, 23, 20),
+score      = c(78.5, 65.0, 88.2),
+passed     = c(TRUE, FALSE, TRUE)
+)
+
+students
+```
+
+::: column-margin
+- Each column is a **`vector`** of the same length.
+
+- Different columns can have different data types.
+
+- **`Data frames`** are central to data analysis in {{< fa brands r-project >}}.
+::: 
+
+Lists are flexible data structures that can store different types of objects, including other data structures. Unlike vectors, list elements do not need to be the same type or size.
+
+Lists often appear as the output of functions, especially more complex ones.
+
+```{webr-r}
+w <- list(3.4, x, y, students)
+w
+```
+
+::: column-margin
+- A **`list`** can contain numbers, vectors, matrices, and data frames.
+
+- Elements inside a **`list`** can have different structures.
+:::
+
+**`Lists`** are essential for handling complex results.
+
+A data structure does not need to contain data in order to exist. You can create an empty object using **`NULL`**. This can be useful when you want to prepare a container that will be filled later.
+
+```{webr-r}
+x <- NULL
+x
+```
+
+::: column-margin
+- **`NULL`** represents the absence of data.
+
+- Empty objects are often used in programming and iterative workflows.
+:::
+
+Understanding data structures is essential for effective {{< fa brands r-project >}} programming. The way data are stored determines how they behave when you manipulate them, how functions interact with them, and how results are returned. As you progress, you will see that most errors and unexpected behavior in R can be traced back to misunderstandings about data structures.
 
 ## Unlocking {{< iconify logos:r-lang >}}'s Hidden Power: Getting Started with {{< iconify logos:r-lang >}} Packages
 
 {{< fa brands r-project >}} packages
+
+```{=html}
+<style>
+/* ===============================
+   webR console (stable version)
+   =============================== */
+
+.webr-console {
+  height: 420px;
+  overflow-y: auto;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  font-family: monospace;
+  font-size: 0.9rem;
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 6px;
+}
+
+.webr-output {
+  white-space: pre-wrap;
+}
+
+/* Input row */
+.webr-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Input field */
+.webr-input {
+  flex: 1;
+  padding: 0.35rem 0.5rem;
+
+  font-family: monospace;
+  font-size: 0.9rem;
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 4px;
+}
+
+/* Button */
+.webr-button {
+  padding: 0.35rem 0.75rem;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  background-color: var(--bs-secondary-bg);
+  color: #000;                 /* 👈 ADD THIS LINE */
+  border: 1px solid var(--bs-border-color);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.webr-button:hover {
+  background-color: var(--bs-tertiary-bg);
+}
+</style>
+
+<div class="webr-console" id="console">
+  <div class="webr-output" id="out">Loading webR, please wait…</div>
+</div>
+
+<div class="webr-controls">
+  <input
+    id="input"
+    class="webr-input"
+    spellcheck="false"
+    autocomplete="off"
+    placeholder="Type R code here"
+  />
+  <button class="webr-button" id="run">Run</button>
+</div>
+
+<script type="module">
+  import { Console } from "https://webr.r-wasm.org/latest/webr.mjs";
+
+  const out = document.getElementById("out");
+  const input = document.getElementById("input");
+  const runBtn = document.getElementById("run");
+  const consoleDiv = document.getElementById("console");
+
+  const webRConsole = new Console({
+    stdout: line => {
+      out.textContent += line + "\n";
+      consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    },
+    stderr: line => {
+      out.textContent += line + "\n";
+      consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    },
+    prompt: p => {
+      out.textContent += p;
+      consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    }
+  });
+
+  await webRConsole.run();
+
+  const sendInput = () => {
+    if (!input.value.trim()) return;
+    out.textContent += input.value + "\n";
+    webRConsole.stdin(input.value);
+    input.value = "";
+    consoleDiv.scrollTop = consoleDiv.scrollHeight;
+  };
+
+  runBtn.addEventListener("click", sendInput);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") sendInput();
+  });
+</script>
+```
+
