@@ -138,7 +138,7 @@ The 30 Day Chart Challenge is a global challenge held every April and invites da
 ![Nyika National Park—Malawi](images/shaded relief/nyika_titled_okeeffe1_whatsapp.png){group="plot"}
 :::
 
-::: {.g-col-12 .g-col-md-4}
+::: {.g-col-12 .g-col-md-6}
 ![Kasungu National Park—Malawi](images/shaded relief/kasungu_titled_acadia_whatsapp.png){group="plot"}
 :::
 :::::::::
