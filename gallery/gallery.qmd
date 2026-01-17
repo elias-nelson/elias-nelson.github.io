@@ -15,7 +15,7 @@ format:
 
 ## {{< fa universal-access >}} Interactive charts {{< fa arrow-pointer >}}
 
-{{< lif ./assets/animations/wired.json style=width:50px;height:50px;border:0; trigger=loop delay=3000 >}}
+{{< li utdckhgo style=width:50px;height:50px;border:0; trigger=loop delay=3000 >}}
 
 ```{=html}
 <div class ="button_wrapper_gallery">
@@ -125,7 +125,7 @@ The 30 Day Chart Challenge is a global challenge held every April and invites da
 
 ⛏️⛏️⛏️
 
-## Greece in Figures
+## Shaded Relief Maps
 
 ```{=html}
 <div class ="button_wrapper_gallery">
@@ -134,28 +134,12 @@ The 30 Day Chart Challenge is a global challenge held every April and invites da
 ```
 
 ::::::::: {.grid .pt-3}
-::: {.g-col-12 .g-col-md-4}
-![Pharmacies in Greece](https://cdn.stesiam.com/GIF-0.png){group="plot"}
+::: {.g-col-12 .g-col-md-6}
+![Nyika National Park—Malawi](images/shaded relief/nyika_titled_okeeffe1_whatsapp.png){group="plot"}
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-![GDP per capita](https://cdn.stesiam.com/GIF-1.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![Dentists per Region](https://cdn.stesiam.com/GIF-2.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![Heating Oil Consumption](https://cdn.stesiam.com/GIF-5.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![Electricity consumption, 2012](https://cdn.stesiam.com/GIF-6.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![Household Size, 2021](https://cdn.stesiam.com/GIF-9.png){group="plot"}
+![Kasungu National Park—Malawi](images/shaded relief/kasungu_titled_acadia_whatsapp.png){group="plot"}
 :::
 :::::::::
 
