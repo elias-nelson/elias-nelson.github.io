@@ -1,0 +1,33 @@
+---
+title: "<i class='bi bi-cpu'></i> Software & Data"
+description: "The place to put my R packages and my data scraping projects."
+link-external-newwindow: true
+page-layout: full
+comments: false
+title-block-banner: true
+css: ../assets/styles/custom-style.css
+listing:
+  - id: rpackages
+    type: custom
+    template: _listing_r.ejs
+    contents: "r-packages/**/index.qmd"
+toc: true
+format: 
+  html:
+    page-layout: full
+    anchor-sections: false
+---
+
+## R packages
+
+I am developing specialized software for users who work exclusively with the R programming language. I still have a lot to learn, so at first I expect to publish data packages I also have some good ideas for more complex packages, but I plan to work on those in 2026... 😀
+
+::: {#rpackages}
+:::
+
+## Scraping Projects
+
+Data analysis requires data. However, it is rare that everything we want is freely available and organized. So we have to extract the necessary information from various sources. These are some projects where I extract data from various websites in order to analyze it in some of my articles. If you are interested in any of the data sets below, you can download them and perform your own analysis without needing to use R. You can also read the corresponding article for more technical details.
+
+::: {#datasets}
+:::

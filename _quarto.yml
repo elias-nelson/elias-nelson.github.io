@@ -60,6 +60,8 @@ website:
         href: posts/blog.qmd
       - text: "Gallery"
         href: gallery/gallery.qmd
+      - text: "Software"
+        href: software/software.qmd
       - icon: github
         href: https://github.com/elias-nelson/
       - icon: twitter-x
