@@ -48,6 +48,7 @@ format:
     toc: true
     toc-title: "On this page"
     toc-location: left
+    toc-depth: 4
     number-sections: true
 
     code-copy: hover
@@ -375,6 +376,135 @@ So far, you’ve been using {{< fa brands r-project >}} in what computer scienti
 
 In some languages, like C, Java, or FORTRAN, you need to *compile* your human-readable code into machine-readable code (typically in the form of 1s and 0s) before it can be executed. If you've worked with those languages before, you might wonder whether you need to compile your {{< fa brands r-project >}} code too. The answer is no—R is a dynamic programming language, meaning it automatically *interprets* your code on the fly as you run it, without the need for a separate compilation step.
 :::
+
+Below I have included an interactive webR REPL console for more engagement right here on this page especially for those who may only want to test the water's of {{< fa brands r-project >}}. Feel free to execute the examples we've doe above.
+
+```{=html}
+<style>
+/* ===============================
+   webR console (stable version)
+   =============================== */
+
+.webr-console {
+  height: 420px;
+  overflow-y: auto;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  font-family: monospace;
+  font-size: 0.9rem;
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 6px;
+}
+
+.webr-output {
+  white-space: pre-wrap;
+}
+
+/* Input row */
+.webr-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Input field */
+.webr-input {
+  flex: 1;
+  padding: 0.35rem 0.5rem;
+
+  font-family: monospace;
+  font-size: 0.9rem;
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 4px;
+}
+
+/* Button */
+.webr-button {
+  padding: 0.35rem 0.75rem;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  background-color: var(--bs-secondary-bg);
+  color: #000;                 /* 👈 ADD THIS LINE */
+  border: 1px solid var(--bs-border-color);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.webr-button:hover {
+  background-color: var(--bs-tertiary-bg);
+}
+</style>
+
+<div class="webr-console" id="console">
+  <div class="webr-output" id="out">Loading webR, please wait…</div>
+</div>
+
+<div class="webr-controls">
+  <input
+    id="input"
+    class="webr-input"
+    spellcheck="false"
+    autocomplete="off"
+    placeholder="Type R code here"
+  />
+  <button class="webr-button" id="run">Run</button>
+</div>
+
+<script type="module">
+  import { Console } from "https://webr.r-wasm.org/latest/webr.mjs";
+
+  const out = document.getElementById("out");
+  const input = document.getElementById("input");
+  const runBtn = document.getElementById("run");
+  const consoleDiv = document.getElementById("console");
+
+  const webRConsole = new Console({
+    stdout: line => {
+      out.textContent += line + "\n";
+      consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    },
+    stderr: line => {
+      out.textContent += line + "\n";
+      consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    },
+    prompt: p => {
+      out.textContent += p;
+      consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    }
+  });
+
+  await webRConsole.run();
+
+  const sendInput = () => {
+    if (!input.value.trim()) return;
+    out.textContent += input.value + "\n";
+    webRConsole.stdin(input.value);
+    input.value = "";
+    consoleDiv.scrollTop = consoleDiv.scrollHeight;
+  };
+
+  runBtn.addEventListener("click", sendInput);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") sendInput();
+  });
+</script>
+```
+
+::: column-margin
+- Input code in the input box and click Run to send the command to the interactive console. 
+:::
+
+&nbsp;
 
 *The "R Editor" Window:*
 
@@ -1223,44 +1353,105 @@ Now, I know this sounds a bit tedious, but don’t worry—it’s simpler than i
 
 By staying on top of updates, you’ll ensure that your coding environment remains compatible, efficient, and equipped with the latest features, sparing you the hassle of unexpected errors or incompatibility down the line.
 
-#### VS Code: IDE and Code Editor for Software Developers and Programming
+#### {{< iconify logos:visual-studio-code >}} Visual Studio Code: A General-Purpose IDE and Code Editor for Software Developers and Programming
 
-RStudio is often the preferred IDE for running R code, given its robust features and intuitive workflow. However, Visual Studio Code (VS Code) has rapidly gained traction as a versatile code editor across a multitude of languages. Speaking from personal experience—and perhaps echoing the sentiment of others in the R and broader programming communities—using R in VS Code often starts as an experiment to find an all-in-one code editor. The idea of managing all programming tasks within a single environment is appealing, and VS Code offers just that.
+RStudio is often the first choice for running {{< fa brands r-project >}} code, largely because it was designed specifically for the {{< fa brands r-project >}} ecosystem and provides a very smooth out-of-the-box experience. However, Visual Studio Code, commonly referred to as VS Code has quickly gained traction as a versatile code editor among software developers working across many programming languages. 
 
-Having used VS Code extensively for Python, HTML, CSS, Jupyter notebooks, and more, I found it natural to explore its potential for running R code. The convenience of consolidating various languages into one editor was persuasive, and it became clear why others might also seek this seamless experience.
+Speaking from personal experience—and perhaps echoing the sentiment of others in the {{< fa brands r-project >}} and broader programming communities—using {{< fa brands r-project >}} in VS Code often starts as an experiment to find an all-in-one code editor. The motivation is simple: the desire to work within a single editor for all programming tasks. If you already use VS Code for Python, HTML, CSS, JavaScript, or other languages, it feels natural to ask whether {{< fa brands r-project >}} can also fit into that same workflow.
 
-Visual Studio Code (VS Code) is a powerful and flexible code editor that supports the R programming language through the R extension. This extension provides features such as syntax highlighting, code completion, linting, and more.
+VS Code is particularly well suited for projects that involve multiple technologies. For example, data analysis in R combined with Python scripts, documentation written in Markdown, and web components written in HTML or JavaScript can all live comfortably in one place. This reduces the constant switching between tools and helps maintain focus when working on complex projects.
 
-Setting up Visual Studio Code (VS Code) for R isn’t as straightforward as installing RStudio. This is mainly because VS Code is designed to support a vast range of programming languages, while RStudio is specifically tailored for R. Including built-in support for all of VS Code’s potential languages would make it overly complex and resource-heavy. Instead, VS Code takes a modular approach, allowing users to customize their setup by installing specific extensions that cater to their unique programming needs. This flexibility is powerful, but it does mean that configuring VS Code for R requires a few additional steps compared to the streamlined experience of RStudio.
+That said, VS Code is not an {{< fa brands r-project >}}-specific IDE. It is a general-purpose source code editor with a very large extension ecosystem. This flexibility is one of its greatest strengths, but it also means that a smooth {{< fa brands r-project >}} experience requires some initial setup.
 
-To run R in VS Code, as with RStudio, you first need to have R (version 3.4.0 or later) installed on your machine. I recommend installing R using a precompiled binary for simplicity, though building from source is also an option, as discussed previously. Since we've already discussed the steps for installing R on windows and MacOS we skip all of this and proceed to show how to install VS Code and configuring it to run R.
+Visual Studio Code supports the {{< fa brands r-project >}} programming language through extensions. The most important of these is the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for Visual Studio Code, which connects VS Code to your existing {{< fa brands r-project >}} installation.
 
-##### Setting Up R Packages for VS Code Integration
+Once properly configured, VS Code can provide many features {{< fa brands r-project >}} users expect, including:
 
-After installing R, you’ll need to install certain R packages from CRAN to enable seamless integration with VS Code.
+- Syntax highlighting for {{< fa brands r-project >}} scripts
 
-::: callout-important
-## {{< iconify logos:r-lang >}} Packages
+- Code completion and function suggestions
 
-Before we dive into the details, let me give you a brief overview of R packages. Think of this as a quick primer to get you familiar with them. In essence, packages in R are collections of R functions, compiled code, and sample data organized in a standard structure. They are fundamental units of reproducible R code and greatly enhance the capabilities of your R environment. A package is essentially a toolkit, containing functions, data, and documentation that extend the base R installation, which itself includes many essential packages that you’ll use frequently. As your projects become more diverse, you’ll inevitably reach a point where you need additional packages to perform specialized tasks.
+- Inline diagnostics and error messages
+
+- Code linting and formatting
+
+- Interaction with an {{< fa brands r-project >}} terminal
+
+- Viewing data frames, plots, workspace variables, help pages and more
+
+While these features may feel familiar to RStudio users, it is important to note that in VS Code they are powered by a combination of extensions and {{< fa brands r-project >}} packages working together.
+
+::: column-margin
+**Key idea:**
+
+- RStudio ships with {{< fa brands r-project >}}-specific tools built in.
+
+- VS Code adds {{< fa brands r-project >}} features through extensions and packages.
 :::
 
-To install packages from CRAN, you use the `install.packages()` function. For integrating R with VS Code, you will need to install the following packages:
+Setting up VS Code for {{< fa brands r-project >}} isn’t as straightforward as installing RStudio. This is not a limitation, but rather a design choice. VS Code is designed to support dozens of programming languages. If it shipped with full support for all of them by default, it would be overly complex and resource-heavy. Instead, VS Code uses a modular approach where users install only the extensions they need.
+
+RStudio, on the other hand, is iconically tailored for {{< fa brands r-project >}}. Its tight integration means that many features work immediately after installation without any additional configuration.
+
+The flexibility of VS Code is powerful, especially for developers working across multiple languages, but it does mean that configuring VS Code for {{< fa brands r-project >}} requires a few extra steps.
+
+To run {{< fa brands r-project >}} in VS Code, as with RStudio, you must already have installed {{< fa brands r-project >}} on your machine. 
+
+- {{< fa brands r-project >}} version **`3.4.0`** or later is required
+
+- Installing {{< fa brands r-project >}} using a precompiled binary is recommended for most users
+
+- Building {{< fa brands r-project >}} from source is possible but not necessary for beginners
+
+Since we have already covered how to install {{< fa brands r-project >}} on Windows and macOS earlier in this guide, we will skip those steps here and focus instead on configuring VS Code to work with {{< fa brands r-project >}}.
+
+##### Setting Up {{< iconify logos:r-lang >}} Packages for VS Code Integration
+
+After installing {{< fa brands r-project >}}, you will need to install a few additional {{< fa brands r-project >}} packages from CRAN. These packages allow R to communicate effectively with VS Code and unlock many of the editor’s features.
+
+::: callout-important
+## What Are {{< iconify logos:r-lang >}} Packages
+
+If this is your first encounter with {{< fa brands r-project >}} packages, do not worry. We will explore them in much more detail later in this guide. For now, a simple analogy helps.
+
+Think of {{< fa brands r-project >}} as a new smartphone. When you first buy it, it comes with basic apps and settings that allow it to function. Over time, you may want to extend its capabilities by installing additional apps from the Google Play Store or Apple App Store.
+
+{{< fa brands r-project >}} packages work in much the same way. Base {{< fa brands r-project >}} comes with many built-in functions and packages that handle common tasks. However, as your work becomes more specialized, you will need additional tools. {{< fa brands r-project >}} packages provide these tools in the form of reusable functions, datasets, and documentation.
+
+Each package is a small, self-contained toolkit. The more packages you install, the broader the range of tasks you can perform. Packages are also a cornerstone of reproducible research, since they allow others to run the same code using the same tools.
+:::
+
+To install packages from CRAN, you use the **`install.packages()`** function. For integrating {{< fa brands r-project >}} with VS Code, the following packages are particularly important.
+
+Open your {{< fa brands r-project >}} console and run:
 
 ```{r}
 #| eval: false
-# For R syntax highlighting and code completion
-install.packages("languageserver")
+# 1. Language Server support
+install.packages("languageserver") # <1>
 
-# For enhanced plot outputs in VS Code
-install.packages("httpgd")
+# 2. Graphics device for VS Code
+install.packages("httpgd") # <2>
+  
+# 3. Code linting
+install.packages("lintr") # <3>
 ```
+1. **`languageserver`**
+Implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
 
-These packages are crucial for creating a smooth development experience when working with R in VS Code. The `languageserver` package provides language features like code completion and diagnostics, while `httpgd` enables better handling of plot outputs, making your workflow more efficient and visually appealing.
+2. **`httpgd`**
+Implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
 
-In the next sections, we’ll explore the essential steps for setting up VS Code for R development, including installing extensions and configuring your environment for optimal use.
+3. **`lintr`**
+Analyzes your R code and highlights potential issues related to style, syntax, or best practices.
 
-##### Installing and integrating VSCode with {{< iconify logos:r-lang >}}
+Together, these packages form the backbone of a productive and smooth {{< fa brands r-project >}} workflow in VS Code.
+
+In the next sections, we will walk through installing the necessary VS Code extensions and configuring the editor so that it is ready for everyday {{< fa brands r-project >}} development.
+
+
+
+##### Installing and integrating {{< iconify logos:visual-studio-code >}} VS Code with {{< iconify logos:r-lang >}}
 
 -   Step one, obviously, is downloading Visual Studio Code, which you can find on the [Visual Studio Code website](https://visualstudio.microsoft.com/downloads/).
 
@@ -1790,124 +1981,4 @@ Understanding data structures is essential for effective {{< fa brands r-project
 
 {{< fa brands r-project >}} packages
 
-```{=html}
-<style>
-/* ===============================
-   webR console (stable version)
-   =============================== */
-
-.webr-console {
-  height: 420px;
-  overflow-y: auto;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-
-  font-family: monospace;
-  font-size: 0.9rem;
-
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-  border: 1px solid var(--bs-border-color);
-  border-radius: 6px;
-}
-
-.webr-output {
-  white-space: pre-wrap;
-}
-
-/* Input row */
-.webr-controls {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-/* Input field */
-.webr-input {
-  flex: 1;
-  padding: 0.35rem 0.5rem;
-
-  font-family: monospace;
-  font-size: 0.9rem;
-
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-  border: 1px solid var(--bs-border-color);
-  border-radius: 4px;
-}
-
-/* Button */
-.webr-button {
-  padding: 0.35rem 0.75rem;
-
-  font-family: inherit;
-  font-size: 0.9rem;
-
-  background-color: var(--bs-secondary-bg);
-  color: #000;                 /* 👈 ADD THIS LINE */
-  border: 1px solid var(--bs-border-color);
-  border-radius: 4px;
-
-  cursor: pointer;
-}
-
-.webr-button:hover {
-  background-color: var(--bs-tertiary-bg);
-}
-</style>
-
-<div class="webr-console" id="console">
-  <div class="webr-output" id="out">Loading webR, please wait…</div>
-</div>
-
-<div class="webr-controls">
-  <input
-    id="input"
-    class="webr-input"
-    spellcheck="false"
-    autocomplete="off"
-    placeholder="Type R code here"
-  />
-  <button class="webr-button" id="run">Run</button>
-</div>
-
-<script type="module">
-  import { Console } from "https://webr.r-wasm.org/latest/webr.mjs";
-
-  const out = document.getElementById("out");
-  const input = document.getElementById("input");
-  const runBtn = document.getElementById("run");
-  const consoleDiv = document.getElementById("console");
-
-  const webRConsole = new Console({
-    stdout: line => {
-      out.textContent += line + "\n";
-      consoleDiv.scrollTop = consoleDiv.scrollHeight;
-    },
-    stderr: line => {
-      out.textContent += line + "\n";
-      consoleDiv.scrollTop = consoleDiv.scrollHeight;
-    },
-    prompt: p => {
-      out.textContent += p;
-      consoleDiv.scrollTop = consoleDiv.scrollHeight;
-    }
-  });
-
-  await webRConsole.run();
-
-  const sendInput = () => {
-    if (!input.value.trim()) return;
-    out.textContent += input.value + "\n";
-    webRConsole.stdin(input.value);
-    input.value = "";
-    consoleDiv.scrollTop = consoleDiv.scrollHeight;
-  };
-
-  runBtn.addEventListener("click", sendInput);
-  input.addEventListener("keydown", e => {
-    if (e.key === "Enter") sendInput();
-  });
-</script>
-```
 
