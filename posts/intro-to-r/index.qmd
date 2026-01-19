@@ -1422,6 +1422,7 @@ Think of {{< fa brands r-project >}} as a new smartphone. When you first buy it,
 Each package is a small, self-contained toolkit. The more packages you install, the broader the range of tasks you can perform. Packages are also a cornerstone of reproducible research, since they allow others to run the same code using the same tools.
 :::
 
+
 To install packages from CRAN, you use the **`install.packages()`** function. For integrating {{< fa brands r-project >}} with VS Code, the following packages are particularly important.
 
 Open your {{< fa brands r-project >}} console and run:
@@ -1437,28 +1438,117 @@ install.packages("httpgd") # <2>
 # 3. Code linting
 install.packages("lintr") # <3>
 ```
-1. **`languageserver`**
-Implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
+1. **`languageserver`** implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
 
-2. **`httpgd`**
-Implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
+2. **`httpgd`** implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
 
-3. **`lintr`**
-Analyzes your R code and highlights potential issues related to style, syntax, or best practices.
+3. **`lintr`** analyzes your R code and highlights potential issues related to style, syntax, or best practices.
 
 Together, these packages form the backbone of a productive and smooth {{< fa brands r-project >}} workflow in VS Code.
 
+When you run **`install.packages()`** fr the first time, {{< fa brands r-project >}} may ask you to choose a **`CRAN`** mirror. **`CRAN`** (Comprehensive R Archive Network) is a global network of servers that store {{< fa brands r-project >}} packages.
+
+::: column-margin
+- A **`CRAN`** mirror is simply a copy of this hosed in different countries.
+:::
+
+You can safely select any mirror. You can select a mirror closest to your location otherwise the default **`0-Cloud / CDN (global)`** – https://cloud.r-project.org/ – this isn’t a single location but a content delivery network (CDN) that automatically serves packages from a server near you, often the best all-around choice even if a local mirror isn’t listed. It will serve packages from a nearby server without needing to manually pick a mirror. All mirrors host the same package content; choosing the closest one might slightly improve download speed, but it doesn’t change what you get.
+
+Most times packages also come with dependencies, which are other packages that help in the functionality of the package hence the name dependency. During the installation process you may be asked, “Do you want to install from sources the packages which need compilation?”
+
+*What does this mean?*
+When you install an {{< fa brands r-project >}} package, it can come in two forms:
+
+1. Binary packages (pre-compiled)
+- Already built for your operating system (Windows or macOS)
+- install quickly
+- Do not require extra tools
+- Best option for beginners
+
+2. Source packages
+- Contain the original code
+- Must be compiled on your computer
+- Require additional software (compilers)
+-- Windows: **`Rtools`**
+-- macOS: **`Xcode`** Command Line Tools
+-- Linux: system build tools
+
+::: column-margin
+- Don't let the compiler tools frighten you, we cover them later on in the guide.
+:::
+
+So in this case {{< fa brands r-project >}} is asking whether you want to:
+
+- Install from source (compile the package yourself), or
+
+- Use a binary version (if available)
+
+Unless otherwise the recommended answer especially for beginners is **`NO`**, and here is why:
+
+- Binary packages are easier and safer for beginners
+
+- No extra software is required
+
+- Generally fewer errors during installation
+
+{{< fa brands r-project >}} will then install available binary packages, and skip those that require compilation.
+
+*When would `"Yes"` make sense?*
+You should only choose Yes if:
+
+- You know what compilation is
+
+- You have the required tools installed (e.g., Rtools)
+
+- You are following advanced documentation that explicitly tells you to install from source.
+
+For most beginners, this is not necessary.
+
+::: column-margin
+**Beginner-friendly rule of thumb 🧠**
+
+- If {{< fa brands r-project >}} asks about installing from source and you’re not sure — always choose NO.
+:::
+
+Once you click NO, {{< fa brands r-project >}} will start installing the packages until you see "The downloaded binary packages are in..."
+
+On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled binary packages automatically, so unless tools like **`Rtools`** or **`Xcode`** are installed, this prompt may not appear at all.
+
+Go ahead and install the remaining two packages; **`"httgpd"`** and **`"lintr"`** using the same process. Apparently also comes as a dependency of **`"languageserver"`** so you may just skip it. But to be sure you may also just intall it separately
+
 In the next sections, we will walk through installing the necessary VS Code extensions and configuring the editor so that it is ready for everyday {{< fa brands r-project >}} development.
-
-
 
 ##### Installing and integrating {{< iconify logos:visual-studio-code >}} VS Code with {{< iconify logos:r-lang >}}
 
--   Step one, obviously, is downloading Visual Studio Code, which you can find on the [Visual Studio Code website](https://visualstudio.microsoft.com/downloads/).
+-   Step one, obviously, is downloading Visual Studio Code, which you can find on the [Visual Studio Code website](https://code.visualstudio.com/Download).
+
+- Download the suitable installer for your machine (Windows, Mac or Linux).
 
 -   VS Code is free and available for Windows, Mac, and Linux. Install it like any other software package.
 
--   
+- For Windows double-clicking the **`.exe`** file should prompt the installation process.
+
+- Accept the agreement as below and click next
+
+- Maintain the default installation location, unless you have a good reason not to and click next
+
+- Maintain the **`Start Menu Folder`** defaults as well and click next.
+
+- Select additional tasks. If you would like a Desktop icon, you can check the box. I also check the other two check boxes so that my files compatible with VS Code can easily be opened with open with in the Windows Explorer file context menu. Click next.
+
+- Finally click install
+
+- After the installation is complete. click finish. VS Code should launch and you will be greeted with the interface below. There is a default welcome file open which you can go through and you're given the option to customize the theme. For now we leave it as is. You can close the file from the top.
+
+Next we have to install the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for VS Code. The steps below guide on how to do this.
+
+1. First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`**.  
+
+2. 
+
+
+
+
 
 #### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
