@@ -1,5 +1,6 @@
 ---
-title: "An Introduction to <img src='https://www.r-project.org/logo/Rlogo.svg' alt='R' style='height:1em; vertical-align:-0.1em;'>"
+title: "An Introduction to R"
+
 subtitle: "A Beginners Guide to R Programming Language for Data Analysis and Graphics"
 
 author: 
@@ -1467,7 +1468,9 @@ In the next sections, we will walk through installing the necessary VS Code exte
 
 After a likely tedious installation of {{< fa brands r-project >}} and an IDE such as RStudio, VS Code or Positron, as well as a detailed familiarization with their interfaces, We are now ready to do a little more coding and explore the fundamentals of {{< fa brands r-project >}} programming. 
 
-In this section, we introduce the core building blocks of {{< fa brands r-project >}} programming. These fundamentals form the foundation for everything you will do in {{< fa brands r-prject >}}, from simple calculations to more advanced analyses. Developing a strong understanding of these basics early on will make your {{< fa brands r-project >}} learning experience smoother and more intuitive as you progress to topics such as data manipulation, visualization, and statistical modeling.
+In this section, we introduce the core building blocks of {{< fa brands r-project >}} programming. These fundamentals form the foundation for everything you will do in {{< fa brands r-prject >}}, from simple calculations to more advanced analyses. Developing a strong understanding of these basics early on will make your earning experience smoother and more intuitive as you progress to topics such as data manipulation, visualization, and statistical modeling.
+
+It can be tempting to skim or skip over these early technical details, especially if they feel abstract at first. However, these concepts quietly underpin much of what comes later in {{< fa brands r-project >}}. Taking the time to understand them now will save you confusion and frustration down the line, when small misunderstandings can lead to puzzling errors in more complex workflows.
 
 ### Commands, Expressions, Assignments, Operators, and Objects
 
@@ -1868,6 +1871,115 @@ mode(cnum)
 ```
 
 The **`class()`** function is generally preferred in modern {{< fa brands r-project >}} programming because it reflects how objects behave in practice, especially for more complex data structures. The **`mode()`** function reports the underlying storage type and is mostly useful for low-level inspection.
+
+In {{< fa brands r-project >}}, you can also whether an object belongs to a particular data type using logical test functions. These functions follow the pattern **`is.<class>()`** fand always return either **`TRUE`** or  **`FALSE`**, depending on the class of the object being tested.
+
+```{webr-r}
+is.numeric(x)
+```
+
+```{webr-r}
+is.character(x)
+```
+
+```{webr-r}
+is.character(name)
+```
+
+```{webr-r}
+is.logical(a)
+```
+
+Logical tests are especially useful when writing code that needs to behave differently depending on the type of data it receives. They help you confirm your assumptions about objects before performing further operations.
+
+In addition to testing data types, it can sometimes be useful to be able to change the class of an object. {{< fa brands r-project >}} allows you to change the class of an object using coercion functions. These functions follow the pattern **`as.<class>()`**.
+
+While coercion can be very useful, it should be used with care. Converting objects between classes does not always work as expected, particularly when the original data cannot be meaningfully represented in the new type.
+
+Let us start by checking the class of **`x`**:
+
+```{webr-r}
+class(x)
+```
+
+Coercing numeric values to character
+
+```{webr-r}
+# Coerce numeric to character
+x_char <- as.character(x)
+
+x_char
+
+class(x_char)
+```
+
+::: column-margin
+- Notice that the number is now treated as text and appears enclosed in quotation marks.
+:::
+
+In this case, the conversion is straightforward. Numeric values can always be represented as character strings, so no information is lost.
+
+Now consider the opposite direction:
+
+```{webr-r}
+# Coerce character to numeric
+class(name)
+
+name_num <- as.numeric(name)
+
+name_num
+```
+
+::: column-margin
+- **`NA`** values are introduced because the character strings in name cannot be interpreted as valid numbers. 
+:::
+
+When {{< fa brands r-project >}} encounters characters that cannot be converted into numeric values, it replaces them with **`NA`** and issues a warning. This behavior highlights why coercion should be done carefully, especially when working with real-world data.
+
+The table below summarizes some commonly used logical test functions and their corresponding coercion functions in {{< fa brands r-project >}} .
+
+```{r}
+#| echo: false
+library(gt)
+library(tibble)
+
+# Create the table data
+type_table <- tibble(
+  Type = c("Character", "Numeric", "Logical", "Factor", "Complex"),
+  `Logical test` = c(
+    "is.character()",
+    "is.numeric()",
+    "is.logical()",
+    "is.factor()",
+    "is.complex()"
+  ),
+  Coercing = c(
+    "as.character()",
+    "as.numeric()",
+    "as.logical()",
+    "as.factor()",
+    "as.complex()"
+  )
+)
+
+# Create a styled gt table
+type_table |>
+  gt() |>
+  cols_align(
+    align = "center",
+    columns = c(`Logical test`, Coercing)
+  ) |>
+  cols_align(
+    align = "left",
+    columns = Type
+  ) |>
+  opt_table_outline() |>
+  opt_all_caps() 
+```
+
+::: column-margin
+- Always test a variable’s class before coercing it, especially when working with imported data.
+:::
 
 ### {{< iconify logos:r-lang >}} Data structures
 In {{< fa brands r-project >}}, data are stored in data structures, sometimes also called data objects. These are the containers that hold your data and that you perform operations on, such as calculations, plotting and statistical analysis. Every object you create in {{< fa brands r-project >}} exists in one of these structures.

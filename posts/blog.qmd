@@ -1,15 +1,25 @@
 ---
 title: "<i class='bi bi-journal-text'></i> Posts"
-description: "A collection of English notebooks. Everything that includes coding in R or in other data analysis programming language (such as Python or Julia) will be listed here. Articles that has a general purpose has also a place in here."
+
+description: |
+  “Many people tend to look at programming styles and languages like religions: if you belong to one, you cannot belong to others. But this analogy is another fallacy.” — Niklaus Wirth
+
+  This blog is a growing compendium of musings on programming and data work—ranging from hands-on explorations in R to forays into other languages such as Python and Julia. It reflects a curiosity-driven approach to learning, where tools are chosen for their strengths, not their labels.
+
 css: [../assets/styles/custom-style.css, posts.css]
+
 anchor-sections: false
+
 listing:
   type: custom
   template: _listing.ejs
   contents: "./**/index.qmd"
   sort: "date desc"
   fields: [image, date, title, description, categories]
+
 page-layout: full
+
 comments: false
+
 title-block-banner: true
 ---
