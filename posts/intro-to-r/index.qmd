@@ -1408,7 +1408,7 @@ Since we have already covered how to install {{< fa brands r-project >}} on Wind
 
 ##### Setting Up {{< iconify logos:r-lang >}} Packages for VS Code Integration
 
-After installing {{< fa brands r-project >}}, you will need to install a few additional {{< fa brands r-project >}} packages from CRAN. These packages allow R to communicate effectively with VS Code and unlock many of the editor’s features.
+To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one additional {{< fa brands r-project >}} package for **CRAN**.
 
 ::: callout-important
 ## What Are {{< iconify logos:r-lang >}} Packages
@@ -1423,36 +1423,43 @@ Each package is a small, self-contained toolkit. The more packages you install, 
 :::
 
 
-To install packages from CRAN, you use the **`install.packages()`** function. For integrating {{< fa brands r-project >}} with VS Code, the following packages are particularly important.
+To install packages from **CRAN**, you use the **`install.packages()`** function. For integrating {{< fa brands r-project >}} with VS Code, the following package is particularly important.
 
 Open your {{< fa brands r-project >}} console and run:
 
 ```{r}
 #| eval: false
-# 1. Language Server support
-install.packages("languageserver") # <1>
-
-# 2. Graphics device for VS Code
-install.packages("httpgd") # <2>
-  
-# 3. Code linting
-install.packages("lintr") # <3>
+# Language Server support
+install.packages("languageserver") 
 ```
-1. **`languageserver`** implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
 
-2. **`httpgd`** implements the Language Server Protocol for R and enables features such as code completion, diagnostics, and function documentation inside VS Code.
+This package is essential. It allows VS Code to understand your {{< fa brands r-project >}} code and enables features such as code completion, inline diagnostics, function documentation, and object inspection.
 
-3. **`lintr`** analyzes your R code and highlights potential issues related to style, syntax, or best practices.
+While not strictly required, you may also choose ton install the **`lintr`** package:
 
-Together, these packages form the backbone of a productive and smooth {{< fa brands r-project >}} workflow in VS Code.
+```{r}
+#| eval: false
+# Code linting
+install.packages("lintr")
+```
 
-When you run **`install.packages()`** fr the first time, {{< fa brands r-project >}} may ask you to choose a **`CRAN`** mirror. **`CRAN`** (Comprehensive R Archive Network) is a global network of servers that store {{< fa brands r-project >}} packages.
+The **`lintr`** package checks your {{< fa brands r-project >}} code for potential issues related to style, syntax, and best practices. It integrates with VS Code to highlight suggestions as you type, helping you develop good coding habits early on.
 
 ::: column-margin
-- A **`CRAN`** mirror is simply a copy of this hosed in different countries.
+- **`lintr`** is optional. If it is not installed, R and VS Code will still work normally.
 :::
 
-You can safely select any mirror. You can select a mirror closest to your location otherwise the default **`0-Cloud / CDN (global)`** – https://cloud.r-project.org/ – this isn’t a single location but a content delivery network (CDN) that automatically serves packages from a server near you, often the best all-around choice even if a local mirror isn’t listed. It will serve packages from a nearby server without needing to manually pick a mirror. All mirrors host the same package content; choosing the closest one might slightly improve download speed, but it doesn’t change what you get.
+Together, these packages provide a solid and beginner-friendly foundation for working with {{< fa brands r-project >}} in VS Code.
+
+When you run **`install.packages()`** for the first time, {{< fa brands r-project >}} may ask you to choose a **`CRAN`** mirror. **`CRAN`** short for Comprehensive R Archive Network, is a global network of servers that store {{< fa brands r-poject >}} packages. A CRAN mirror is simply a copy of this repository hosted in different locations around the world.
+
+::: column-margin
+- A **`CRAN`** mirror is simply a copy of the same packages hosted in different countries.
+:::
+
+You can safely choose any mirror. You can select a mirror closest to your location otherwise If you are unsure, selecting **`0-Cloud / CDN (global)`** at https://cloud.r-project.org/ is usually the best option. This is not a single server, but a content delivery network that automatically serves packages from a location close to you. It often provides the best performance without requiring you to manually choose a nearby country.
+
+Importantly, all **CRAN** mirrors contain the same packages. The choice only affects download speed, not package content.
 
 Most times packages also come with dependencies, which are other packages that help in the functionality of the package hence the name dependency. During the installation process you may be asked, “Do you want to install from sources the packages which need compilation?”
 
@@ -1512,7 +1519,7 @@ For most beginners, this is not necessary.
 
 Once you click NO, {{< fa brands r-project >}} will start installing the packages until you see "The downloaded binary packages are in..."
 
-On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled binary packages automatically, so unless tools like **`Rtools`** or **`Xcode`** are installed, this prompt may not appear at all.
+On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled binary packages automatically, so unless tools like **`Rtools`** or **`Xcode`** are installed, this prompt may not appear at all. So don't be confused if this prompt doesn't show for you.
 
 Go ahead and install the remaining two packages; **`"httgpd"`** and **`"lintr"`** using the same process. Apparently also comes as a dependency of **`"languageserver"`** so you may just skip it. But to be sure you may also just intall it separately
 
@@ -1545,8 +1552,6 @@ Next we have to install the [{{< fa brands r-project >}} extension](https://mark
 1. First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`**.  
 
 2. 
-
-
 
 
 
