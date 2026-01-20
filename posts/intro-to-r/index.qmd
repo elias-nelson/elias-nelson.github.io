@@ -1408,7 +1408,7 @@ Since we have already covered how to install {{< fa brands r-project >}} on Wind
 
 ##### Setting Up {{< iconify logos:r-lang >}} Packages for VS Code Integration
 
-To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one additional {{< fa brands r-project >}} package for **CRAN**.
+To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one additional {{< fa brands r-project >}} package from **`CRAN`**. 
 
 ::: callout-important
 ## What Are {{< iconify logos:r-lang >}} Packages
@@ -1422,10 +1422,9 @@ Think of {{< fa brands r-project >}} as a new smartphone. When you first buy it,
 Each package is a small, self-contained toolkit. The more packages you install, the broader the range of tasks you can perform. Packages are also a cornerstone of reproducible research, since they allow others to run the same code using the same tools.
 :::
 
+To install packages from **`CRAN`**, you use the **`install.packages()`** function. For integrating {{< fa brands r-project >}} with VS Code, the following package is essential.
 
-To install packages from **CRAN**, you use the **`install.packages()`** function. For integrating {{< fa brands r-project >}} with VS Code, the following package is particularly important.
-
-Open your {{< fa brands r-project >}} console and run:
+Open your {{< fa brands r-project >}} Console and run:
 
 ```{r}
 #| eval: false
@@ -1433,9 +1432,14 @@ Open your {{< fa brands r-project >}} console and run:
 install.packages("languageserver") 
 ```
 
-This package is essential. It allows VS Code to understand your {{< fa brands r-project >}} code and enables features such as code completion, inline diagnostics, function documentation, and object inspection.
+::: column-margin
+- For VS Code, **`languageserver`** is essential. Everything else is optional.
 
-While not strictly required, you may also choose ton install the **`lintr`** package:
+:::
+
+This **`languageserver`** package allows VS Code to understand your {{< fa brands r-project >}} code. It enables features such as code completion, inline diagnostics, function documentation, and object inspection.
+
+While not strictly required, you may also choose to install the **`lintr`** package:
 
 ```{r}
 #| eval: false
@@ -1443,87 +1447,101 @@ While not strictly required, you may also choose ton install the **`lintr`** pac
 install.packages("lintr")
 ```
 
-The **`lintr`** package checks your {{< fa brands r-project >}} code for potential issues related to style, syntax, and best practices. It integrates with VS Code to highlight suggestions as you type, helping you develop good coding habits early on.
+The **`lintr`** package checks your {{< fa brands r-project >}} code for potential issues related to style, syntax, and best practices. When integrated with VS Code, it highlights suggestions as you type, helping you develop good coding habits early on.
 
 ::: column-margin
-- **`lintr`** is optional. If it is not installed, R and VS Code will still work normally.
+- **`lintr`** is optional. If it is not installed, {{< fa brands r-project >}} and VS Code will still work normally.
 :::
 
 Together, these packages provide a solid and beginner-friendly foundation for working with {{< fa brands r-project >}} in VS Code.
 
-When you run **`install.packages()`** for the first time, {{< fa brands r-project >}} may ask you to choose a **`CRAN`** mirror. **`CRAN`** short for Comprehensive R Archive Network, is a global network of servers that store {{< fa brands r-poject >}} packages. A CRAN mirror is simply a copy of this repository hosted in different locations around the world.
+When you run **`install.packages()`** for the first time, {{< fa brands r-project >}} may ask you to choose a **`CRAN`** mirror.
+
+**`CRAN`**, short for the *Comprehensive R Archive Network*, is a global network of servers that store {{< fa brands r-project >}} packages. A CRAN mirror is simply a copy of this repository hosted in different locations around the world.
 
 ::: column-margin
 - A **`CRAN`** mirror is simply a copy of the same packages hosted in different countries.
 :::
 
-You can safely choose any mirror. You can select a mirror closest to your location otherwise If you are unsure, selecting **`0-Cloud / CDN (global)`** at https://cloud.r-project.org/ is usually the best option. This is not a single server, but a content delivery network that automatically serves packages from a location close to you. It often provides the best performance without requiring you to manually choose a nearby country.
+You can safely choose any mirror. If you prefer, you may manually select a mirror located in a country close to you, which can sometimes improve download speed. 
 
-Importantly, all **CRAN** mirrors contain the same packages. The choice only affects download speed, not package content.
+If you are unsure, selecting **`0-Cloud / CDN (global)`** at https://cloud.r-project.org/ is usually the best option. This is not a single server, but a content delivery network that automatically serves packages from a location close to you.
 
-Most times packages also come with dependencies, which are other packages that help in the functionality of the package hence the name dependency. During the installation process you may be asked, “Do you want to install from sources the packages which need compilation?”
+Importantly, all CRAN mirrors contain the same packages. The choice only affects download speed, not package content.
 
-*What does this mean?*
-When you install an {{< fa brands r-project >}} package, it can come in two forms:
+Many {{< fa brands r-project >}} packages rely on other packages to function properly. These supporting packages are called dependencies.
 
-1. Binary packages (pre-compiled)
-- Already built for your operating system (Windows or macOS)
+When you install a package, {{< fa brands r-project >}} automatically checks for and installs any required dependencies. This is normal and expected, so do not be alarmed if you see several additional packages being installed.
+
+During installation, you may see a message asking:
+
+> *“Do you want to install from sources the packages which need compilation?”*
+
+This question can be confusing for beginners, so let us break it down.
+
+{{< fa brands r-project >}} packages are distributed in two main forms:
+
+Binary packages (pre-compiled)
+
+- Already built for your operating system
+
 - install quickly
-- Do not require extra tools
-- Best option for beginners
 
-2. Source packages
-- Contain the original code
+- Do not require additional tools
+
+- Recommended for beginners
+
+Source packages
+
+- Contain the original package code
+
 - Must be compiled on your computer
+
 - Require additional software (compilers)
--- Windows: **`Rtools`**
--- macOS: **`Xcode`** Command Line Tools
--- Linux: system build tools
+
+  - Windows: **`Rtools`**
+
+  - macOS: **`Xcode`** Command Line Tools
+
+  - Linux: system build tools
 
 ::: column-margin
-- Don't let the compiler tools frighten you, we cover them later on in the guide.
+- Do not worry if this sounds unfamiliar. We cover compiler tools such as Rtools and Xcode later in the guide.
 :::
 
-So in this case {{< fa brands r-project >}} is asking whether you want to:
+When {{< fa brands r-project >}} asks whether you want to install from source, it is essentially asking whether you want to compile the package yourself or use a ready-made version.
 
-- Install from source (compile the package yourself), or
+For beginners, the recommended answer is **`NO`**, because:
 
-- Use a binary version (if available)
+- Binary packages are easier to install
 
-Unless otherwise the recommended answer especially for beginners is **`NO`**, and here is why:
+- No additional software is required
 
-- Binary packages are easier and safer for beginners
+- There is a lower chance of installation errors
 
-- No extra software is required
+When you choose **`NO`**, {{< fa brands r-project >}} installs available binary packages automatically and skips source compilation.
 
-- Generally fewer errors during installation
+Choosing Yes only makes sense if:
 
-{{< fa brands r-project >}} will then install available binary packages, and skip those that require compilation.
+- You understand what package compilation is
 
-*When would `"Yes"` make sense?*
-You should only choose Yes if:
-
-- You know what compilation is
-
-- You have the required tools installed (e.g., Rtools)
+- You already have the required tools installed (e.g., Rtools)
 
 - You are following advanced documentation that explicitly tells you to install from source.
 
 For most beginners, this is not necessary.
 
-::: column-margin
-**Beginner-friendly rule of thumb 🧠**
+On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled binary packages automatically, so unless tools like **`Rtools`** or **`Xcode`** are installed, this prompt may not appear at all. Do not be concerned if you never see it.
 
-- If {{< fa brands r-project >}} asks about installing from source and you’re not sure — always choose NO.
+::: column-margin
+**Beginner rule of thumb 🧠**
+
+- If {{< fa brands r-project >}} asks about installing from source and you are unsure, always choose **`NO`**.
 :::
 
-Once you click NO, {{< fa brands r-project >}} will start installing the packages until you see "The downloaded binary packages are in..."
+Once you click NO, {{< fa brands r-project >}} will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.
 
-On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled binary packages automatically, so unless tools like **`Rtools`** or **`Xcode`** are installed, this prompt may not appear at all. So don't be confused if this prompt doesn't show for you.
-
-Go ahead and install the remaining two packages; **`"httgpd"`** and **`"lintr"`** using the same process. Apparently also comes as a dependency of **`"languageserver"`** so you may just skip it. But to be sure you may also just intall it separately
-
-In the next sections, we will walk through installing the necessary VS Code extensions and configuring the editor so that it is ready for everyday {{< fa brands r-project >}} development.
+In the next section, we will shift focus to Visual Studio Code itself, where we will install the necessary VS Code extensions and configure the editor for everyday {{< fa brands r-project >}} development.
 
 ##### Installing and integrating {{< iconify logos:visual-studio-code >}} VS Code with {{< iconify logos:r-lang >}}
 
