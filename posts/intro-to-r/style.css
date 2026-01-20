@@ -22,3 +22,17 @@
 .webr-toolbar button:last-child {
   display: none !important;
 }
+
+.pkg-hex {
+  width: 80px;
+  display: block;
+  margin: 0.75rem auto;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* Hover */
+.pkg-hex:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

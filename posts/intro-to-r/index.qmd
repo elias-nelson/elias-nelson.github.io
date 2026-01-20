@@ -502,10 +502,10 @@ Below I have included an interactive webR REPL console for more engagement right
 ```
 
 ::: column-margin
-- Input code in the input box and click Run to send the command to the interactive console. 
+-   Input code in the input box and click Run to send the command to the interactive console.
 :::
 
-&nbsp;
+ 
 
 *The "R Editor" Window:*
 
@@ -1356,7 +1356,7 @@ By staying on top of updates, you’ll ensure that your coding environment remai
 
 #### {{< iconify logos:visual-studio-code >}} Visual Studio Code: A General-Purpose IDE and Code Editor for Software Developers and Programming
 
-RStudio is often the first choice for running {{< fa brands r-project >}} code, largely because it was designed specifically for the {{< fa brands r-project >}} ecosystem and provides a very smooth out-of-the-box experience. However, Visual Studio Code, commonly referred to as VS Code has quickly gained traction as a versatile code editor among software developers working across many programming languages. 
+RStudio is often the first choice for running {{< fa brands r-project >}} code, largely because it was designed specifically for the {{< fa brands r-project >}} ecosystem and provides a very smooth out-of-the-box experience. However, Visual Studio Code, commonly referred to as VS Code has quickly gained traction as a versatile code editor among software developers working across many programming languages.
 
 Speaking from personal experience—and perhaps echoing the sentiment of others in the {{< fa brands r-project >}} and broader programming communities—using {{< fa brands r-project >}} in VS Code often starts as an experiment to find an all-in-one code editor. The motivation is simple: the desire to work within a single editor for all programming tasks. If you already use VS Code for Python, HTML, CSS, JavaScript, or other languages, it feels natural to ask whether {{< fa brands r-project >}} can also fit into that same workflow.
 
@@ -1368,26 +1368,26 @@ Visual Studio Code supports the {{< fa brands r-project >}} programming language
 
 Once properly configured, VS Code can provide many features {{< fa brands r-project >}} users expect, including:
 
-- Syntax highlighting for {{< fa brands r-project >}} scripts
+-   Syntax highlighting for {{< fa brands r-project >}} scripts
 
-- Code completion and function suggestions
+-   Code completion and function suggestions
 
-- Inline diagnostics and error messages
+-   Inline diagnostics and error messages
 
-- Code linting and formatting
+-   Code linting and formatting
 
-- Interaction with an {{< fa brands r-project >}} terminal
+-   Interaction with an {{< fa brands r-project >}} terminal
 
-- Viewing data frames, plots, workspace variables, help pages and more
+-   Viewing data frames, plots, workspace variables, help pages and more
 
 While these features may feel familiar to RStudio users, it is important to note that in VS Code they are powered by a combination of extensions and {{< fa brands r-project >}} packages working together.
 
 ::: column-margin
 **Key idea:**
 
-- RStudio ships with {{< fa brands r-project >}}-specific tools built in.
+-   RStudio ships with {{< fa brands r-project >}}-specific tools built in.
 
-- VS Code adds {{< fa brands r-project >}} features through extensions and packages.
+-   VS Code adds {{< fa brands r-project >}} features through extensions and packages.
 :::
 
 Setting up VS Code for {{< fa brands r-project >}} isn’t as straightforward as installing RStudio. This is not a limitation, but rather a design choice. VS Code is designed to support dozens of programming languages. If it shipped with full support for all of them by default, it would be overly complex and resource-heavy. Instead, VS Code uses a modular approach where users install only the extensions they need.
@@ -1396,19 +1396,19 @@ RStudio, on the other hand, is iconically tailored for {{< fa brands r-project >
 
 The flexibility of VS Code is powerful, especially for developers working across multiple languages, but it does mean that configuring VS Code for {{< fa brands r-project >}} requires a few extra steps.
 
-To run {{< fa brands r-project >}} in VS Code, as with RStudio, you must already have installed {{< fa brands r-project >}} on your machine. 
+To run {{< fa brands r-project >}} in VS Code, as with RStudio, you must already have installed {{< fa brands r-project >}} on your machine.
 
-- {{< fa brands r-project >}} version **`3.4.0`** or later is required
+-   {{< fa brands r-project >}} version **`3.4.0`** or later is required
 
-- Installing {{< fa brands r-project >}} using a precompiled binary is recommended for most users
+-   Installing {{< fa brands r-project >}} using a precompiled binary is recommended for most users
 
-- Building {{< fa brands r-project >}} from source is possible but not necessary for beginners
+-   Building {{< fa brands r-project >}} from source is possible but not necessary for beginners
 
 Since we have already covered how to install {{< fa brands r-project >}} on Windows and macOS earlier in this guide, we will skip those steps here and focus instead on configuring VS Code to work with {{< fa brands r-project >}}.
 
 ##### Setting Up {{< iconify logos:r-lang >}} Packages for VS Code Integration
 
-To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one additional {{< fa brands r-project >}} package from **`CRAN`**. 
+To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one additional {{< fa brands r-project >}} package from **`CRAN`**.
 
 ::: callout-important
 ## What Are {{< iconify logos:r-lang >}} Packages
@@ -1433,8 +1433,7 @@ install.packages("languageserver")
 ```
 
 ::: column-margin
-- For VS Code, **`languageserver`** is essential. Everything else is optional.
-
+-   For VS Code, **`languageserver`** is essential. Everything else is optional.
 :::
 
 This **`languageserver`** package allows VS Code to understand your {{< fa brands r-project >}} code. It enables features such as code completion, inline diagnostics, function documentation, and object inspection.
@@ -1450,7 +1449,17 @@ install.packages("lintr")
 The **`lintr`** package checks your {{< fa brands r-project >}} code for potential issues related to style, syntax, and best practices. When integrated with VS Code, it highlights suggestions as you type, helping you develop good coding habits early on.
 
 ::: column-margin
-- **`lintr`** is optional. If it is not installed, {{< fa brands r-project >}} and VS Code will still work normally.
+-   **`lintr`** is optional. If it is not installed, {{< fa brands r-project >}} and VS Code will still work normally.
+
+```{=html}
+<a href="https://lintr.r-lib.org" target="_blank" rel="noopener">
+  <img
+    src="https://raw.githubusercontent.com/r-lib/lintr/main/man/figures/logo.png"
+    alt="lintr hex logo"
+    class="pkg-hex"
+  />
+</a>
+```
 :::
 
 Together, these packages provide a solid and beginner-friendly foundation for working with {{< fa brands r-project >}} in VS Code.
@@ -1460,10 +1469,10 @@ When you run **`install.packages()`** for the first time, {{< fa brands r-projec
 **`CRAN`**, short for the *Comprehensive R Archive Network*, is a global network of servers that store {{< fa brands r-project >}} packages. A CRAN mirror is simply a copy of this repository hosted in different locations around the world.
 
 ::: column-margin
-- A **`CRAN`** mirror is simply a copy of the same packages hosted in different countries.
+-   A **`CRAN`** mirror is simply a copy of the same packages hosted in different countries.
 :::
 
-You can safely choose any mirror. If you prefer, you may manually select a mirror located in a country close to you, which can sometimes improve download speed. 
+You can safely choose any mirror. If you prefer, you may manually select a mirror located in a country close to you, which can sometimes improve download speed.
 
 If you are unsure, selecting **`0-Cloud / CDN (global)`** at https://cloud.r-project.org/ is usually the best option. This is not a single server, but a content delivery network that automatically serves packages from a location close to you.
 
@@ -1483,51 +1492,51 @@ This question can be confusing for beginners, so let us break it down.
 
 Binary packages (pre-compiled)
 
-- Already built for your operating system
+-   Already built for your operating system
 
-- install quickly
+-   install quickly
 
-- Do not require additional tools
+-   Do not require additional tools
 
-- Recommended for beginners
+-   Recommended for beginners
 
 Source packages
 
-- Contain the original package code
+-   Contain the original package code
 
-- Must be compiled on your computer
+-   Must be compiled on your computer
 
-- Require additional software (compilers)
+-   Require additional software (compilers)
 
-  - Windows: **`Rtools`**
+    -   Windows: **`Rtools`**
 
-  - macOS: **`Xcode`** Command Line Tools
+    -   macOS: **`Xcode`** Command Line Tools
 
-  - Linux: system build tools
+    -   Linux: system build tools
 
 ::: column-margin
-- Do not worry if this sounds unfamiliar. We cover compiler tools such as Rtools and Xcode later in the guide.
+-   Do not worry if this sounds unfamiliar. We cover compiler tools such as Rtools and Xcode later in the guide.
 :::
 
 When {{< fa brands r-project >}} asks whether you want to install from source, it is essentially asking whether you want to compile the package yourself or use a ready-made version.
 
 For beginners, the recommended answer is **`NO`**, because:
 
-- Binary packages are easier to install
+-   Binary packages are easier to install
 
-- No additional software is required
+-   No additional software is required
 
-- There is a lower chance of installation errors
+-   There is a lower chance of installation errors
 
 When you choose **`NO`**, {{< fa brands r-project >}} installs available binary packages automatically and skips source compilation.
 
 Choosing Yes only makes sense if:
 
-- You understand what package compilation is
+-   You understand what package compilation is
 
-- You already have the required tools installed (e.g., Rtools)
+-   You already have the required tools installed (e.g., Rtools)
 
-- You are following advanced documentation that explicitly tells you to install from source.
+-   You are following advanced documentation that explicitly tells you to install from source.
 
 For most beginners, this is not necessary.
 
@@ -1536,7 +1545,7 @@ On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled 
 ::: column-margin
 **Beginner rule of thumb 🧠**
 
-- If {{< fa brands r-project >}} asks about installing from source and you are unsure, always choose **`NO`**.
+-   If {{< fa brands r-project >}} asks about installing from source and you are unsure, always choose **`NO`**.
 :::
 
 Once you click NO, {{< fa brands r-project >}} will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.
@@ -1547,31 +1556,29 @@ In the next section, we will shift focus to Visual Studio Code itself, where we 
 
 -   Step one, obviously, is downloading Visual Studio Code, which you can find on the [Visual Studio Code website](https://code.visualstudio.com/Download).
 
-- Download the suitable installer for your machine (Windows, Mac or Linux).
+-   Download the suitable installer for your machine (Windows, Mac or Linux).
 
 -   VS Code is free and available for Windows, Mac, and Linux. Install it like any other software package.
 
-- For Windows double-clicking the **`.exe`** file should prompt the installation process.
+-   For Windows double-clicking the **`.exe`** file should prompt the installation process.
 
-- Accept the agreement as below and click next
+-   Accept the agreement as below and click next
 
-- Maintain the default installation location, unless you have a good reason not to and click next
+-   Maintain the default installation location, unless you have a good reason not to and click next
 
-- Maintain the **`Start Menu Folder`** defaults as well and click next.
+-   Maintain the **`Start Menu Folder`** defaults as well and click next.
 
-- Select additional tasks. If you would like a Desktop icon, you can check the box. I also check the other two check boxes so that my files compatible with VS Code can easily be opened with open with in the Windows Explorer file context menu. Click next.
+-   Select additional tasks. If you would like a Desktop icon, you can check the box. I also check the other two check boxes so that my files compatible with VS Code can easily be opened with open with in the Windows Explorer file context menu. Click next.
 
-- Finally click install
+-   Finally click install
 
-- After the installation is complete. click finish. VS Code should launch and you will be greeted with the interface below. There is a default welcome file open which you can go through and you're given the option to customize the theme. For now we leave it as is. You can close the file from the top.
+-   After the installation is complete. click finish. VS Code should launch and you will be greeted with the interface below. There is a default welcome file open which you can go through and you're given the option to customize the theme. For now we leave it as is. You can close the file from the top.
 
 Next we have to install the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for VS Code. The steps below guide on how to do this.
 
-1. First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`**.  
+1.  First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`**.
 
-2. 
-
-
+2.  
 
 #### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
@@ -1579,7 +1586,7 @@ Next we have to install the [{{< fa brands r-project >}} extension](https://mark
 
 ## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
 
-After a likely tedious installation of {{< fa brands r-project >}} and an IDE such as RStudio, VS Code or Positron, as well as a detailed familiarization with their interfaces, We are now ready to do a little more coding and explore the fundamentals of {{< fa brands r-project >}} programming. 
+After a likely tedious installation of {{< fa brands r-project >}} and an IDE such as RStudio, VS Code or Positron, as well as a detailed familiarization with their interfaces, We are now ready to do a little more coding and explore the fundamentals of {{< fa brands r-project >}} programming.
 
 In this section, we introduce the core building blocks of {{< fa brands r-project >}} programming. These fundamentals form the foundation for everything you will do in {{< fa brands r-prject >}}, from simple calculations to more advanced analyses. Developing a strong understanding of these basics early on will make your earning experience smoother and more intuitive as you progress to topics such as data manipulation, visualization, and statistical modeling.
 
@@ -1591,7 +1598,7 @@ At this point, you have already written your first **`"Hello, World!"`** program
 
 A command in {{< fa brands r-project >}} is an instruction you give to the interpreter. Most commands are expressions, meaning they are pieces of code that {{< fa brands r-project >}} evaluates to produce a result.
 
-As earlier discussed, the simplest  expressions in {{< fa brands r-project >}} are arithmetic operations. 
+As earlier discussed, the simplest expressions in {{< fa brands r-project >}} are arithmetic operations.
 
 ```{webr-r}
 # Addition
@@ -1629,7 +1636,7 @@ sqrt(9)
 
 Most of these operations behave exactly as expected. However, one notable difference is that there is no square-root symbol in {{< fa brands r-project >}}. Instead, {fa brands r-project} uses functions such as **`sqrt()`** to compute roots.
 
-When you run these expressions, {{< fa brands r-project >}}, R evaluates them and prints the result to the Console. If you type them into a script and  click **`Run`** (or press **`Ctrl + Enter`** the same evaluation happens line by line. 
+When you run these expressions, {{< fa brands r-project >}}, R evaluates them and prints the result to the Console. If you type them into a script and click **`Run`** (or press **`Ctrl + Enter`** the same evaluation happens line by line.
 
 You may notice that each printed result with `[1]`. This indicates the position (index) of the first element in the output. While this may seem odd now, it will make much more sense once we discuss vectors and indexing later on.
 
@@ -1657,7 +1664,7 @@ print(x)
 Once assigned, **`x`** becomes an object in your workspace. Objects are central to {{< fa brands r-project>}}—they are how data, results, functions, and models are represented and manipulated.
 
 ::: column-margin
-- In {{< fa brands r-project >}} almost everything is an object.
+-   In {{< fa brands r-project >}} almost everything is an object.
 :::
 
 Be careful with spacing when using operators. for example:
@@ -1685,7 +1692,7 @@ y
 ```
 
 ::: column-margin
-- Notice the value stored in object **`y`** changes because the second assignment replaces the first one.
+-   Notice the value stored in object **`y`** changes because the second assignment replaces the first one.
 :::
 
 In RStudio, assigned objects appear in the **`Environment`** pane (top right).
@@ -1730,11 +1737,10 @@ ls()
 ```
 
 ::: column-margin
-
-- **`ls()`** lists all objects currently in the workspace.
-- **`rm()`** removes objects.
-- **`rm(list = ls())`** removes everything that **`ls()`** finds.
-- Running **`ls()`** afterward confirms that the workspace is empty.
+-   **`ls()`** lists all objects currently in the workspace.
+-   **`rm()`** removes objects.
+-   **`rm(list = ls())`** removes everything that **`ls()`** finds.
+-   Running **`ls()`** afterward confirms that the workspace is empty.
 :::
 
 This helps ensure that your analysis starts from a clean environment and is not influenced by leftover objects from previous work.
@@ -1764,9 +1770,9 @@ PRINT(x)
 
 In {{< fa brands r-project >}}, commands can be separated in two ways:
 
-- By starting a new line (i.e., hitting **`Enter`**) or 
+-   By starting a new line (i.e., hitting **`Enter`**) or
 
-- By using a semicolon **`;`**
+-   By using a semicolon **`;`**
 
 Using semicolons can be useful for condensing code in scripts, although placing each command on its own line is generally clearer and more readable. If a command is incomplete on a line, either by design or due to a syntax error, the Console prompt changes from **`>`** to **`+`**, indicating that {{< fa brands r-project >}} is waiting for additional input before it can evaluate the command.
 
@@ -1886,7 +1892,7 @@ reactable(
 )
 ```
 
-&nbsp;
+ 
 
 To bring everything together, commands in {{< fa brands r-project >}} operate on objects. An object is anything that can be assigned a name using the assignment operator **`<-`**. Objects can store values, data, or even behavior.
 
@@ -1895,6 +1901,7 @@ Common object types include vectors, matrices, factors, lists, data frames, and 
 Understanding how objects are created, stored, and manipulated, and how operators act on them, is central to effective {{< fa brands r-project >}} programming. This foundation prepares you to work confidently with data types and data structures, which we explore next.
 
 ### {{< iconify logos:r-lang >}} Data types
+
 A **`"data type"`** describes the kind of values stored in an object, not the structure that holds them. For example, a vector, data frame or list can store different data types. In {{< fa brands r-project >}}, the most commonly encountered data types are **`numeric`**, **`character`**, **`logical`**, and **`complex`**. These basic types are sometimes referred to as **`modes`**.
 
 Numeric data represent numbers and are used in calculations.
@@ -1923,12 +1930,12 @@ name
 ```
 
 ::: column-margin
-- An **`error`** occurs because **`John`** is interpreted as an object name rather than text.  
+-   An **`error`** occurs because **`John`** is interpreted as an object name rather than text.\
 :::
 
-Single or double quotes are interchangeable but they must be used consistently. When character data are imported from files such as **`CSVs`**, quotes are typically handled automatically and do not need to be added manually. 
+Single or double quotes are interchangeable but they must be used consistently. When character data are imported from files such as **`CSVs`**, quotes are typically handled automatically and do not need to be added manually.
 
-Logical data represent truth values and can take only three possible values: **`TRUE`**, **`FALSE`**, and **`NA`**. The value **`NA`** indicates missing data, which is handled explicitly in {< fa brands r-project >}.
+Logical data represent truth values and can take only three possible values: **`TRUE`**, **`FALSE`**, and **`NA`**. The value **`NA`** indicates missing data, which is handled explicitly in {\< fa brands r-project \>}.
 
 ```{webr-r}
 a <- TRUE
@@ -1936,9 +1943,9 @@ a
 ```
 
 ::: column-margin
-- Note that logical values are not enclosed in quotes. Quoting them would convert them to **`character`** data.
+-   Note that logical values are not enclosed in quotes. Quoting them would convert them to **`character`** data.
 
-- The same is also true for numeric values.
+-   The same is also true for numeric values.
 :::
 
 Although {{< fa brands r-project >}} recognizes **`T`** and **`F`** as short forms for **`TRUE`** and **`FALSE`** respectively, these are not reserved keywords and can therefore be reassigned by the user. For this reason, it is generally safer to use the full logical values.
@@ -1951,7 +1958,6 @@ As already illustrated in the previous section, logical values often arise as th
 
 Complex numbers consist of a real and an imaginary part and are written using **`i`** to denote the imaginary unit.
 
-
 ```{webr-r}
 cnum <- 10 + (0 + 3i)
 
@@ -1961,7 +1967,6 @@ cnum
 Complex data are less common in everyday data analysis, but they are supported natively by {{< fa brands r-project >}}
 
 You can examine the type of data stored in an object using the **`class()`** or **`mode()`** functions.
-
 
 ```{webr-r}
 class(name)
@@ -1985,7 +1990,7 @@ mode(cnum)
 
 The **`class()`** function is generally preferred in modern {{< fa brands r-project >}} programming because it reflects how objects behave in practice, especially for more complex data structures. The **`mode()`** function reports the underlying storage type and is mostly useful for low-level inspection.
 
-In {{< fa brands r-project >}}, you can also whether an object belongs to a particular data type using logical test functions. These functions follow the pattern **`is.<class>()`** fand always return either **`TRUE`** or  **`FALSE`**, depending on the class of the object being tested.
+In {{< fa brands r-project >}}, you can also whether an object belongs to a particular data type using logical test functions. These functions follow the pattern **`is.<class>()`** fand always return either **`TRUE`** or **`FALSE`**, depending on the class of the object being tested.
 
 ```{webr-r}
 is.numeric(x)
@@ -2027,7 +2032,7 @@ class(x_char)
 ```
 
 ::: column-margin
-- Notice that the number is now treated as text and appears enclosed in quotation marks.
+-   Notice that the number is now treated as text and appears enclosed in quotation marks.
 :::
 
 In this case, the conversion is straightforward. Numeric values can always be represented as character strings, so no information is lost.
@@ -2044,7 +2049,7 @@ name_num
 ```
 
 ::: column-margin
-- **`NA`** values are introduced because the character strings in name cannot be interpreted as valid numbers. 
+-   **`NA`** values are introduced because the character strings in name cannot be interpreted as valid numbers.
 :::
 
 When {{< fa brands r-project >}} encounters characters that cannot be converted into numeric values, it replaces them with **`NA`** and issues a warning. This behavior highlights why coercion should be done carefully, especially when working with real-world data.
@@ -2091,10 +2096,11 @@ type_table |>
 ```
 
 ::: column-margin
-- Always test a variable’s class before coercing it, especially when working with imported data.
+-   Always test a variable’s class before coercing it, especially when working with imported data.
 :::
 
 ### {{< iconify logos:r-lang >}} Data structures
+
 In {{< fa brands r-project >}}, data are stored in data structures, sometimes also called data objects. These are the containers that hold your data and that you perform operations on, such as calculations, plotting and statistical analysis. Every object you create in {{< fa brands r-project >}} exists in one of these structures.
 
 The most common data structures in {{< fa brands r-project >}} are **`vectors`**, **`matrices`**, **`arrays`**, **`data frames`**, **`lists`**, and **`factors`**. Each has a specific purpose and is suited to different kinds of tasks. In later sections, you will learn how to work with them in more depth. For now, the goal is to understand what they look like and how they differ.
@@ -2107,9 +2113,9 @@ x
 ```
 
 ::: column-margin
-- **`1:12`** creates a sequence of integers from 1 to 12.
+-   **`1:12`** creates a sequence of integers from 1 to 12.
 
-- All elements in a vector must be of the same data type.
+-   All elements in a vector must be of the same data type.
 :::
 
 Vectors are the building blocks for many other data structures.
@@ -2122,11 +2128,11 @@ y
 ```
 
 ::: column-margin
-- The **`matrix()`** function reshapes a vector into rows and columns.
+-   The **`matrix()`** function reshapes a vector into rows and columns.
 
-- **`nrow = 3`** tells {{< fa brands r-project >}} how many rows the matrix should have.
+-   **`nrow = 3`** tells {{< fa brands r-project >}} how many rows the matrix should have.
 
-- Values are filled column by column by default.
+-   Values are filled column by column by default.
 :::
 
 Arrays extend the idea of matrices by allowing more than two dimensions. They are useful when working with multidimensional data.
@@ -2137,9 +2143,9 @@ z
 ```
 
 ::: column-margin
-- **`dim = c(2, 5, 3)`** defines rows, columns, and layers.
+-   **`dim = c(2, 5, 3)`** defines rows, columns, and layers.
 
-- Arrays still store only one data type.
+-   Arrays still store only one data type.
 :::
 
 Arrays are less common for beginners but appear in advanced applications.
@@ -2163,12 +2169,12 @@ students
 ```
 
 ::: column-margin
-- Each column is a **`vector`** of the same length.
+-   Each column is a **`vector`** of the same length.
 
-- Different columns can have different data types.
+-   Different columns can have different data types.
 
-- **`Data frames`** are central to data analysis in {{< fa brands r-project >}}.
-::: 
+-   **`Data frames`** are central to data analysis in {{< fa brands r-project >}}.
+:::
 
 Lists are flexible data structures that can store different types of objects, including other data structures. Unlike vectors, list elements do not need to be the same type or size.
 
@@ -2180,9 +2186,9 @@ w
 ```
 
 ::: column-margin
-- A **`list`** can contain numbers, vectors, matrices, and data frames.
+-   A **`list`** can contain numbers, vectors, matrices, and data frames.
 
-- Elements inside a **`list`** can have different structures.
+-   Elements inside a **`list`** can have different structures.
 :::
 
 **`Lists`** are essential for handling complex results.
@@ -2195,9 +2201,9 @@ x
 ```
 
 ::: column-margin
-- **`NULL`** represents the absence of data.
+-   **`NULL`** represents the absence of data.
 
-- Empty objects are often used in programming and iterative workflows.
+-   Empty objects are often used in programming and iterative workflows.
 :::
 
 Understanding data structures is essential for effective {{< fa brands r-project >}} programming. The way data are stored determines how they behave when you manipulate them, how functions interact with them, and how results are returned. As you progress, you will see that most errors and unexpected behavior in R can be traced back to misunderstandings about data structures.
@@ -2205,5 +2211,3 @@ Understanding data structures is essential for effective {{< fa brands r-project
 ## Unlocking {{< iconify logos:r-lang >}}'s Hidden Power: Getting Started with {{< iconify logos:r-lang >}} Packages
 
 {{< fa brands r-project >}} packages
-
-
