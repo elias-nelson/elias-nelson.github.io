@@ -204,7 +204,7 @@ Installing {{< fa brands r-project >}} on Windows is a straightforward process. 
 
 2.  **Download R for Windows**: Click on the "Download R for Windows" link.
 
-![](utils/upscayl/1. download_R.png){.shadowed fig-align="center"}
+![](utils/upscaled/1. download_R.png){.shadowed fig-align="center"}
 
 3.  **Download the base system**: On the next page, click "base" or "Install R for the first time" to download the R executable file (e.g., `R-4.x.x-win.exe`).
 
@@ -212,39 +212,39 @@ Installing {{< fa brands r-project >}} on Windows is a straightforward process. 
 
 5.  **Select installation language**: The installer will first prompt you to select the installation language. Choose your preferred language and click "OK".
 
-![](utils/upscayl/2. select_language.png){.shadowed fig-align="center" width="40%"}
+![](utils/upscaled/2. select_language.png){.shadowed fig-align="center" width="40%"}
 
 6.  **License agreement**: You’ll see a window with the GNU General Public License information. Simply click "Next".
 
-![](utils/upscayl/3. license.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/3. license.png){.shadowed fig-align="center" width="70%"}
 
 7.  **Choose the destination location**: By default, R will install in `C:\Program Files\R\R-4.x.x`. Unless you have a specific reason to change it, I recommend leaving this as is and clicking "Next".
 
-![](utils/upscayl/4. directory.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/4. directory.png){.shadowed fig-align="center" width="70%"}
 
 8.  **Select components**: In the "Select Components" window, the default options should suffice for most users, so just click "Next".
 
-![](utils/upscayl/5. select_components.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/5. select_components.png){.shadowed fig-align="center" width="70%"}
 
 9.  **Startup options**: Again, leave the default startup options selected and click "Next".
 
-![](utils/upscayl/6. startup_options.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/6. startup_options.png){.shadowed fig-align="center" width="70%"}
 
 10. **Select Start Menu folder**: The default Start Menu folder is fine, so just click "Next" here as well.
 
-![](utils/upscayl/7. start_menu_folder.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/7. start_menu_folder.png){.shadowed fig-align="center" width="70%"}
 
 11. **Additional tasks**: The installer will ask if you'd like to create desktop shortcuts or add `R` to your system PATH. The default options are usually best, so leave them checked and click "Next".
 
-![](utils/upscayl/8. additional_tasks.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/8. additional_tasks.png){.shadowed fig-align="center" width="70%"}
 
 12. **Begin installation**: After confirming all the settings, click "Next" to start the installation process.
 
-![](utils/upscayl/9. installation_process.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/9. installation_process.png){.shadowed fig-align="center" width="70%"}
 
 13. **Complete installation**: Once the installation is complete, click "Finish" to close the installer.
 
-![](utils/upscayl/10. finish_installation.png){.shadowed fig-align="center" width="70%"}
+![](utils/upscaled/10. finish_installation.png){.shadowed fig-align="center" width="70%"}
 
 Congratulations, you've successfully installed {{< fa brands r-project >}} on your Windows system!
 
@@ -258,7 +258,7 @@ The installation process for macOS is very similar to that of Windows, but with 
 
 3.  **Choose the latest release**: In the "Latest release" section, download the appropriate version of {{< fa brands r-project >}} for your macOS system.
 
-![](utils/upscayl/11. download_R_MacOS.png){.shadowed fig-align="center"}
+![](utils/upscaled/11. download_R_MacOS.png){.shadowed fig-align="center"}
 
 4.  **Open the installer**: Once the download is complete, double-click the `.pkg` installer file to open it.
 
@@ -280,7 +280,7 @@ What follows is a practical guide on using the `RGUI`, which is the standard gra
 
 On Windows, {{< fa brands r-project >}} is typically installed in **`C:\Program Files\R`**, and you can access it from the Start menu under the {{< fa brands r-project >}} group. If, during installation, you selected "Create a desktop shortcut," you’ll also have an `RGUI` icon on your desktop. To launch {{< fa brands r-project >}}, simply double-click this icon, and you’ll be greeted by a user interface that looks something like this:
 
-![](utils/upscayl/13. RGUI.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/13. RGUI.png){.shadowed fig-align="center" width="80%"}
 
 When opened, the main window, labeled "R Console," will appear. This is where you will enter and execute your {{< fa brands r-project >}} commands. You can type commands directly into the Console and see the output immediately. This is also where error messages appear, . Keep in mind, closing the Console will end your {{< fa brands r-project >}} session.
 
@@ -307,9 +307,9 @@ print("Hello, World!")
 
 After pressing **Enter**, you should see the following output appear in the Console, as shown in the image below.
 
-![](utils/upscayl/14. hello_world.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/14. hello_world.png){.shadowed fig-align="center" width="80%"}
 
-Congratulations!—you’ve just written a computer program! A computer program is simply a sequence of instructions that perform a specific task when executed by the computer. The "Hello, World!" program is a classic way to introduce novice programmers to a new language. It serves two purposes: demonstrating the basic syntax of the language and verifying that the installation was successful, ensuring you know how to use it. In this case, the program consists of just one instruction—the command to display the text "Hello, World!" in the console. The command responsible for this is `print()`.
+Congratulations!—you’ve just written a computer program! A computer program is simply a sequence of instructions that perform a specific task when executed by the computer. The "Hello, World!" program is a classic way to introduce novice programmers to a new language. It serves two purposes: demonstrating the basic syntax of the language and verifying that the installation was successful, ensuring you know how to use it. In this case, the program consists of just one instruction—the command to display the text "Hello, World!" in the console. The command responsible for this is **`print()`**.
 
 *A couple of things to note about your first program:*
 
@@ -340,7 +340,7 @@ print(4 + 2)
 
 After pressing **Enter**, you should see the following output in the console:
 
-![](utils/upscayl/15. arithmetic_program.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/15. arithmetic_program.png){.shadowed fig-align="center" width="80%"}
 
 So far, we've been using the `print()` function to display output. However, you can actually get output in the console without explicitly calling `print()`. You don’t always need the `print()` function for simple outputs. Typing just the expression will display the result:. For example, suppose you type:
 
@@ -351,7 +351,7 @@ So far, we've been using the `print()` function to display output. However, you 
 
 In the console, you’ll see the following result:
 
-![](utils/upscayl/16. hello_world_2.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/16. hello_world_2.png){.shadowed fig-align="center" width="80%"}
 
 Similarly, you can try:
 
@@ -362,7 +362,7 @@ Similarly, you can try:
 
 with the output:
 
-![](utils/upscayl/17. arithmetic_program_2.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/17. arithmetic_program_2.png){.shadowed fig-align="center" width="80%"}
 
 ::: callout-important
 ## **Read-Evaluate-Print Loop (REPL)**
@@ -511,7 +511,7 @@ Below I have included an interactive webR REPL console for more engagement right
 
 For more complex programs, you'll want to work in the "R Editor," where you can write and edit multiple lines of code. When you're ready to move beyond typing and executing commands one by one, you can use the "R Editor" window to write and manage scripts efficiently. To open a blank editor, click **File** → **New Script** from the menu. If you have an existing script, select **File** → **Open Script** to continue working on it. The image below shows a new blank "R Editor" window.
 
-![](utils/upscayl/18. R_editor.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/18. R_editor.png){.shadowed fig-align="center" width="80%"}
 
 You can have multiple "R Editor" windows open simultaneously, allowing you to work on different scripts side by side.
 
@@ -535,7 +535,7 @@ When you utilize a function such as `plot()` to create a graphic, the graphics w
 
 To illustrate this, let’s plot a graph using a built-in dataset called **`pressure`**. The dataset, which comes pre-installed with {{< fa brands r-project >}}, shows the relationship between temperature (in degrees Celsius) and vapor pressure of mercury (measured in millimeters). Below, we apply the `plot()` function to the pressure dataset and execute it from the "R Editor":
 
-![](utils/upscayl/19. R_graphics_window.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/19. R_graphics_window.png){.shadowed fig-align="center" width="80%"}
 
 To open a new graphics window without closing an existing one, you can use the `dev.new()` function. This allows you to create multiple graphics windows for your visualizations. To save a graphic, simply click **File** → **Save As** and select your desired format from the menu.
 
@@ -552,7 +552,7 @@ As an example, let's view the **pressure** dataset we used earlier to plot the g
 fix(pressure)
 ```
 
-![](utils/upscayl/20. R_data_editor.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/20. R_data_editor.png){.shadowed fig-align="center" width="80%"}
 
 This will open the data frame in a tab where you can inspect it interactively.
 
@@ -562,7 +562,7 @@ Any changes you make using the Data Editor are automatically saved to your works
 
 You can access your command history by using the `history()` function, which opens a window displaying your most recent commands. By default, this shows the last 25 lines of code you've submitted. Below is an example of what my current history looks like.
 
-![](utils/upscayl/21. R_history_window.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/21. R_history_window.png){.shadowed fig-align="center" width="80%"}
 
 To save the contents of this history window, you can either click **File** → **Save to file** in the menu or use the `savehistory()` function directly in the Console. This allows you to preserve your previous commands for future reference or reuse.
 
@@ -598,9 +598,9 @@ While RStudio is mainly known for its support of {{< fa brands r-project >}}, it
 
     Click `"RSTUDIO IDE"` (or simply select `"DOWNLOAD RSTUDIO"` at the bottom of the list. If you choose `"DOWNLOAD RSTUDIO"`, you can skip to step 4).
 
-    ![](utils/upscayl/23. Posit_page_2.png){.shadowed fig-align="center"}
+    ![](utils/upscaled/23. Posit_page_2.png){.shadowed fig-align="center"}
 
-    ![](utils/upscayl/22. Posit_page_1.png){.shadowed fig-align="center"}
+    ![](utils/upscaled/22. Posit_page_1.png){.shadowed fig-align="center"}
 
     This will take you to the [RStudio IDE](https://posit.co/products/open-source/rstudio/?sid=1) page.
 
@@ -644,13 +644,13 @@ While RStudio is mainly known for its support of {{< fa brands r-project >}}, it
 
     Go ahead and click on `"DOWNLOAD RSTUDIO DESKTOP"` under the `Open Source Edition` to get the free version of RStudio.
 
-    ![](utils/upscayl/24. RStudio_IDE_download.png){.shadowed fig-align="center"}
+    ![](utils/upscaled/24. RStudio_IDE_download.png){.shadowed fig-align="center"}
 
     This will take you to the [DOWNLOAD RStudio Desktop](https://posit.co/downloads/) page
 
 3.  **Select `DOWNLOAD RSTUDIO`** On the [DOWNLOAD RStudio Desktop](https://posit.co/downloads/) page select `DOWNLOAD RSTUDIO.`
 
-    ![](utils/upscayl/25. Download_RStudio.png){.shadowed fig-align="center"}
+    ![](utils/upscaled/25. Download_RStudio.png){.shadowed fig-align="center"}
 
     This will take you to the [RStudio Desktop installers](https://posit.co/download/rstudio-desktop/) page.
 
@@ -664,11 +664,11 @@ While RStudio is mainly known for its support of {{< fa brands r-project >}}, it
 
     For Windows users, clicking **`"DOWNLOAD RSTUDIO DESKTOP FOR WINDOWS"`** will immediately start the download of the installer (`.exe` file).
 
-    ![](utils/upscayl/26. Download_RStudio_Desktop.png){.shadowed fig-align="center"}
+    ![](utils/upscaled/26. Download_RStudio_Desktop.png){.shadowed fig-align="center"}
 
     If you are using **macOS or Linux**, simply scroll down the page to find the appropriate installer for your operating system and follow the corresponding instructions.
 
-    ![](utils/upscayl/27. RStudio_OS.png){.shadowed fig-align="center"}
+    ![](utils/upscaled/27. RStudio_OS.png){.shadowed fig-align="center"}
 
 5.  **Run the installer.**
 
@@ -680,15 +680,15 @@ While RStudio is mainly known for its support of {{< fa brands r-project >}}, it
 
     This will launch the RStudio installation wizard, starting with a welcome screen similar to the one shown below.
 
-    ![](utils/upscayl/28. RStudio_installation.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/28. RStudio_installation.png){.shadowed fig-align="center" width="70%"}
 
     Proceed through the setup wizard by following the prompts. When you reach the **“Choose Install Location”** screen, it is strongly recommended to keep the default installation path unless you have a specific reason to change it. Click **Install** to continue.
 
-    ![](utils/upscayl/29. RStudio_location.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/29. RStudio_location.png){.shadowed fig-align="center" width="70%"}
 
     RStudio will then begin installing the required files on your system.
 
-    ![](utils/upscayl/30. RStudio_install_process.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/30. RStudio_install_process.png){.shadowed fig-align="center" width="70%"}
 
     Once the installation completes successfully, click **Finish** to exit the installer. RStudio Desktop is now installed and ready to use.
 
@@ -698,11 +698,11 @@ While RStudio is mainly known for its support of {{< fa brands r-project >}}, it
 
     As **RStudio** opens, you may briefly see a start-up process similar to the one shown below.
 
-    ![](utils/upscayl/31. opening_RStudio.png){.shadowed fig-align="center" width="80%"}
+    ![](utils/upscaled/31. opening_RStudio.png){.shadowed fig-align="center" width="80%"}
 
     Once RStudio opens, you'll be greeted by it's main interface, as shown below:
 
-    ![](utils/upscayl/32. RStudio_window.png){.shadowed fig-align="center" width="100%"}
+    ![](utils/upscaled/32. RStudio_window.png){.shadowed fig-align="center" width="100%"}
 
     From this point onward, you can work entirely within RStudio. The IDE is now fully connected to {{< fa brands r-project >}}, providing a more powerful and user-friendly environment for writing code, running analyses, managing projects, and creating visualizations.
 
@@ -724,11 +724,11 @@ Before diving into coding, it’s worth spending a few moments customizing **RSt
 
 -   On Windows, head to **Tools** → **Global Options** or press `Ctrl + ,`.
 
-![](utils/upscayl/33. open_Global_Options.png){.shadowed fig-align="center" width="100%"}
+![](utils/upscaled/33. open_Global_Options.png){.shadowed fig-align="center" width="100%"}
 
 You should be greeted with the Global Options window as below.
 
-![](utils/upscayl/34. Global Options.png){.shadowed fig-align="center" width="100%"}
+![](utils/upscaled/34. Global Options.png){.shadowed fig-align="center" width="100%"}
 
 **RStudio** offers many customization options, and over time you’ll naturally adjust them to match your personal workflow. For now, I’ll highlight just a few essential settings that are especially helpful for beginners and will set you up for a smoother experience from the start.
 
@@ -738,7 +738,7 @@ You should be greeted with the Global Options window as below.
 
     In the **Code → Editing** tab, enable **at least the first five options**, paying special attention to **“Auto-indent code after paste.”**
 
-    ![](utils/upscayl/35. Code-Editing.png){.shadowed fig-align="center" width="100%"}
+    ![](utils/upscaled/35. Code-Editing.png){.shadowed fig-align="center" width="100%"}
 
     This setting automatically fixes indentation when you paste code, helping your scripts stay clean and readable without extra effort. Good indentation isn’t just about aesthetics—it makes your code easier to follow, debug, and maintain, especially as your scripts grow longer or more complex.
 
@@ -750,7 +750,7 @@ You should be greeted with the Global Options window as below.
 
     In the **Code → Display** tab, consider enabling the **first three options**. One especially useful feature is **“Highlight selected line.”**
 
-    ![](utils/upscayl/36. Code-Display.png){.shadowed fig-align="center" width="100%"}
+    ![](utils/upscaled/36. Code-Display.png){.shadowed fig-align="center" width="100%"}
 
     This highlights the line your cursor is currently on, which is incredibly helpful when working in long scripts. It reduces eye strain and helps you avoid running or editing the wrong line by mistake.
 
@@ -762,7 +762,7 @@ You should be greeted with the Global Options window as below.
 
     Take a moment to browse through the available themes and pick one that feels comfortable to you—there’s no “correct” choice here. Personally, I recommend trying a **dark theme**, especially if you code for long periods, as it can reduce eye strain. My go-to choice is **Solarized Dark**, but feel free to experiment and settle on what works best for your eyes.
 
-    ![](utils/upscayl/37.Appearance-Esitor_theme.png){.shadowed fig-align="center" width="100%"}
+    ![](utils/upscaled/37.Appearance-Esitor_theme.png){.shadowed fig-align="center" width="100%"}
 
 Once you have selected your preferred options, click **“Apply”** to save the settings and apply the changes.
 
@@ -780,7 +780,7 @@ The RStudio interface is divided into four quadrants, each serving a specific fu
 
 -   The **`Files | Plots | Packages | Help | Viewer`** window
 
-![](utils/upscayl/38. RStudio_windows.png){.shadowed fig-align="center"}
+![](utils/upscaled/38. RStudio_windows.png){.shadowed fig-align="center"}
 
 While you can customize the layout of the panes in the RStudio interface, I personally prefer the default arrangement. To change the pane layout, go to **Tools** → **Global Options**. Under **Global Options**, select the **Pane Layout** option and adjust the panes to your liking.
 
@@ -804,7 +804,7 @@ Let’s try a quick example by calculating the sum of `20 + 7`. Click into the C
 
 Here's an example of how it should appear in your RStudio Console:
 
-![](utils/upscayl/39. RStudio_Console.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/39. RStudio_Console.png){.shadowed fig-align="center" width="80%"}
 
 In the top-right corner of the Console pane, you'll notice a broom icon. This is an important feature for clearing the Console when it gets too cluttered. If you want to remove all the text in the Console, simply click the broom icon. Alternatively, you can use the handy keyboard shortcut `Ctrl + L` on both Windows and Mac for the same purpose. If you prefer using code, the following commands can also clear the Console:
 
@@ -842,7 +842,7 @@ Located in the top-left pane of RStudio, the **Source Window** serves as a versa
 
 -   **Running Analyses:** Code written in the Source window can be executed line by line or in chunks, allowing you to run analyses, generate outputs, and build results in a structured and reproducible way.
 
-![](utils/upscayl/40. RStudio_Source.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/40. RStudio_Source.png){.shadowed fig-align="center" width="80%"}
 
 In essence, the Source window provides a workspace for any text-based file that RStudio can read. It is where most of your coding and project development will take place, making it one of the most important components of the RStudio interface. However, it's important to note that Microsoft Office documents and non-text files (like images) are not supported in this pane. This limitation emphasizes the focus on coding and text editing within the Source window.
 
@@ -882,19 +882,19 @@ As you continue working in {{< fa brands r-project >}}, this pane may also conta
 
 If these terms are unfamiliar right now, don’t worry—we will introduce and explain each of them step by step in later sections. For now, it’s enough to know that the Environment pane acts like a dashboard, allowing you to quickly see what objects exist, inspect them, and manage your workspace.
 
-![](utils/upscayl/41. RStudio_Environment.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/41. RStudio_Environment.png){.shadowed fig-align="center" width="80%"}
 
 The **`History`** tab keeps a record of the commands you have run during your current and past R sessions. This can be helpful if you want to revisit, reuse, or rerun previous code without typing it again. For example, if you computed the sum of `20 + 7`, this entry will be stored in your history. You can quickly insert this command back into the console by clicking on it in the History pane and selecting **To Console**. This action will paste `20 + 7` back into the console, allowing you to hit `Return ↵` to retrieve the result. Alternatively, you can copy the command into an existing or new R Script by clicking on **To Source**, enabling you to save and reuse it later. If you want to preserve your command history, you can click on the floppy disk icon to save it. Additionally, you can delete individual entries using the button with a white page and red circle, or clear the entire history using the broom icon (note that this action is irreversible).
 
-![](utils/upscayl/42. RStudio_History.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/42. RStudio_History.png){.shadowed fig-align="center" width="80%"}
 
 The **`Connections`** tab is used when working with external data sources such as databases or remote storage systems. Beginners may not use this tab immediately, but it becomes useful when working with larger or more complex data sources.
 
-![](utils/upscayl/43. RStudio_Connections.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/43. RStudio_Connections.png){.shadowed fig-align="center" width="80%"}
 
 Lastly, the **Tutorial** tab provides interactive, guided learning content. Some {{< fa brands r-project >}} packages include tutorials that appear here, making it a convenient space for hands-on learning directly within RStudio.
 
-![](utils/upscayl/44. RStudio_Tutorial.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/44. RStudio_Tutorial.png){.shadowed fig-align="center" width="80%"}
 
 ###### The **`Files | Plots | Packages | Help | Viewer | Presentation`** Pane
 
@@ -914,7 +914,7 @@ Using the Files pane, you can:
 
 Later in this guide, we will explore **R projects and working directories** in more detail. For now, it’s helpful to think of the Files tab as your central navigation hub inside RStudio—keeping all the components of your work easy to find and manage in one place.
 
-![](utils/upscayl/45. Rstudio_Files.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/45. Rstudio_Files.png){.shadowed fig-align="center" width="80%"}
 
 Because the **Console** is designed primarily for text input and output, it cannot display visualizations directly. Instead, RStudio offers the **Plots** tab, which is equivalent to the **"R Graphics"** window in base {{< fa brands r-project >}}. This tab is specificzlly dedicated to rendering and displaying any graphs or charts you create.
 
@@ -928,7 +928,7 @@ boxplot(mtcars$hp)
 
 The `mtcars` dataset comes pre-installed with R, making it convenient for quick demonstrations. In this example, the `boxplot()` function is used to visualize the distribution of the `hp` (horsepower) variable.Once you run the code, the resulting plot will automatically appear in the **Plots** tab of **RStudio**.
 
-![](utils/upscayl/46. RStudio_Plot.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/46. RStudio_Plot.png){.shadowed fig-align="center" width="80%"}
 
 You can navigate through multiple plots by using the arrow buttons in this pane. To delete the current plot, click on the `red circle with a white 'x'`, or clear all plots by using the `broom` icon. You can also export your plot for use in presentations or reports, with options for saving it as an image file or PDF.
 
@@ -936,11 +936,11 @@ The **`Packages`** tab is used to manage additional tools, known as packages, th
 
 By default, {{< fa brands r-project >}} comes with a set of basic packages already installed, but many analyses require additional packages that you can install as needed. The Packages pane displays a list of all packages currently installed on your system. From here, you can load or unload packages and quickly check which tools are available for your work.
 
-![](utils/upscayl/47. RStudio_Packages.png){.shadowed fig-align="center" width="80%"}
+![](utils/upscaled/47. RStudio_Packages.png){.shadowed fig-align="center" width="80%"}
 
 The **`Help`** tab is your primary go-to reference when you need assistance while working in {{< fa brands r-project >}}, and it also provides quick access to official documentation, manuals, learning resources, and other useful reference materials related to {{< fa brands r-project >}} and RStudio..
 
-![](utils/upscayl/48. RStudio_Help.png){.shadowed fig-align="center" width="90%"}
+![](utils/upscaled/48. RStudio_Help.png){.shadowed fig-align="center" width="90%"}
 
 The **Help** tab also provides detailed documentation for {{< fa brands r-project >}} functions, datasets, and packages. Whenever you are unsure how a function works, what arguments it accepts, or what a dataset contains, the Help pane is usually the first place you should look.
 
@@ -955,7 +955,7 @@ For instance, if you want to explore details about the built-in `mtcars` dataset
 
 Running this command opens the **Help** tab and displays comprehensive information about the dataset, including a description, variable definitions, and usage examples.
 
-![](utils/upscayl/49. RStudio_Help2.png){.shadowed fig-align="center" width="90%"}
+![](utils/upscaled/49. RStudio_Help2.png){.shadowed fig-align="center" width="90%"}
 
 You can also use the search bar within the Help pane to look up specific topics or browse related documentation. Beyond RStudio, there is a rich ecosystem of online resources for learning and troubleshooting. For additional learning, I highly recommend CRAN’s '[Getting Help with R](https://www.r-project.org/help.html)' webpage. And if you're ever stuck, don’t hesitate to expand your search to other resources, such as [Google](https://www.google.com/), [Stack Overflow](https://stackoverflow.com/) or [Twitter](https://twitter.com/home) (using [#RStats](https://twitter.com/hashtag/rstats)).
 
@@ -1562,7 +1562,7 @@ Begin by downloading Visual Studio Code from the official website:
 
 Choose the installer that matches your operating system (Windows, Mac or Linux).
 
-    ![](utils/upscayl/50. download_vscode.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/50. download_vscode.png){.shadowed fig-align="center" width="70%"}
 
 -   **Step 2: Start the Installation**
 VS Code intsalls like any other desktop application.
@@ -1576,24 +1576,24 @@ VS Code intsalls like any other desktop application.
 -   **Step 3: Accept the License Agreement**
 Read through the license agreement, accept the terms, and click Next to continue.
 
-    ![](utils/upscayl/51. vscode_license_agreement.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/51. vscode_license_agreement.png){.shadowed fig-align="center" width="70%"}
 
 -   **Step 4: Choose the Installation Location**
 Unless you have a specific reason to install VS Code elsewhere, it is best to keep the default installation location.
 
 Click **`Next`** to continue.
 
-    ![](utils/upscayl/52. vscode_install_location.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/52. vscode_install_location.png){.shadowed fig-align="center" width="70%"}
 
 -   **Step 5: Start Menu Folder**
 The default **`Start Menu Folder`** works well for most users. Leave this unchanged and click **`Next`**.
 
-    ![](utils/upscayl/53. vscode_start_menu.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/53. vscode_start_menu.png){.shadowed fig-align="center" width="70%"}
 
 -   **Step 6: Select Additional Tasks (Recommended Settings)**
 This step is easy to rush through, but it is worth paying attention here.
 
-    ![](utils/upscayl/54. vscode_additional_tasks.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/54. vscode_additional_tasks.png){.shadowed fig-align="center" width="70%"}
     
 Here is what these options do and why they are useful:
 
@@ -1613,16 +1613,16 @@ After selecting your preferred options, click **`Next`**.
 -   **Step 7: Install VS Code**
 Click Install to begin the installation process.
 
-    ![](utils/upscayl/55. vscode_click_install.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/55. vscode_click_install.png){.shadowed fig-align="center" width="70%"}
 
 You will see a progress screen while VS Code is being installed.
 
-    ![](utils/upscayl/56. installation_process.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/56. installation_process.png){.shadowed fig-align="center" width="70%"}
 
 -   **Step 8: Finish and Launch**
 Once installation is complete, click **`Finish`**.
 
-    ![](utils/upscayl/57. launch_vscode.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/57. launch_vscode.png){.shadowed fig-align="center" width="70%"}
 
 VS Code should launch automatically.
 
@@ -1631,13 +1631,13 @@ When VS Code opens for the first time, you will see a welcome screen. This inclu
 
 For now, you can leave everything as-is and simply close the welcome tab.
 
-    ![](utils/upscayl/59. vscode_welcome.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/59. vscode_welcome.png){.shadowed fig-align="center" width="70%"}
 
 At this point, Visual Studio Code is successfully installed on your system. Next, we will install the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) extension for VS Code, which allows the editor to understand and run R code.
 
 1.  First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`**.
 
-    ![](utils/upscayl/60. vscode_extensions.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/60. vscode_extensions.png){.shadowed fig-align="center" width="70%"}
 
 2.  
 
