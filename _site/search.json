@@ -102,21 +102,21 @@
     "href": "gallery/gallery.html",
     "title": " Gallery",
     "section": "",
-    "text": "Explore my interactive charts"
+    "text": "Explore my interactive Visualizations"
   },
   {
     "objectID": "gallery/gallery.html#interactive-charts",
     "href": "gallery/gallery.html#interactive-charts",
     "title": " Gallery",
     "section": "",
-    "text": "Explore my interactive charts"
+    "text": "Explore my interactive Visualizations"
   },
   {
-    "objectID": "gallery/gallery.html#day-chart-challenge",
-    "href": "gallery/gallery.html#day-chart-challenge",
+    "objectID": "gallery/gallery.html#day-map-challenge",
+    "href": "gallery/gallery.html#day-map-challenge",
     "title": " Gallery",
-    "section": "30 Day Chart Challenge",
-    "text": "30 Day Chart Challenge\nThe 30 Day Chart Challenge is a global challenge held every April and invites data analysts and visualization enthusiasts to create a chart every day for 30 days. Each day has a different theme or chart type, encouraging creativity, data exploration and practicing analysis and design techniques.\n\n Explore my code"
+    "section": "30 Day Map Challenge",
+    "text": "30 Day Map Challenge\nThe 30 Day Chart Challenge is a global challenge held every April and invites data analysts and visualization enthusiasts to create a chart every day for 30 days. Each day has a different theme or chart type, encouraging creativity, data exploration and practicing analysis and design techniques.\n\n Explore my code"
   },
   {
     "objectID": "gallery/gallery.html#tidy-tuesday",
@@ -126,13 +126,6 @@
     "text": "Tidy Tuesday\n\n See Code"
   },
   {
-    "objectID": "gallery/gallery.html#day-map-challenge",
-    "href": "gallery/gallery.html#day-map-challenge",
-    "title": " Gallery",
-    "section": "30 Day Map Challenge",
-    "text": "30 Day Map Challenge\n\n Explore my code\n\n\n\n\n\n\nPublic Music Schools in Greece\n\n\n\n\n\n\n\nRailway Network of Greece\n\n\n\n\n\n\n\nPublic Buildings, Lamia city\n\n\n\n\n\n\n\nStarmap of Athens"
-  },
-  {
     "objectID": "gallery/gallery.html#inforgraphics",
     "href": "gallery/gallery.html#inforgraphics",
     "title": " Gallery",
@@ -140,18 +133,18 @@
     "text": "Inforgraphics\n\n See Code\n\n⛏️⛏️⛏️"
   },
   {
-    "objectID": "gallery/gallery.html#shaded-relief-maps",
-    "href": "gallery/gallery.html#shaded-relief-maps",
+    "objectID": "gallery/gallery.html#d-shaded-relief-maps",
+    "href": "gallery/gallery.html#d-shaded-relief-maps",
     "title": " Gallery",
-    "section": "Shaded Relief Maps",
-    "text": "Shaded Relief Maps\n\n See Code\n\n\n\n\n\n\nNyika National Park—Malawi\n\n\n\n\n\n\n\nKasungu National Park—Malawi"
+    "section": "3D Shaded Relief Maps",
+    "text": "3D Shaded Relief Maps\n\n See Code\n\n\n\n\n\n\nNyika National Park—Malawi\n\n\n\n\n\n\n\nKasungu National Park—Malawi"
   },
   {
-    "objectID": "gallery/gallery.html#eu-in-figures",
-    "href": "gallery/gallery.html#eu-in-figures",
+    "objectID": "gallery/gallery.html#d-population-density",
+    "href": "gallery/gallery.html#d-population-density",
     "title": " Gallery",
-    "section": "EU in Figures",
-    "text": "EU in Figures\n\n See Code\n\n\n\n\n\n\nUnemployment, 2022\n\n\n\n\n\n\n\nR&D, 2021"
+    "section": "3D Population Density",
+    "text": "3D Population Density\n\n See Code"
   },
   {
     "objectID": "index.html",

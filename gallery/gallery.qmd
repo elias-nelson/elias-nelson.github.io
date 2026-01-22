@@ -19,11 +19,11 @@ format:
 
 ```{=html}
 <div class ="button_wrapper_gallery">
-<a href="./interactive-charts"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> Explore my interactive charts</button></a>
+<a href="./interactive-charts"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> Explore my interactive Visualizations</button></a>
 </div>
 ```
 
-## 30 Day Chart Challenge
+## 30 Day Map Challenge
 
 The 30 Day Chart Challenge is a global challenge held every April and invites data analysts and visualization enthusiasts to create a chart every day for 30 days. Each day has a different theme or chart type, encouraging creativity, data exploration and practicing analysis and design techniques.
 
@@ -33,31 +33,7 @@ The 30 Day Chart Challenge is a global challenge held every April and invites da
 </div>
 ```
 
-::::::::: {.grid .pt-3}
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/day1-2024-cc-en-drk.png){group="plot"}
-:::
 
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/day4-2024-cc-en.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/day15_dark-2024-cc.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/day23-2024-cc.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/day26-2024-cc.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/day28-2024-cc.png){group="plot"}
-:::
-:::::::::
 
 ## Tidy Tuesday
 
@@ -67,53 +43,7 @@ The 30 Day Chart Challenge is a global challenge held every April and invites da
 </div>
 ```
 
-:::::::: {.grid .pt-3}
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/w06-2023-tt.png){group="plot"}
-:::
 
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/w15-2023-tt.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/w17-2023-tt.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/w41-2023-tt.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](https://cdn.stesiam.com/w9-2025-tt.png){group="plot"}
-:::
-::::::::
-
-## 30 Day Map Challenge
-
-```{=html}
-<div class ="button_wrapper_gallery">
-<a href="https://github.com/stesiam/30DayMapChallenge"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> Explore my code</button></a>
-</div>
-```
-
-::::::: {.grid .pt-3}
-::: {.g-col-12 .g-col-md-4}
-![Public Music Schools in Greece](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day01/d1-2022-30dmc.png?raw=true){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![Railway Network of Greece](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day02/d2-2022-30dmc.png?raw=true){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![Public Buildings, Lamia city](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day08/d8-2022-30dmc.png?raw=true){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![Starmap of Athens](https://github.com/stesiam/30DayMapChallenge/blob/main/2022/day09/d9-2022-30dmc.png?raw=true){group="plot"}
-:::
-:::::::
 
 ## Inforgraphics
 
@@ -125,11 +55,11 @@ The 30 Day Chart Challenge is a global challenge held every April and invites da
 
 ⛏️⛏️⛏️
 
-## Shaded Relief Maps
+## 3D Shaded Relief Maps
 
 ```{=html}
 <div class ="button_wrapper_gallery">
-<a href="https://github.com/stesiam/Greece-In-Figures"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> See Code</button></a>
+<a href="https://github.com/elias-nelson/3D-Shaded-Relief-Maps"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> See Code</button></a>
 </div>
 ```
 
@@ -143,20 +73,10 @@ The 30 Day Chart Challenge is a global challenge held every April and invites da
 :::
 :::::::::
 
-## EU in Figures
+## 3D Population Density
 
 ```{=html}
 <div class ="button_wrapper_gallery">
 <a href="https://github.com/stesiam/EU-In-Figures"><button type="button" class="btn  btn-outline-primary btn-rounded"><i class="bi bi-github"></i> See Code</button></a>
 </div>
 ```
-
-::::: {.grid .pt-3}
-::: {.g-col-12 .g-col-md-4}
-![Unemployment, 2022](https://cdn.stesiam.com/EIF-1.png){group="plot"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![R&D, 2021](https://cdn.stesiam.com/EIF-2.png){group="plot"}
-:::
-:::::
