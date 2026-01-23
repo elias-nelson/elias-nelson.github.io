@@ -1,6 +1,9 @@
 ---
 title: "<i class='bi bi-card-image'></i> Gallery"
-description: "A collection of my visualizations. Some of them are based on popular challenges such as #TidyTuesday and #30DayMapChallenge. The collection is not restricted to those, as I find from time to time interesting datasets to work with."
+description: |
+  <em>By visualizing information, we turn it into a landscape that you can explore with your eyes, a sort of information map. And when you’re lost in information, an information map is kind of useful.<em> ―David McCandless
+
+  A collection of my visualizations. Some of them are based on popular challenges such as #TidyTuesday and #30DayMapChallenge.
 lang: en
 link-external-newwindow: true
 page-layout: full
