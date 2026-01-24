@@ -1,7 +1,7 @@
 ---
 title: "An Introduction to R"
 
-subtitle: "A Beginners Guide to R Programming Language for Data Analysis and Graphics"
+subtitle: "A Beginners Guide to {{< iconify logos:r-lang >}} Programming Language for Data Analysis and Graphics"
 
 author: 
   - name: Elias Nelson Kaunda
@@ -298,14 +298,14 @@ For new users, the easiest way to save the Console’s contents is to navigate t
 
 *Ready to Write Your First Program in* {{< iconify logos:r-lang >}}*?*
 
-Now that we have {{< fa brands r-project >}} installed and running, let’s dive right in by writing our first simple computer program. To do this, open {{< fa brands r-project >}} (if it’s not already open), and in the "R Console" type the following code after the `>` prompt symbol, then press **Enter**:
+Now that we have {{< fa brands r-project >}} installed and running, let’s dive right in by writing our first simple computer program. To do this, open {{< fa brands r-project >}} (if it’s not already open), and in the "R Console" type the following code after the `>` prompt symbol, then press **`Enter↵`**:
 
 ```{r}
 #| eval: false
 print("Hello, World!")
 ```
 
-After pressing **Enter**, you should see the following output appear in the Console, as shown in the image below.
+After pressing **`Enter↵`**, you should see the following output appear in the Console, as shown in the image below.
 
 ![](utils/upscaled/14.%20hello_world.png){.shadowed fig-align="center" width="80%"}
 
@@ -331,14 +331,14 @@ Let’s try another simple program with a basic arithmetic calculation—yes, {{
 
 -   Raise numbers to a power with `^`
 
-Type the following code into the console and press **Enter**:
+Type the following code into the console and press **`Enter↵`**:
 
 ```{r}
 #| eval: false
 print(4 + 2)
 ```
 
-After pressing **Enter**, you should see the following output in the console:
+After pressing **`Enter↵`**, you should see the following output in the console:
 
 ![](utils/upscaled/15.%20arithmetic_program.png){.shadowed fig-align="center" width="80%"}
 
@@ -784,7 +784,7 @@ The RStudio interface is divided into four quadrants, each serving a specific fu
 
 While you can customize the layout of the panes in the RStudio interface, I personally prefer the default arrangement. To change the pane layout, go to **Tools** → **Global Options**. Under **Global Options**, select the **Pane Layout** option and adjust the panes to your liking.
 
-You may notice that sometimes the Source window isn't visible when you first open RStudio. This happens when there’s no file opened. To activate the Source window, either open an existing file or create a new one by selecting `File → New File → R Script` from the menu bar, or by using the keyboard shortcut `Ctrl + Shift + N` on Windows or `Cmd + Shift + N` on macOS.
+You may notice that sometimes the Source window isn't visible when you first open RStudio. This happens when there’s no file opened. To activate the Source window, either open an existing file or create a new one by selecting `File → New File → R Script` from the menu bar, or by using the keyboard shortcut `Ctrl + Shift + N` on Windows or `⌘ + Shift + N` on macOS.
 
 Now, let's briefly explore the purpose of each pane and how they contribute to your workflow in {{< fa brands r-project >}}.
 
@@ -794,7 +794,7 @@ The **Console** is normally located in the bottom-left pane of RStudio unless ch
 
 The Console displays the output of your commands and computations, and you can also type and execute R code directly here—just as you did earlier when working with base R.
 
-Let’s try a quick example by calculating the sum of `20 + 7`. Click into the Console, type the following, and press `Enter/Return ↵` on your keyboard. The result should be straightforward:
+Let’s try a quick example by calculating the sum of **`20 + 7`**. Click into the Console, type the following, and press **`Enter/Return ↵`** on your keyboard. The result should be straightforward:
 
 ```{r}
 #| eval: false
@@ -940,7 +940,7 @@ By default, {{< fa brands r-project >}} comes with a set of basic packages alrea
 
 The **`Help`** tab is your primary go-to reference when you need assistance while working in {{< fa brands r-project >}}, and it also provides quick access to official documentation, manuals, learning resources, and other useful reference materials related to {{< fa brands r-project >}} and RStudio..
 
-![](utils/upscaled/48.%20RStudio_Help.png){.shadowed fig-align="center" width="90%"}
+![](utils/upscaled/48. RStudio_Help_1.png){.shadowed fig-align="center" width="90%"}
 
 The **Help** tab also provides detailed documentation for {{< fa brands r-project >}} functions, datasets, and packages. Whenever you are unsure how a function works, what arguments it accepts, or what a dataset contains, the Help pane is usually the first place you should look.
 
@@ -955,7 +955,7 @@ For instance, if you want to explore details about the built-in `mtcars` dataset
 
 Running this command opens the **Help** tab and displays comprehensive information about the dataset, including a description, variable definitions, and usage examples.
 
-![](utils/upscaled/49.%20RStudio_Help2.png){.shadowed fig-align="center" width="90%"}
+![](utils/upscaled/49. RStudio_Help_2.png){.shadowed fig-align="center" width="90%"}
 
 You can also use the search bar within the Help pane to look up specific topics or browse related documentation. Beyond RStudio, there is a rich ecosystem of online resources for learning and troubleshooting. For additional learning, I highly recommend CRAN’s '[Getting Help with R](https://www.r-project.org/help.html)' webpage. And if you're ever stuck, don’t hesitate to expand your search to other resources, such as [Google](https://www.google.com/), [Stack Overflow](https://stackoverflow.com/) or [Twitter](https://twitter.com/home) (using [#RStats](https://twitter.com/hashtag/rstats)).
 
@@ -1220,15 +1220,15 @@ or use the project dropdown in the top-right corner and select **New Project**.
 
 2.  In the dialog box, choose **New Directory.**
 
-![](images/39-RStudio_directory.png){fig-align="center"}
+![](utils/39-RStudio_directory.png){fig-align="center"}
 
 3.  Next, select **New Project**.
 
-![](images/40-RStudio_new_project.png){fig-align="center"}
+![](utils/40-RStudio_new_project.png){fig-align="center"}
 
 4.  Enter a clear, descriptive name for your project folder (referred to as the **Directory Name**) that reflects the nature of your work. Make sure to save this project folder in a logical and organized location on your computer. You can adjust the folder's location by clicking **Browse...** and selecting the appropriate directory. Ideally, this should be a folder where you routinely store your research or analysis projects, ensuring easy access and consistency in file management.
 
-![](images/43-RStudio_project.png){fig-align="center"}
+![](utils/43-RStudio_project.png){fig-align="center"}
 
 5.  Optionally, you can create a Git repository for version control by ticking the **Create a git repository** checkbox. If you’re unfamiliar with Git or don’t use GitHub, you can safely ignore this option for now.
 
@@ -1236,7 +1236,7 @@ or use the project dropdown in the top-right corner and select **New Project**.
 
 7.  Once you’re satisfied with the settings, click **Create Project**. RStudio will open a new session for your project, and you’re ready to begin.
 
-![](images/42-RStudio_project_open.png){fig-align="center"}
+![](utils/42-RStudio_project_open.png){fig-align="center"}
 
 Once your project is set up, you’ll notice a few changes in RStudio:
 
@@ -1260,7 +1260,7 @@ Good folder organization also plays a critical role in reproducible research and
 
 Aside from using RStudio projects, it’s also good practice to set up a working directory that makes your project easy to navigate. Here's a basic template you can use as a starting point:
 
-![](images/44-Project_template.png){fig-align="center" width="40%"}
+![](utils/44-Project_template.png){fig-align="center" width="40%"}
 
 For each project I work on, I usually have at least the following folder structure:
 
@@ -1555,86 +1555,149 @@ In the next section, we will shift focus to Visual Studio Code itself, where we 
 
 The first step in using {{< fa brands r-project >}} inside Visual Studio Code is installing the editor itself. VS Code is free, lightweight, and available for all major operating systems.
 
--   **Step 1: Download Visual Studio Code** Begin by downloading Visual Studio Code from the official website: 👉 https://code.visualstudio.com/Download
+-   **Step 1: Download Visual Studio Code** 
+
+    Begin by downloading Visual Studio Code from the official website: 👉 https://code.visualstudio.com/Download
 
     Choose the installer that matches your operating system (Windows, Mac or Linux).
 
-    ![](utils/upscaled/50. download_vscode.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/50. download_vscode.png){.shadowed fig-align="center" width="90%"}
 
 
--   **Step 2: Start the Installation** VS Code intsalls like any other desktop application.
+-   **Step 2: Start the Installation** 
 
--   On Windows, double-click the downloaded **`.exe`** file to start the installer.
+    VS Code intsalls like any other desktop application.
 
--   On macOS, open the downloaded archive and drag VS Code into your Applications folder.
+    - On Windows, double-click the downloaded **`.exe`** file to start the installer.
 
--   On Linux, follow the instructions provided for your distribution.
+    - On macOS, open the downloaded archive and drag VS Code into your Applications folder.
 
--   **Step 3: Accept the License Agreement** Read through the license agreement, accept the terms, and click Next to continue.
+    - On Linux, follow the instructions provided for your distribution.
 
-    ![](utils/upscaled/51.%20vscode_license_agreement.png){.shadowed fig-align="center" width="70%"}
+- **Step 3: Accept the License Agreement** 
 
--   **Step 4: Choose the Installation Location** Unless you have a specific reason to install VS Code elsewhere, it is best to keep the default installation location.
+    Read through the license agreement, accept the terms, and click Next to continue.
+
+    ![](utils/upscaled/51. vscode_license_agreement.png){.shadowed fig-align="center" width="90%"}
+
+-   **Step 4: Choose the Installation Location** 
+    
+    Unless you have a specific reason to install VS Code elsewhere, it is best to keep the default installation location.
 
     Click **`Next`** to continue.
 
-    ![](utils/upscaled/52. vscode_install_location.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/52. vscode_install_location.png){.shadowed fig-align="center" width="90%"}
 
 
--   **Step 5: Start Menu Folder** The default **`Start Menu Folder`** works well for most users. Leave this unchanged and click **`Next`**.
-
-    ![](utils/upscaled/53.%20vscode_start_menu.png){.shadowed fig-align="center" width="70%"}
-
--   **Step 6: Select Additional Tasks (Recommended Settings)** This step is easy to rush through, but it is worth paying attention here.
-
-    ![](utils/upscaled/54.%20vscode_additional_tasks.png){.shadowed fig-align="center" width="70%"}
-
-Here is what these options do and why they are useful:
-
--   **`Create a desktop icon:`** 
-
-    Optional. This simply places a VS Code shortcut on your desktop for quick access.
-
--   **`Add “Open with Code” to file context menu:`** 
-
-    This allows you to right-click a file in Windows Explorer and open it directly in VS Code. Very convenient when working with R scripts, Quarto files, or project folders.
-
--   **`Add “Open with Code” to directory context menu:`** 
+-   **Step 5: Start Menu Folder** 
   
-    This lets you right-click an entire folder and open it as a workspace in VS Code. This is especially useful for R projects, as VS Code will treat the folder as a single working environment.
+    The default **`Start Menu Folder`** works well for most users. Leave this unchanged and click **`Next`**.
+
+    ![](utils/upscaled/53. vscode_start_menu.png){.shadowed fig-align="center" width="90%"}
+
+-   **Step 6: Select Additional Tasks (Recommended Settings)** 
+
+    This step is easy to rush through, but it is worth paying attention here.
+
+    ![](utils/upscaled/54. vscode_additional_tasks.png){.shadowed fig-align="center" width="90%"}
+
+    Here is what these options do and why they are useful:
+
+    -   **`Create a desktop icon:`** 
+
+        Optional. This simply places a VS Code shortcut on your desktop for quick access.
+
+    -   **`Add “Open with Code” to file context menu:`** 
+
+        This allows you to right-click a file in Windows Explorer and open it directly in VS Code. Very convenient when working with R scripts, Quarto files, or project folders.
+
+    -   **`Add “Open with Code” to directory context menu:`** 
+  
+        This lets you right-click an entire folder and open it as a workspace in VS Code. This is especially useful for R projects, as VS Code will treat the folder as a single working environment.
 
     For beginners, it is safe and recommended to check all three options. They do not change how VS Code behaves internally; they simply make it easier to open files and projects.
 
     After selecting your preferred options, click **`Next`**.
 
--   **Step 7: Install VS Code** Click Install to begin the installation process.
+-   **Step 7: Install VS Code** 
 
-    ![](utils/upscaled/55.%20vscode_click_install.png){.shadowed fig-align="center" width="70%"}
+    Click Install to begin the installation process.
+
+    ![](utils/upscaled/55. vscode_click_install.png){.shadowed fig-align="center" width="90%"}
 
     You will see a progress screen while VS Code is being installed.
 
-    ![](utils/upscaled/56. installation_process.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/56. installation_process.png){.shadowed fig-align="center" width="90%"}
 
 
--   **Step 8: Finish and Launch** Once installation is complete, click **`Finish`**.
+-   **Step 8: Finish and Launch** 
+    
+    Once installation is complete, click **`Finish`**.
 
-    ![](utils/upscaled/57.%20launch_vscode.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/57. launch_vscode.png){.shadowed fig-align="center" width="90%"}
 
     VS Code should launch automatically.
 
--   **Step 9: First Launch** When VS Code opens for the first time, you will see a welcome screen. This includes links to tutorials and options to customize the editor’s appearance.
+-   **Step 9: First Launch** 
+    
+    When VS Code opens for the first time, you will see a welcome screen. This includes links to tutorials and options to customize the editor’s appearance.
 
     For now, you can leave everything as-is and simply close the welcome tab.
 
-    ![](utils/upscaled/59. vscode_welcome.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/59. vscode_welcome.png){.shadowed fig-align="center"}
 
     At this point, Visual Studio Code is successfully installed on your system. Next, we will install the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) extension for VS Code, which allows the editor to understand and run R code.
 
-1.  First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`**.
+1.  **Navigate to the Extensions view:** First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`** or use the shortcut **`Ctrl + Shift + X`** (**`⌘ + Shift + X`** on MacOS).
 
-    ![](utils/upscaled/60.%20vscode_extensions.png){.shadowed fig-align="center" width="70%"}
+    ![](utils/upscaled/60. vscode_extensions.png){.shadowed fig-align="center"}
 
-2.  
+2. Search for **`REditorSupport.r`**. Select the extension and click **`install`** and that should do the trick.
+
+Next we have to integrate/configure **`radian`** for interactive {{< fa brands r-project >}} terminal. Radian is an alternative console for {{< fa brands r-project >}} with features like syntax highlighting and auto-completion. To integrate radian with VS Code, ensure {{< fa brands r-project >}} and {{< iconify logos:python >}} **python** are installed on your system. 
+
+Well now we're gonna take a little detour because we haven't covered how to install Python late alone pip. So since the language of our interest here is {{< fa brands r-project >}} I'll just show you how to easily install python and pip, which is the standard package manager for Python. It allows you install and manage additional libraries (equivalent to packages in {{< fa brands r-projet >}}) that are not included in the standard python library.
+
+You should first check if python isn't installed on your computer:
+
+- In Windows open **`Command Prompt`** using the **`Run Dialog Box`**
+    
+    - Press Windows key/{{< iconify logos:microsoft-windows-icon >}} + **`R`** 
+    
+    - Type **`cmd`** n the dialogue box
+    
+    - Press **`Enter↵`** or click **`OK`**
+
+    This should open a new Command prompt terminal as below 
+    
+- In the terminal type in:
+```{python}
+#| eval: false
+python --version
+```
+
+    click **`Enter↵`**.
+
+::: column-margin
+- You can also copy and paste the code above into the terminal. However use the mouse as the usual **`Ctrl/⌘ + C`** and **`Ctrl/⌘+ V`** keyboard shortcut's don't work.
+:::
+
+    If you have python installed on your computer the output should print the version installed on your computer. If not installed, it should tell you that Python isn't installed as below.
+
+- For MacOS press **`⌘ + Space`**, type Terminal and press **`Enter↵`**. Type the same prompt in the terminal to check if python is installed on your machine.
+
+If python isn't installed follow the steps below to install it:
+
+1. 
+
+Install radian by running in your terminal the following command:
+
+```{python}
+#| eval: false
+pip install radian
+```
+
+
 
 #### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
@@ -1692,7 +1755,7 @@ sqrt(9)
 
 Most of these operations behave exactly as expected. However, one notable difference is that there is no square-root symbol in {{< fa brands r-project >}}. Instead, {fa brands r-project} uses functions such as **`sqrt()`** to compute roots.
 
-When you run these expressions, {{< fa brands r-project >}}, R evaluates them and prints the result to the Console. If you type them into a script and click **`Run`** (or press **`Ctrl + Enter`** the same evaluation happens line by line.
+When you run these expressions, {{< fa brands r-project >}}, R evaluates them and prints the result to the Console. If you type them into a script and click **`Run`** (or press **`Ctrl + Enter↵`** the same evaluation happens line by line. 
 
 You may notice that each printed result with `[1]`. This indicates the position (index) of the first element in the output. While this may seem odd now, it will make much more sense once we discuss vectors and indexing later on.
 
@@ -1826,7 +1889,7 @@ PRINT(x)
 
 In {{< fa brands r-project >}}, commands can be separated in two ways:
 
--   By starting a new line (i.e., hitting **`Enter`**) or
+-   By starting a new line (i.e., hitting **`Enter↵`**) or
 
 -   By using a semicolon **`;`**
 
