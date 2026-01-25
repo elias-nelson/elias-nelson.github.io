@@ -1648,11 +1648,55 @@ The first step in using {{< fa brands r-project >}} inside Visual Studio Code is
 
     At this point, Visual Studio Code is successfully installed on your system. Next, we will install the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) extension for VS Code, which allows the editor to understand and run R code.
 
-1.  **Navigate to the Extensions view:** First off, while in VS Code, to your left you will find an activity bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`** or use the shortcut **`Ctrl + Shift + X`** (**`⌘ + Shift + X`** on MacOS).
+1.  **Navigate to the Extensions view:** First off, while in VS Code, to your left you will find an Activity Bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`** (four squares icon) or use the shortcut **`Ctrl + Shift + X`** (**`⌘ + Shift + X`** on MacOS).
 
     ![](utils/upscaled/60. vscode_extensions.png){.shadowed fig-align="center"}
 
 2. Search for **`REditorSupport.r`**. Select the extension and click **`install`** and that should do the trick.
+
+3. Once you've successfully installed the {{< fa brands r-project >}} Extension you must now also see an {{< fa brands r-project>}} icon appear in your Activity Bar just below the **`Extensions`** view icon. 
+4. Add {{< fa brands r-project >}} to PATH 
+
+- On windows
+
+    - Locate {{< fa brands r-project >}} installation folder. By default, {{< fa brands r-project >}} installs to something like:
+
+```{r}
+#| eval: false
+
+c:\Program Files\R\R-x.x.x\bin
+```
+
+    - Copy the path. Open File Explorer, navigate to the **`bin`** folder iside your {{< fa brands r-project >}} installation. Copy the full path by right clicking on the **`bin`** folder and select *`copy as path`* (**`Ctrl/⌘ + Shift + C`**).
+    
+    - Open Environment Variables. Press Windows key/{{< iconify logos:microsoft-windows-icon >}} + **`R`**, type **`sysdm.cpl`** and hit **`Enter↵`**. Go to **`Advanced`** tab and  clcik **`Environment Variables`**.
+    
+    - Edit **`PATH`** variable. Under **`System variables`**, find an select **`Path`**, then click **`Edit`**. Click **`New`**, paste the path you copied (**`C:\Program Files\R\R-x.x.x\bin`**). Click **`OK`** to save.
+    
+5. You may also need to configure the {{< fa brands r-project >}} VS Code settings.
+
+- The {{< fa brands r-project >}} extension in VS Code sometimes need to know exactly where your {{< fa brands r-project >}} executable is.
+
+- To configure:
+
+    - Go to **`File → Preferences → Settings`**
+    
+    - Search for **`Rpath`**
+    
+    - Set it to the full path of your {{< fa brands r-project >}} executable:
+    
+    Windows: **`C:\Program Files\R\R-x.x.x\bin\R.exe`**
+    
+    macOS/Linux: **`/usr/local/bin/R`**
+
+6. Open a terminal in VS Code by clicking on the dots (...) in the top pane, then **`Terminal`** → **`New Terminal`**. If you're in full screen mode however you must be ale to simply see the **`Terminal`** click on it and select **`New Terminal`** which opens a terminal in VS Code or simply use the keyboard shortcut **`Ctrl + (backtick)`** on Windows and **`⌘ + (backtick)`** on macOS.
+
+6. Click the dropdown arrow next to the **`+`** button in the terminal tab and select **`Command Prompt`**.
+
+7. Type **`R`** in the terminal and press **`Enter↵`** to start an {{< fa brands r-projct >}} **`session`**.
+
+8. Alternatively you may just select the **`R Terminal`** after clicking the dropdown arrow next to the **`+`** button in the terminal tab.
+
 
 Next we have to integrate/configure **`radian`** for interactive {{< fa brands r-project >}} terminal. Radian is an alternative console for {{< fa brands r-project >}} with features like syntax highlighting and auto-completion. To integrate radian with VS Code, ensure {{< fa brands r-project >}} and {{< iconify logos:python >}} **python** are installed on your system. 
 
@@ -1688,9 +1732,28 @@ python --version
 
 If python isn't installed follow the steps below to install it:
 
-1. 
+1. Go to www.python.org. 
+
+2. On the homepage click on the **`Download`** tab as below.
+
+3. For Windows users click the **`Windows`** link and on the **`Windows`** page click on the **`Download Windows installer (xx-bit)`** fo your appropriate bit type under the **`Stable Releases`** section which should prompt downloading of the executable (**`.exe`**) file. For other users (macOS or Linux) follow the links provided to download python.
+
+4. For windows double clicking the **`.exe`** file should prompt the installation.
+
+5. Check the two boxes at the bottom as below and click **`Install Now`**. 
+
+    - Checking the **`Use admin privileges when installing py.exe`** ensures that the installation proceeds without restrictions as the installation process requires elevated permissions to modify system files and settings,
+    - While checking **`Add python.exe to PATH`** means that the installation process automatically includes adding the Python executable to the systems PATH variable. This is important because you're tellig your operating system where to find python (or python3) executable when you type it in the termianl/command prompt. However there may be conflicts if a prior python version(s) installation is also available and was also added to the PATH, Python will always use whichever comes first in the PATH list if multiple versions are installed. In this scenario especially if some tools/scripts may expect a specific version you may have to use version managers or explicitly call the version you want e.g., **`python3.11`** or **`python3.12`** 
+    
+6. Leave the installation process to run as below.
+
+7. Click close once the installation is successful as below.
+
+Congratulations you have managed to install python on your system. We're now ready to continue with our radian interactive {{< fa brands r-project >}} Console.
 
 Install radian by running in your terminal the following command:
+
+Remember for Windows users you can 
 
 ```{python}
 #| eval: false
