@@ -1738,6 +1738,8 @@ R --vanilla
 
 The **vanilla** {{< fa brands r-project >}} **console** refers to a basic {{< fa brands r-project >}} session that does not load any custom settings ({{< fa brands r-project >}} startup file configurations e.g., **`.Rprofile`**) or libraries.
 
+Running this command opens R in terminal and you can run {{< fa brands r-project >}} code in the terminal.
+
 ##### Pointing VS Code directly to {{<fa brands r-project  >}} (**`Rpath`** setting)
 
 Sometimes the {{< fa brands r-project >}} extension needs an explicit pointer to the {{< fa brands r-project >}} executable.
@@ -1946,21 +1948,73 @@ Finally to install **`radian`** :
 
     If everything was successful, this will print the version of radian installed, including the paths to {{< fa brands r-project >}} and python executables and their corresponding versions installed. This is where you may also notice that the manual addition of {{< fa brands r-project >}} to **`PATH`** and python's automatic addition during installment saves us from future headaches and errors that we my have faced such as here. Radian is just a front-end; it needs {{< fa brands r-project >}} to run, hence it has to be added to **`PATH`**.
 
-6.  Many people prefer using the **`radian`** as an alternative Console for {{< fa brands r-project >}}
+6.  Many people prefer using the **`radian`** as an alternative Console for {{< fa brands r-project >}}. You can configure VS Code to use radian by setting the path to the **`radian`** executable in your **`setting.json`**. To set **`radian`** as your default {{< fa brands r-project >}} terminal in VS Code settings
 
-    Now as a final step to using the **`radian`** Console in VS Code we need to configure VS Code to use radian by setting th path to the **`radian`** executable in your **`setting.json`**. On a Mac, this is typically **`/usr/local/bin/radian`**. You can access settings.json by pressing **`⌘ + Shift + P`** on Mac or **`Ctrl + Shift + P`** on Windows/Linux, typing **`“Open Settings (JSON)”`**, and pressing **`Enter↵`**.
+    For windows the radian executable should be located in your Python **`Scripts`** folder (i.e., **`"C:\Users\ENTOMOLOGY LAB\AppData\Local\Programs\Python\Python314\Scripts\radian.exe"`**). While on a n a Mac, this is typically **`"/usr/local/bin/radian"`**, while for Linux **`"/usr/bin/radian"`**.
 
-    For Windows since radian is installed via pip, its executable is in your Python Scripts folder. For a setup like this it is likely:
+7.   You can access settings.json by pressing **`⌘ + Shift + P`** on Mac or **`Ctrl + Shift + P`** on Windows/Linux, typing **`“Open Settings (JSON)”`**, and pressing **`Enter↵`**.
 
-    ``` cmd
-    C:\Users\Entomology Lab\AppData\Local\Programs\Python314\Scripts
-    ```
-
-7.  Configure VS Code settings
+8.  Configure VS Code settings
 
     -   Open VS Code
     -   Press Ctrl + space,
     -   Search for **`settings.json`**.
+
+    For windows add the following line:
+
+    ``` cmd
+    {
+        "r.term.windows": "C:\Users\ENTOMOLOGY LAB\AppData\Local\Programs\Python\Python314\Scripts\radian.exe"
+    }
+    ```
+
+For Mac:
+
+``` cmd
+{
+    "r.term.mac": "/usr/local/bin/radian"
+}
+```
+
+For Linux
+
+``` cmd
+{
+    "r.term.linux": "/usr/bin/radian"
+}
+```
+
+There are a few more recommended VS Code settings for {{< fa brands r-project >}}. These settings help to optimize your workflow when working with {{< fa brands r-project >}} in VS Code. You can add these settings in your **`settings.json`** file as we did with the **`radian`** executable:
+
+``` cmd
+{
+"r.bracketedPaste": true,
+"r.removeLeadingComments": true,
+"r.plot.useHttpgd": true,
+"editor.wordWrap": "wordWrapColumn",
+
+"[r]": {
+   "editor.defaultFormatter": "REditorSupport.r"
+},
+
+"workbench.colorCustomizations": {
+   //  "editorError.foreground": "#00000000", // Red Squiggly, I suggest not to change this one…
+   //  "editorWarning.foreground": "#00000000", // Yellow Squiggly, I suggest not to change this one…
+   "editorInfo.foreground": "#00000000", // Blue Squiggly, you could even change it yo something almost completely transparent so it doesn’t bother you as much…
+    }
+
+}
+```
+
+An integral part of setting up VS Code for R development is fine-tuning the behavior of the **`lintr`** package, which plays a crucial role in maintaining high code quality and adherence to coding standards. By customizing the .lintr configuration, developers can control which linting rules are enforced, tailoring the development environment to their preferences or project-specific guidelines.
+
+Enhance your R programming experience in VS Code by tweaking some settings in your **`settings.json`** file.
+
+Migrating from RStudio to VS Code for R development not only opens up new possibilities for enhancing your development environment but also requires some adjustments to tailor the experience to your preferences.
+
+By following the above steps, you’ve now equipped VS Code with powerful tools and configurations to supercharge your {{< fa brands r-project >}} programming. With the {{< fa brands r-project >}} extension, **`radian`**, essential packages, and tailored settings, you’re all set to enjoy a streamlined, productive coding experience in {{< fa brands r-project >}}. Whether you’re analyzing data, creating visualizations, or developing statistical models, VS Code is now a formidable ally in your {{< fa brands r-project >}} programming endeavors. Happy coding!
+
+This is one of the little maintainence chores that comes with upgrading {{< fa brands r-project >}} on Windows is you need to adjust paths.
 
 #### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
