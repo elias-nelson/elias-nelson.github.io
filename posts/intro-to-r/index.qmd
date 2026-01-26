@@ -940,7 +940,7 @@ By default, {{< fa brands r-project >}} comes with a set of basic packages alrea
 
 The **`Help`** tab is your primary go-to reference when you need assistance while working in {{< fa brands r-project >}}, and it also provides quick access to official documentation, manuals, learning resources, and other useful reference materials related to {{< fa brands r-project >}} and RStudio..
 
-![](utils/upscaled/48. RStudio_Help_1.png){.shadowed fig-align="center" width="90%"}
+![](utils/upscaled/48.%20RStudio_Help_1.png){.shadowed fig-align="center" width="90%"}
 
 The **Help** tab also provides detailed documentation for {{< fa brands r-project >}} functions, datasets, and packages. Whenever you are unsure how a function works, what arguments it accepts, or what a dataset contains, the Help pane is usually the first place you should look.
 
@@ -955,7 +955,7 @@ For instance, if you want to explore details about the built-in `mtcars` dataset
 
 Running this command opens the **Help** tab and displays comprehensive information about the dataset, including a description, variable definitions, and usage examples.
 
-![](utils/upscaled/49. RStudio_Help_2.png){.shadowed fig-align="center" width="90%"}
+![](utils/upscaled/49.%20RStudio_Help_2.png){.shadowed fig-align="center" width="90%"}
 
 You can also use the search bar within the Help pane to look up specific topics or browse related documentation. Beyond RStudio, there is a rich ecosystem of online resources for learning and troubleshooting. For additional learning, I highly recommend CRAN’s '[Getting Help with R](https://www.r-project.org/help.html)' webpage. And if you're ever stuck, don’t hesitate to expand your search to other resources, such as [Google](https://www.google.com/), [Stack Overflow](https://stackoverflow.com/) or [Twitter](https://twitter.com/home) (using [#RStats](https://twitter.com/hashtag/rstats)).
 
@@ -1543,8 +1543,7 @@ For most beginners, this is not necessary.
 On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled binary packages automatically, so unless tools like **`Rtools`** or **`Xcode`** are installed, this prompt may not appear at all. Do not be concerned if you never see it.
 
 ::: column-margin
-- **Beginner rule of thumb 🧠**
-If {{< fa brands r-project >}} asks about installing from source and you are unsure, always choose **`NO`**.
+-   **Beginner rule of thumb 🧠** If {{< fa brands r-project >}} asks about installing from source and you are unsure, always choose **`NO`**.
 :::
 
 Once you click NO, {{< fa brands r-project >}} will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.
@@ -1555,212 +1554,366 @@ In the next section, we will shift focus to Visual Studio Code itself, where we 
 
 The first step in using {{< fa brands r-project >}} inside Visual Studio Code is installing the editor itself. VS Code is free, lightweight, and available for all major operating systems.
 
--   **Step 1: Download Visual Studio Code** 
+-   **Step 1: Download Visual Studio Code**
 
-    Begin by downloading Visual Studio Code from the official website: 👉 https://code.visualstudio.com/Download
+    Begin by downloading Visual Studio Code from the official website: 👉 <https://code.visualstudio.com/Download>
 
     Choose the installer that matches your operating system (Windows, Mac or Linux).
 
-    ![](utils/upscaled/50. download_vscode.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/50.%20download_vscode.png){.shadowed fig-align="center" width="90%"}
 
-
--   **Step 2: Start the Installation** 
+-   **Step 2: Start the Installation**
 
     VS Code intsalls like any other desktop application.
 
-    - On Windows, double-click the downloaded **`.exe`** file to start the installer.
+    -   On Windows, double-click the downloaded **`.exe`** file to start the installer.
 
-    - On macOS, open the downloaded archive and drag VS Code into your Applications folder.
+    -   On macOS, open the downloaded archive and drag VS Code into your Applications folder.
 
-    - On Linux, follow the instructions provided for your distribution.
+    -   On Linux, follow the instructions provided for your distribution.
 
-- **Step 3: Accept the License Agreement** 
+-   **Step 3: Accept the License Agreement**
 
     Read through the license agreement, accept the terms, and click Next to continue.
 
-    ![](utils/upscaled/51. vscode_license_agreement.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/51.%20vscode_license_agreement.png){.shadowed fig-align="center" width="90%"}
 
--   **Step 4: Choose the Installation Location** 
-    
+-   **Step 4: Choose the Installation Location**
+
     Unless you have a specific reason to install VS Code elsewhere, it is best to keep the default installation location.
 
     Click **`Next`** to continue.
 
-    ![](utils/upscaled/52. vscode_install_location.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/52.%20vscode_install_location.png){.shadowed fig-align="center" width="90%"}
 
+-   **Step 5: Start Menu Folder**
 
--   **Step 5: Start Menu Folder** 
-  
     The default **`Start Menu Folder`** works well for most users. Leave this unchanged and click **`Next`**.
 
-    ![](utils/upscaled/53. vscode_start_menu.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/53.%20vscode_start_menu.png){.shadowed fig-align="center" width="90%"}
 
--   **Step 6: Select Additional Tasks (Recommended Settings)** 
+-   **Step 6: Select Additional Tasks (Recommended Settings)**
 
     This step is easy to rush through, but it is worth paying attention here.
 
-    ![](utils/upscaled/54. vscode_additional_tasks.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/54.%20vscode_additional_tasks.png){.shadowed fig-align="center" width="90%"}
 
     Here is what these options do and why they are useful:
 
-    -   **`Create a desktop icon:`** 
+    -   **`Create a desktop icon:`**
 
         Optional. This simply places a VS Code shortcut on your desktop for quick access.
 
-    -   **`Add “Open with Code” to file context menu:`** 
+    -   **`Add “Open with Code” to file context menu:`**
 
         This allows you to right-click a file in Windows Explorer and open it directly in VS Code. Very convenient when working with R scripts, Quarto files, or project folders.
 
-    -   **`Add “Open with Code” to directory context menu:`** 
-  
+    -   **`Add “Open with Code” to directory context menu:`**
+
         This lets you right-click an entire folder and open it as a workspace in VS Code. This is especially useful for R projects, as VS Code will treat the folder as a single working environment.
 
     For beginners, it is safe and recommended to check all three options. They do not change how VS Code behaves internally; they simply make it easier to open files and projects.
 
     After selecting your preferred options, click **`Next`**.
 
--   **Step 7: Install VS Code** 
+-   **Step 7: Install VS Code**
 
     Click Install to begin the installation process.
 
-    ![](utils/upscaled/55. vscode_click_install.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/55.%20vscode_click_install.png){.shadowed fig-align="center" width="90%"}
 
     You will see a progress screen while VS Code is being installed.
 
-    ![](utils/upscaled/56. installation_process.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/56.%20installation_process.png){.shadowed fig-align="center" width="90%"}
 
+-   **Step 8: Finish and Launch**
 
--   **Step 8: Finish and Launch** 
-    
     Once installation is complete, click **`Finish`**.
 
-    ![](utils/upscaled/57. launch_vscode.png){.shadowed fig-align="center" width="90%"}
+    ![](utils/upscaled/57.%20launch_vscode.png){.shadowed fig-align="center" width="90%"}
 
     VS Code should launch automatically.
 
--   **Step 9: First Launch** 
-    
+-   **Step 9: First Launch**
+
     When VS Code opens for the first time, you will see a welcome screen. This includes links to tutorials and options to customize the editor’s appearance.
 
     For now, you can leave everything as-is and simply close the welcome tab.
 
-    ![](utils/upscaled/59. vscode_welcome.png){.shadowed fig-align="center"}
+    ![](utils/upscaled/59.%20vscode_welcome.png){.shadowed fig-align="center"}
 
-    At this point, Visual Studio Code is successfully installed on your system. Next, we will install the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) extension for VS Code, which allows the editor to understand and run R code.
+    At this point, Visual Studio Code is successfully installed on your system. Next, we will install the [{{< fa brands r-project >}} extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) extension for VS Code, which allows the editor to understand and run {{< fa brands r-project >}} code.
 
-1.  **Navigate to the Extensions view:** First off, while in VS Code, to your left you will find an Activity Bar with options for **`Explorer`**, **`Search`**, **`Source Control`**, **`Run and Debug`** and finally **`Extensions`**. Click on **`Extensions`** (four squares icon) or use the shortcut **`Ctrl + Shift + X`** (**`⌘ + Shift + X`** on MacOS).
+This extension adds {{< fa brands r-project >}}-specific features such as:
 
-    ![](utils/upscaled/60. vscode_extensions.png){.shadowed fig-align="center"}
+-   Syntax highlighting
 
-2. Search for **`REditorSupport.r`**. Select the extension and click **`install`** and that should do the trick.
+-   Code execution
 
-3. Once you've successfully installed the {{< fa brands r-project >}} Extension you must now also see an {{< fa brands r-project>}} icon appear in your Activity Bar just below the **`Extensions`** view icon. 
-4. Add {{< fa brands r-project >}} to PATH 
+-   An {{< fa brands r-project >}}-aware terminal
 
-- On windows
+-   Basic editor support for {{< fa brands r-project >}} scripts
 
-    - Locate {{< fa brands r-project >}} installation folder. By default, {{< fa brands r-project >}} installs to something like:
+1.  **Open the Extensions view:**
 
-```{r}
-#| eval: false
+    Inside VS Code, look to the **Activity Bar** on the left-hand side. You will see icons for:
 
-c:\Program Files\R\R-x.x.x\bin
-```
+    -   Explorer
 
-    - Copy the path. Open File Explorer, navigate to the **`bin`** folder iside your {{< fa brands r-project >}} installation. Copy the full path by right clicking on the **`bin`** folder and select *`copy as path`* (**`Ctrl/⌘ + Shift + C`**).
-    
-    - Open Environment Variables. Press Windows key/{{< iconify logos:microsoft-windows-icon >}} + **`R`**, type **`sysdm.cpl`** and hit **`Enter↵`**. Go to **`Advanced`** tab and  clcik **`Environment Variables`**.
-    
-    - Edit **`PATH`** variable. Under **`System variables`**, find an select **`Path`**, then click **`Edit`**. Click **`New`**, paste the path you copied (**`C:\Program Files\R\R-x.x.x\bin`**). Click **`OK`** to save.
-    
-5. You may also need to configure the {{< fa brands r-project >}} VS Code settings.
+    -   Search
 
-- The {{< fa brands r-project >}} extension in VS Code sometimes need to know exactly where your {{< fa brands r-project >}} executable is.
+    -   Source Control
 
-- To configure:
+    -   Run and Debug
 
-    - Go to **`File → Preferences → Settings`**
-    
-    - Search for **`Rpath`**
-    
-    - Set it to the full path of your {{< fa brands r-project >}} executable:
-    
-    Windows: **`C:\Program Files\R\R-x.x.x\bin\R.exe`**
-    
-    macOS/Linux: **`/usr/local/bin/R`**
+    -   Extensions.
 
-6. Open a terminal in VS Code by clicking on the dots (...) in the top pane, then **`Terminal`** → **`New Terminal`**. If you're in full screen mode however you must be ale to simply see the **`Terminal`** click on it and select **`New Terminal`** which opens a terminal in VS Code or simply use the keyboard shortcut **`Ctrl + (backtick)`** on Windows and **`⌘ + (backtick)`** on macOS.
+    Click on **`Extensions`** (the four-squares icon), or use the keyboard shortcut:
 
-6. Click the dropdown arrow next to the **`+`** button in the terminal tab and select **`Command Prompt`**.
+    -   Windows/Linux: **`Ctrl + Shift + X`**
 
-7. Type **`R`** in the terminal and press **`Enter↵`** to start an {{< fa brands r-projct >}} **`session`**.
+    -   macOS: **`⌘ + Shift + X`**
 
-8. Alternatively you may just select the **`R Terminal`** after clicking the dropdown arrow next to the **`+`** button in the terminal tab.
+    ![](utils/upscaled/60.%20vscode_extensions.png){.shadowed fig-align="center"}
 
+2.  **Install the** {{< fa brands r-project >}} **extension:**
 
-Next we have to integrate/configure **`radian`** for interactive {{< fa brands r-project >}} terminal. Radian is an alternative console for {{< fa brands r-project >}} with features like syntax highlighting and auto-completion. To integrate radian with VS Code, ensure {{< fa brands r-project >}} and {{< iconify logos:python >}} **python** are installed on your system. 
+    In the extensionss search bar type **`REditorSupport.r`**.
 
-Well now we're gonna take a little detour because we haven't covered how to install Python late alone pip. So since the language of our interest here is {{< fa brands r-project >}} I'll just show you how to easily install python and pip, which is the standard package manager for Python. It allows you install and manage additional libraries (equivalent to packages in {{< fa brands r-projet >}}) that are not included in the standard python library.
+    -   Select the extension
 
-You should first check if python isn't installed on your computer:
+    -   Click **`install`**
 
-- In Windows open **`Command Prompt`** using the **`Run Dialog Box`**
-    
-    - Press Windows key/{{< iconify logos:microsoft-windows-icon >}} + **`R`** 
-    
-    - Type **`cmd`** n the dialogue box
-    
-    - Press **`Enter↵`** or click **`OK`**
+    Once installed, VS Code now understands {{< fa brands r-project >}} code.
 
-    This should open a new Command prompt terminal as below 
-    
-- In the terminal type in:
-```{python}
-#| eval: false
-python --version
-```
+    ![](utils/upscaled/61.%20RExtension.png){.shadowed fig-align="center"}
 
-    click **`Enter↵`**.
+3.  **Confirm the extension is active**
+
+    After installation, you should notice a new {{< fa brands r-project >}} icon appear in the Activity Bar, usally just below the Extensions icon. This confirms that the {{< fa brands r-project >}} is active and ready to use
+
+    ![](utils/upscaled/61.%20RExtension2.png){.shadowed fig-align="center"}
+
+##### Making {{< iconify logos:r-lang >}} discoverable by {{< iconify logos:visual-studio-code >}} (Adding {{< iconify logos:r-lang >}} to **`PATH`**)
+
+For VS Code (and your system terminal) to run R, it needs to know where the R executable lives. This is handled through a system setting called PATH.
+
+> Think of **`PATH`** as a list of folders your computer searches when you type a command like {{< fa brands r-project >}} into a terminal.
+
+On Windows
+
+1.  **Locate your** {{< fa brands r-project >}} **installation**
+
+    By default, {{< fa brands r-project >}} is installed in a folder similar to:
+
+    **`C:\Program Files\R\R-x.x.x\bin`**
+
+2.  **Copy the path**
+
+    Open File Explorer, navigate to the **`bin`** folder inside your {{< fa brands r-project >}} installation. Right-click the folder and select **`Copy as path`**. Alternatively you can use the keyboard shortcut **`Ctrl/⌘ + Shift + C`**
+
+3.  **Open Environment Variables**.
+
+    Press {{< iconify logos:microsoft-windows-icon >}} Windows key + **`R`**, type **`sysdm.cpl`** and hit **`Enter↵`**. Go to **`Advanced`** tab and click **`Environment Variables`**.
+
+4.  **Edit the `PATH` variable**.
+
+    Under **`System variables`**, select **`Path`**, click **`Edit`** → **`New`**, paste the path you copied (**`C:\Program Files\R\R-x.x.x\bin`**). Click **`OK`** to save.
+
+    ![](utils/upscaled/71.%20add_R_to_PATH.png){.shadowed fig-align="center" width="120%"}
+
+    Once this is done, typing {{< fa brands r-project >}} in a terminal should work anywhere on your system.
+
+##### Pointing VS Code directly to {{<fa brands r-project  >}} (**`Rpath`** setting)
+
+Sometimes the {{< fa brands r-project >}} extension needs an explicit pointer to the {{< fa brands r-project >}} executable.
+
+To set this:
+
+1.  Go to **`File → Preferences → Settings`**
+
+2.  Search for **`Rpath`**
+
+3.  Set the value to the full path of your {{< fa brands r-project >}} executable:
+
+    -   Windows:
+
+        **`C:\Program Files\R\R-x.x.x\bin\R.exe`**
+
+    -   macOS/Linux:
+
+        **`/usr/local/bin/R`**
+
+    ![](utils/upscaled/75.%20Rpath.png){.shadowed fig-align="center" width="120%"}
+
+    This removes any ambiguity and ensures VS Code always uses the correct {{< fa brands r-project >}} installation.
+
+##### Starting an {{< iconify logos:r-lang >}} session inside {{< iconify logos:visual-studio-code >}} VS Code
+
+1.  **Open a terminal:**
+
+-   Menu: **`Terminal`** → **`New Terminal`**.
+
+-   Shortcut:
+
+    -   Windows/Linux: **`` Ctrl + ` ``**
+
+    -   macOS: **`` ⌘ + ` ``**
+
+    ![](utils/upscaled/70.%20powershell_terminal.png){.shadowed fig-align="center" width="120%"}
+
+2.  Click the dropdown arrow next to the **`+`** button in the and select **`Command Prompt`**.
+
+    ![](utils/upscaled/72.%20vscode_cmd.png){.shadowed fig-align="center" width="120%"}
+
+3.  In the terminal type:
+
+    ``` cmd
+    R
+    ```
+
+    and press **`Enter↵`** to start an {{< fa brands r-projct >}} **`session`**.
+
+    ![](utils/upscaled/73.%20vscode_R_session.png)
+
+4.  Alternatively, from the same dropdown menu next to the **`+`** button, select **`R Terminal`**. This launches an {{< fa brands r-project >}} session automatically and is often the easiest option for beginners.
+
+    ![](utils/upscaled/74.%20vscode_R_terminal.png){.shadowed fig-align="center" width="120%"}
+
+5.  Here you can run code as we did before in the base {{< fa brands r-project >}} Console or in RStudio's Console pane. You can simply run a simple **`print("Hello, World")`** program as we did previously. Go ahead and also try a simple arithmetic computation after that.
+
+Up to this point, everything we’ve done has been purely about {{< fa brands r-project >}}.
+
+Now we introduce **`radian`**, an enhanced {{< fa brands r-project >}} console that provides:
+
+-   Syntax highlighting
+
+-   Better auto-completion
+
+-   A smoother interactive experience inside VS Code
+
+Radian is an alternative console for {{< fa brands r-project >}}. To integrate radian with VS Code, we need to have {{< fa brands r-project >}} and {{< iconify logos:python >}} **python** installed on our system.
+
+I get it, right now you're wondering how python has made it into our discussion, but take heart and don't be too overwhelmed.
+
+Here's the key point:
+
+> **Radian is written in Python**.
+>
+> That’s why Python is required — not because you need to learn Python, but because it acts as a supporting tool for a better {{< fa brands r-project >}} experience.
+
+So think of Python here as infrastructure, not a new language you must master.
+
+However a very short introduction to Python may be imminent as we need to install the program for us to continue and integrate radian with VS Code. Python is a high-level, general-purpose programming language created by **Guido van Rossum** and first released in 1991. It is widely known for its readable syntax and is commonly used as a foundation for tools, automation, and scientific software.
+
+In our case:
+
+-   Python is required to install **`radian`**
+
+-   We only need Python and **`pip`** (Python's package manager)
+
+-   No Python programming knowledge is required
+
+You can safely continue thinking "in {{< fa brands r-project >}} throughout this section.
+
+Before installing Python you should first check if python isn't already installed on your computer:
+
+On Windows, to open **`Command Prompt`**
+
+1.  Press {{< iconify logos:microsoft-windows-icon >}} Windows key + **`R`**
+
+2.  Type **`cmd`** in the **`Run Dialog Box`**
+
+3.  Press **`Enter↵`** or click **`OK`**
+
+4.  In the Command Prompt terminal, type:
+
+    ``` cmd
+    python --version
+    ```
+
+    then press **`Enter↵`**.
+
+    -   If Python is installed, you’ll see a version number e.g., **`Python 3.12.7`**.
+
+    -   If not, Windows will report that Python is not recognized.
 
 ::: column-margin
-- You can also copy and paste the code above into the terminal. However use the mouse as the usual **`Ctrl/⌘ + C`** and **`Ctrl/⌘+ V`** keyboard shortcut's don't work.
+**Tip:** Use your mouse to copy and paste commands — standard **`Ctrl/⌘ + C`** and **`Ctrl/⌘+ V`** keyboard shortcuts may not work in some terminals.
 :::
 
-    If you have python installed on your computer the output should print the version installed on your computer. If not installed, it should tell you that Python isn't installed as below.
+![](utils/upscaled/63.%20python_not_installed.png){.shadowed fig-align="center" width="80%"}
 
-- For MacOS press **`⌘ + Space`**, type Terminal and press **`Enter↵`**. Type the same prompt in the terminal to check if python is installed on your machine.
+On macOS
 
-If python isn't installed follow the steps below to install it:
+-   Press **`⌘ + Space`**
 
-1. Go to www.python.org. 
+-   Search for Terminal and press **`Enter↵`**.
 
-2. On the homepage click on the **`Download`** tab as below.
+-   Run the same command:
 
-3. For Windows users click the **`Windows`** link and on the **`Windows`** page click on the **`Download Windows installer (xx-bit)`** fo your appropriate bit type under the **`Stable Releases`** section which should prompt downloading of the executable (**`.exe`**) file. For other users (macOS or Linux) follow the links provided to download python.
+    ``` cmd
+    python --version
+    ```
 
-4. For windows double clicking the **`.exe`** file should prompt the installation.
+If Python is not installed follow the steps below to install it:
 
-5. Check the two boxes at the bottom as below and click **`Install Now`**. 
+1.  Visit [www.python.org](https://www.python.org/)
 
-    - Checking the **`Use admin privileges when installing py.exe`** ensures that the installation proceeds without restrictions as the installation process requires elevated permissions to modify system files and settings,
-    - While checking **`Add python.exe to PATH`** means that the installation process automatically includes adding the Python executable to the systems PATH variable. This is important because you're tellig your operating system where to find python (or python3) executable when you type it in the termianl/command prompt. However there may be conflicts if a prior python version(s) installation is also available and was also added to the PATH, Python will always use whichever comes first in the PATH list if multiple versions are installed. In this scenario especially if some tools/scripts may expect a specific version you may have to use version managers or explicitly call the version you want e.g., **`python3.11`** or **`python3.12`** 
-    
-6. Leave the installation process to run as below.
+2.  Click **`Download`**
 
-7. Click close once the installation is successful as below.
+    ![](utils/upscaled/64.%20python_download.png){.shadowed fig-align="center"}
 
-Congratulations you have managed to install python on your system. We're now ready to continue with our radian interactive {{< fa brands r-project >}} Console.
+3.  Choose the installer for your operating system
+
+    ![](utils/upscaled/65.%20python_OS.png){.shadowed fig-align="center"}
+
+    For **Windows** users click the **`Windows`** link and then click on the **`Download Windows installer (xx-bit)`** for your appropriate bit type under the **`Stable Releases`** under *Stable Releases*
+
+    ![](utils/upscaled/66.%20download_python_windows.png){.shadowed fig-align="center"}
+
+    For other users (macOS or Linux) follow the links provided to download python.
+
+4.  Install Python
+
+    For Windows users simply double-click the **`.exe`** installer to begin the installation process.
+
+    ![](utils/upscaled/76.%20python_install_prompt.png){.shadowed fig-align="center" width="80%"}
+
+    Before clicking Install Now, check the following options:
+
+    -   ☑︎ **Use admin privileges when installing py.exe**
+
+    Ensures that the installation proceeds without restrictions as the installation process requires elevated permissions to modify system files and settings,
+
+    -   ☑ **Add python.exe to `PATH`**
+
+    This is important because you're tellig your operating system where to find python (or python3). This allows you to run Python from the terminal by typing python. Remember we earlier had to do this manually for {{< fa brands r-project >}}, well this affords to avoid the gruesome some of having to do that manually for Python.
+
+::: callout-note
+## **Note on multiple** {{< iconify logos:python >}} **Python versions:**
+
+If you already have another Python version installed, **`PATH`** order matters. In such cases, tools may use the first Python version found. Advanced users often use version managers, but beginners can safely proceed with the default setup and explicitly call the version you want e.g., **`python3.11`** or **`python3.12`** when the need arises
+:::
+
+5.  Click **`Install Now`** and let the installation complete.
+
+    ![](utils/upscaled/67.%20python_install_process.png){.shadowed fig-align="center" width="80%"}
+
+6.  Click close once the installation is successful as below.
+
+    ![](utils/upscaled/68.%20python_install_complete.png){.shadowed fig-align="center" width="80%"}
+
+You are now fully prepared to install and configure radian, giving you a powerful and pleasant interactive {{< fa brands r-project >}} console inside VS Code — without needing to learn Python itself.
 
 Install radian by running in your terminal the following command:
 
-Remember for Windows users you can 
+Remember for Windows users you can
 
 ```{python}
 #| eval: false
 pip install radian
 ```
-
-
 
 #### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
@@ -1818,7 +1971,7 @@ sqrt(9)
 
 Most of these operations behave exactly as expected. However, one notable difference is that there is no square-root symbol in {{< fa brands r-project >}}. Instead, {fa brands r-project} uses functions such as **`sqrt()`** to compute roots.
 
-When you run these expressions, {{< fa brands r-project >}}, R evaluates them and prints the result to the Console. If you type them into a script and click **`Run`** (or press **`Ctrl + Enter↵`** the same evaluation happens line by line. 
+When you run these expressions, {{< fa brands r-project >}}, R evaluates them and prints the result to the Console. If you type them into a script and click **`Run`** (or press **`Ctrl + Enter↵`** the same evaluation happens line by line.
 
 You may notice that each printed result with `[1]`. This indicates the position (index) of the first element in the output. While this may seem odd now, it will make much more sense once we discuss vectors and indexing later on.
 
