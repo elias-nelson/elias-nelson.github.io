@@ -1716,13 +1716,27 @@ On Windows
 
     Press {{< iconify logos:microsoft-windows-icon >}} Windows key + **`R`**, type **`sysdm.cpl`** and hit **`Enter↵`**. Go to **`Advanced`** tab and click **`Environment Variables`**.
 
-4.  **Edit the `PATH` variable**.
+**Edit the `PATH` variable**.
 
-    Under **`System variables`**, select **`Path`**, click **`Edit`** → **`New`**, paste the path you copied (**`C:\Program Files\R\R-x.x.x\bin`**). Click **`OK`** to save.
+Under **`System variables`**, select **`Path`**, click **`Edit`** → **`New`**, paste the path you copied (**`C:\Program Files\R\R-x.x.x\bin`**). Click **`OK`** to save.
 
-    ![](utils/upscaled/71.%20add_R_to_PATH.png){.shadowed fig-align="center" width="120%"}
+![](utils/upscaled/71.%20add_R_to_PATH.png){.shadowed fig-align="center" width="120%"}
 
-    Once this is done, typing {{< fa brands r-project >}} in a terminal should work anywhere on your system.
+Once this is done, typing {{< fa brands r-project >}} in a terminal should work anywhere on your system.
+
+To show a quick demonstration of what this means. Open **`Command Prompt`** to run R in the terminal you can simply run:
+
+``` cmd
+R
+```
+
+Or if you would prefer the **vanilla** {{< fa brands r-project >}} console run:
+
+``` cmd
+R --vanilla
+```
+
+The **vanilla** {{< fa brands r-project >}} **console** refers to a basic {{< fa brands r-project >}} session that does not load any custom settings ({{< fa brands r-project >}} startup file configurations e.g., **`.Rprofile`**) or libraries.
 
 ##### Pointing VS Code directly to {{<fa brands r-project  >}} (**`Rpath`** setting)
 
@@ -1906,14 +1920,47 @@ If you already have another Python version installed, **`PATH`** order matters. 
 
 You are now fully prepared to install and configure radian, giving you a powerful and pleasant interactive {{< fa brands r-project >}} console inside VS Code — without needing to learn Python itself.
 
-Install radian by running in your terminal the following command:
+Finally to install **`radian`** :
 
-Remember for Windows users you can
+1.  Open the **`Command Prompt`** terminal while in VS Code as we did before.
 
-```{python}
-#| eval: false
-pip install radian
-```
+2.  Firstly make sure you are using an updated version pip. the safest is to upgrade pip, setuptools and wheel. Outdated packaging tools often can cause errors. In your opened command prompt terminal run:
+
+    ``` cmd
+    python -m pip install --upgrade pip setuptools wheel
+    ```
+
+3.  After making sure you have updated packing tools, run the following command to install **`radian`**:
+
+    ``` cmd
+    pip install radian
+    ```
+
+4.  The installation process should take a whille but a successful installation of **`radian`** will look like:
+
+5.  To further confirm **`radians`** installation run the command below in the same terminal:
+
+    ``` cmd
+    radian --version
+    ```
+
+    If everything was successful, this will print the version of radian installed, including the paths to {{< fa brands r-project >}} and python executables and their corresponding versions installed. This is where you may also notice that the manual addition of {{< fa brands r-project >}} to **`PATH`** and python's automatic addition during installment saves us from future headaches and errors that we my have faced such as here. Radian is just a front-end; it needs {{< fa brands r-project >}} to run, hence it has to be added to **`PATH`**.
+
+6.  Many people prefer using the **`radian`** as an alternative Console for {{< fa brands r-project >}}
+
+    Now as a final step to using the **`radian`** Console in VS Code we need to configure VS Code to use radian by setting th path to the **`radian`** executable in your **`setting.json`**. On a Mac, this is typically **`/usr/local/bin/radian`**. You can access settings.json by pressing **`⌘ + Shift + P`** on Mac or **`Ctrl + Shift + P`** on Windows/Linux, typing **`“Open Settings (JSON)”`**, and pressing **`Enter↵`**.
+
+    For Windows since radian is installed via pip, its executable is in your Python Scripts folder. For a setup like this it is likely:
+
+    ``` cmd
+    C:\Users\Entomology Lab\AppData\Local\Programs\Python314\Scripts
+    ```
+
+7.  Configure VS Code settings
+
+    -   Open VS Code
+    -   Press Ctrl + space,
+    -   Search for **`settings.json`**.
 
 #### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
 
