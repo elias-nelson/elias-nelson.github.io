@@ -1952,7 +1952,7 @@ Finally to install **`radian`** :
 
     For windows the radian executable should be located in your Python **`Scripts`** folder (i.e., **`"C:\Users\ENTOMOLOGY LAB\AppData\Local\Programs\Python\Python314\Scripts\radian.exe"`**). While on a n a Mac, this is typically **`"/usr/local/bin/radian"`**, while for Linux **`"/usr/bin/radian"`**.
 
-7.   You can access settings.json by pressing **`⌘ + Shift + P`** on Mac or **`Ctrl + Shift + P`** on Windows/Linux, typing **`“Open Settings (JSON)”`**, and pressing **`Enter↵`**.
+7.  You can access settings.json by pressing **`⌘ + Shift + P`** on Mac or **`Ctrl + Shift + P`** on Windows/Linux, typing **`“Open Settings (JSON)”`**, and pressing **`Enter↵`**.
 
 8.  Configure VS Code settings
 
@@ -1964,7 +1964,7 @@ Finally to install **`radian`** :
 
     ``` cmd
     {
-        "r.term.windows": "C:\Users\ENTOMOLOGY LAB\AppData\Local\Programs\Python\Python314\Scripts\radian.exe"
+        "r.term.windows": "C:\\Users\\ENTOMOLOGY LAB\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\radian.exe"
     }
     ```
 
@@ -1984,11 +1984,15 @@ For Linux
 }
 ```
 
+The **`radian`** terminal provides syntax highlighting, multiline editing, and autocompletion in the console. Standard {{< fa brands r-project >}} terminal lacks these features. Radian makes the interactive {{< fa brands r-project >}} much more usable with modern terminal features.
+
 There are a few more recommended VS Code settings for {{< fa brands r-project >}}. These settings help to optimize your workflow when working with {{< fa brands r-project >}} in VS Code. You can add these settings in your **`settings.json`** file as we did with the **`radian`** executable:
 
 ``` cmd
 {
 "r.bracketedPaste": true,
+"r.sessionWatcher": true,
+"r.alwaysUseActiveTerminal": true,
 "r.removeLeadingComments": true,
 "r.plot.useHttpgd": true,
 "editor.wordWrap": "wordWrapColumn",
@@ -2014,11 +2018,27 @@ Migrating from RStudio to VS Code for R development not only opens up new possib
 
 By following the above steps, you’ve now equipped VS Code with powerful tools and configurations to supercharge your {{< fa brands r-project >}} programming. With the {{< fa brands r-project >}} extension, **`radian`**, essential packages, and tailored settings, you’re all set to enjoy a streamlined, productive coding experience in {{< fa brands r-project >}}. Whether you’re analyzing data, creating visualizations, or developing statistical models, VS Code is now a formidable ally in your {{< fa brands r-project >}} programming endeavors. Happy coding!
 
-This is one of the little maintainence chores that comes with upgrading {{< fa brands r-project >}} on Windows is you need to adjust paths.
+This is one of the little maintenance chores that comes with upgrading {{< fa brands r-project >}} on Windows is you need to adjust paths.
 
-#### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **python**
+#### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **Python**
 
-![](positron.gif){fig-align="left" width="70%"}
+![Positron](positron.gif){fig-align="left" width="70%"}
+
+Positron is a next-generation, open-sorce Integrated Development Environment (IDE) from Posit designed specifically to serve as the central development environment for the modern data scientist. 
+
+Positron builds on over a decade of experience with RStudio and is a fork of Visual Studio Code ({{< iconify logos:visual-studio-code >}} VS Code), providing a familiar yet powerful interface. It is engineered from the ground up to be a polyglot tool, treating {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python** as first class citizens and providing a cohesive experience for the entire data science lifecycle.
+
+Positron is built on [Code - OSS](https://github.com/microsoft/vscode), the same open-source engine as VS Code, supporting extensions and familiar shortcuts, while bringing the workflow, console and data viewer functionality of RStudio to both {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python**. This approach allows it to inherit the core strengths of VS Code while adding native functionality that data scientists and analysts need to be productive.
+
+The core design principles behind Positron are:
+
+- **Polyglot** - Work with {{< fa brands r-project >}}, {{< iconify logos:python >}} **Python**, and other languages in a single, unified environment.
+
+- **Extensible** - Customize your workflow with a vast ecosystem of VS Code-compatible extensions from the Open VSX marketplace.
+
+- **AI done responsibly** - Write code, explore data, and build with AI while ensuring your work is correct, transparent and reproducible.
+
+##### Hello Positron IDE: 
 
 ## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
 

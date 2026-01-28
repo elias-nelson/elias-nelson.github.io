@@ -2007,7 +2007,7 @@ globalThis.qwebrExecuteCode = async function (
   <li><a href="#getting-started-with-the-interface" id="toc-getting-started-with-the-interface" class="nav-link" data-scroll-target="#getting-started-with-the-interface"><span class="header-section-number">3.2.1</span> Getting Started With the <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> Interface</a></li>
   <li><a href="#rstudio-ide-for-and-python" id="toc-rstudio-ide-for-and-python" class="nav-link" data-scroll-target="#rstudio-ide-for-and-python"><span class="header-section-number">3.2.2</span> RStudio IDE for <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> and <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>python</strong></a></li>
   <li><a href="#visual-studio-code-a-general-purpose-ide-and-code-editor-for-software-developers-and-programming" id="toc-visual-studio-code-a-general-purpose-ide-and-code-editor-for-software-developers-and-programming" class="nav-link" data-scroll-target="#visual-studio-code-a-general-purpose-ide-and-code-editor-for-software-developers-and-programming"><span class="header-section-number">3.2.3</span> <iconify-icon role="img" inline="" icon="logos:visual-studio-code" aria-label="Icon visual-studio-code from logos Iconify.design set." title="Icon visual-studio-code from logos Iconify.design set."></iconify-icon> Visual Studio Code: A General-Purpose IDE and Code Editor for Software Developers and Programming</a></li>
-  <li><a href="#positron-a-new-yet-familiar-ide-for-and-python" id="toc-positron-a-new-yet-familiar-ide-for-and-python" class="nav-link" data-scroll-target="#positron-a-new-yet-familiar-ide-for-and-python"><span class="header-section-number">3.2.4</span> Positron: A New, Yet Familiar IDE for <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> and <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>python</strong></a></li>
+  <li><a href="#positron-a-new-yet-familiar-ide-for-and-python" id="toc-positron-a-new-yet-familiar-ide-for-and-python" class="nav-link" data-scroll-target="#positron-a-new-yet-familiar-ide-for-and-python"><span class="header-section-number">3.2.4</span> Positron: A New, Yet Familiar IDE for <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> and <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>Python</strong></a></li>
   </ul></li>
   </ul></li>
   <li><a href="#programming-basics-and-fundamentals" id="toc-programming-basics-and-fundamentals" class="nav-link" data-scroll-target="#programming-basics-and-fundamentals"><span class="header-section-number">4</span> <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> Programming Basics and Fundamentals</a>
@@ -3905,15 +3905,21 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Open File Explorer, navigate to the <strong><code>bin</code></strong> folder inside your <i class="fa-brands fa-r-project" aria-label="r-project"></i> installation. Right-click the folder and select <strong><code>Copy as path</code></strong>. Alternatively you can use the keyboard shortcut <strong><code>Ctrl/⌘ + Shift + C</code></strong></p></li>
 <li><p><strong>Open Environment Variables</strong>.</p>
 <p>Press <iconify-icon role="img" inline="" icon="logos:microsoft-windows-icon" aria-label="Icon microsoft-windows-icon from logos Iconify.design set." title="Icon microsoft-windows-icon from logos Iconify.design set."></iconify-icon> Windows key + <strong><code>R</code></strong>, type <strong><code>sysdm.cpl</code></strong> and hit <strong><code>Enter↵</code></strong>. Go to <strong><code>Advanced</code></strong> tab and click <strong><code>Environment Variables</code></strong>.</p></li>
-<li><p><strong>Edit the <code>PATH</code> variable</strong>.</p>
+</ol>
+<p><strong>Edit the <code>PATH</code> variable</strong>.</p>
 <p>Under <strong><code>System variables</code></strong>, select <strong><code>Path</code></strong>, click <strong><code>Edit</code></strong> → <strong><code>New</code></strong>, paste the path you copied (<strong><code>C:\Program Files\R\R-x.x.x\bin</code></strong>). Click <strong><code>OK</code></strong> to save.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="utils/upscaled/71. add_R_to_PATH.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="utils/upscaled/71. add_R_to_PATH.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
 </figure>
 </div>
-<p>Once this is done, typing <i class="fa-brands fa-r-project" aria-label="r-project"></i> in a terminal should work anywhere on your system.</p></li>
-</ol>
+<p>Once this is done, typing <i class="fa-brands fa-r-project" aria-label="r-project"></i> in a terminal should work anywhere on your system.</p>
+<p>To show a quick demonstration of what this means. Open <strong><code>Command Prompt</code></strong> to run R in the terminal you can simply run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or if you would prefer the <strong>vanilla</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> console run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>R -<span class="at">-vanilla</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <strong>vanilla</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> <strong>console</strong> refers to a basic <i class="fa-brands fa-r-project" aria-label="r-project"></i> session that does not load any custom settings (<i class="fa-brands fa-r-project" aria-label="r-project"></i> startup file configurations e.g., <strong><code>.Rprofile</code></strong>) or libraries.</p>
+<p>Running this command opens R in terminal and you can run <i class="fa-brands fa-r-project" aria-label="r-project"></i> code in the terminal.</p>
 </section>
 <section id="pointing-vs-code-directly-to-rpath-setting" class="level5" data-number="3.2.3.4">
 <h5 data-number="3.2.3.4" class="anchored" data-anchor-id="pointing-vs-code-directly-to-rpath-setting"><span class="header-section-number">3.2.3.4</span> Pointing VS Code directly to <i class="fa-brands fa-r-project" aria-label="r-project"></i> (<strong><code>Rpath</code></strong> setting)</h5>
@@ -3963,7 +3969,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </figure>
 </div></li>
 <li><p>In the terminal type:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>and press <strong><code>Enter↵</code></strong> to start an <i class="fa-brands fa-r-projct" aria-label="r-projct"></i> <strong><code>session</code></strong>.</p>
 <p><a href="utils/upscaled/73. vscode_R_session.png" class="lightbox" data-gallery="quarto-lightbox-gallery-75"><img src="utils/upscaled/73. vscode_R_session.png" class="img-fluid"></a></p></li>
 <li><p>Alternatively, from the same dropdown menu next to the <strong><code>+</code></strong> button, select <strong><code>R Terminal</code></strong>. This launches an <i class="fa-brands fa-r-project" aria-label="r-project"></i> session automatically and is often the easiest option for beginners.</p>
@@ -4004,7 +4010,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>Type <strong><code>cmd</code></strong> in the <strong><code>Run Dialog Box</code></strong></p></li>
 <li><p>Press <strong><code>Enter↵</code></strong> or click <strong><code>OK</code></strong></p></li>
 <li><p>In the Command Prompt terminal, type:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>then press <strong><code>Enter↵</code></strong>.</p>
 <ul>
 <li><p>If Python is installed, you’ll see a version number e.g., <strong><code>Python 3.12.7</code></strong>.</p></li>
@@ -4024,7 +4030,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>Press <strong><code>⌘ + Space</code></strong></p></li>
 <li><p>Search for Terminal and press <strong><code>Enter↵</code></strong>.</p></li>
 <li><p>Run the same command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 <p>If Python is not installed follow the steps below to install it:</p>
 <ol type="1">
@@ -4093,20 +4099,91 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </div></li>
 </ol>
 <p>You are now fully prepared to install and configure radian, giving you a powerful and pleasant interactive <i class="fa-brands fa-r-project" aria-label="r-project"></i> console inside VS Code — without needing to learn Python itself.</p>
-<p>Install radian by running in your terminal the following command:</p>
-<p>Remember for Windows users you can</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>pip install radian</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<p>Finally to install <strong><code>radian</code></strong> :</p>
+<ol type="1">
+<li><p>Open the <strong><code>Command Prompt</code></strong> terminal while in VS Code as we did before.</p></li>
+<li><p>Firstly make sure you are using an updated version pip. the safest is to upgrade pip, setuptools and wheel. Outdated packaging tools often can cause errors. In your opened command prompt terminal run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> pip install -<span class="at">-upgrade</span> pip setuptools wheel</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>After making sure you have updated packing tools, run the following command to install <strong><code>radian</code></strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>pip install radian</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>The installation process should take a whille but a successful installation of <strong><code>radian</code></strong> will look like:</p></li>
+<li><p>To further confirm <strong><code>radians</code></strong> installation run the command below in the same terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>radian -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If everything was successful, this will print the version of radian installed, including the paths to <i class="fa-brands fa-r-project" aria-label="r-project"></i> and python executables and their corresponding versions installed. This is where you may also notice that the manual addition of <i class="fa-brands fa-r-project" aria-label="r-project"></i> to <strong><code>PATH</code></strong> and python’s automatic addition during installment saves us from future headaches and errors that we my have faced such as here. Radian is just a front-end; it needs <i class="fa-brands fa-r-project" aria-label="r-project"></i> to run, hence it has to be added to <strong><code>PATH</code></strong>.</p></li>
+<li><p>Many people prefer using the <strong><code>radian</code></strong> as an alternative Console for <i class="fa-brands fa-r-project" aria-label="r-project"></i>. You can configure VS Code to use radian by setting the path to the <strong><code>radian</code></strong> executable in your <strong><code>setting.json</code></strong>. To set <strong><code>radian</code></strong> as your default <i class="fa-brands fa-r-project" aria-label="r-project"></i> terminal in VS Code settings</p>
+<p>For windows the radian executable should be located in your Python <strong><code>Scripts</code></strong> folder (i.e., <strong><code>"C:\Users\ENTOMOLOGY LAB\AppData\Local\Programs\Python\Python314\Scripts\radian.exe"</code></strong>). While on a n a Mac, this is typically <strong><code>"/usr/local/bin/radian"</code></strong>, while for Linux <strong><code>"/usr/bin/radian"</code></strong>.</p></li>
+<li><p>You can access settings.json by pressing <strong><code>⌘ + Shift + P</code></strong> on Mac or <strong><code>Ctrl + Shift + P</code></strong> on Windows/Linux, typing <strong><code>“Open Settings (JSON)”</code></strong>, and pressing <strong><code>Enter↵</code></strong>.</p></li>
+<li><p>Configure VS Code settings</p>
+<ul>
+<li>Open VS Code</li>
+<li>Press Ctrl + space,</li>
+<li>Search for <strong><code>settings.json</code></strong>.</li>
+</ul>
+<p>For windows add the following line:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.windows"</span>: <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">ENTOMOLOGY LAB</span><span class="sc">\\</span><span class="st">AppData</span><span class="sc">\\</span><span class="st">Local</span><span class="sc">\\</span><span class="st">Programs</span><span class="sc">\\</span><span class="st">Python</span><span class="sc">\\</span><span class="st">Python314</span><span class="sc">\\</span><span class="st">Scripts</span><span class="sc">\\</span><span class="st">radian.exe"</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<p>For Mac:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.mac"</span>: <span class="st">"/usr/local/bin/radian"</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For Linux</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.linux"</span>: <span class="st">"/usr/bin/radian"</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <strong><code>radian</code></strong> terminal provides syntax highlighting, multiline editing, and autocompletion in the console. Standard <i class="fa-brands fa-r-project" aria-label="r-project"></i> terminal lacks these features. Radian makes the interactive <i class="fa-brands fa-r-project" aria-label="r-project"></i> much more usable with modern terminal features.</p>
+<p>There are a few more recommended VS Code settings for <i class="fa-brands fa-r-project" aria-label="r-project"></i>. These settings help to optimize your workflow when working with <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code. You can add these settings in your <strong><code>settings.json</code></strong> file as we did with the <strong><code>radian</code></strong> executable:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="st">"r.bracketedPaste"</span>: true,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="st">"r.sessionWatcher"</span>: true,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="st">"r.alwaysUseActiveTerminal"</span>: true,</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="st">"r.removeLeadingComments"</span>: true,</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="st">"r.plot.useHttpgd"</span>: true,</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="st">"editor.wordWrap"</span>: <span class="st">"wordWrapColumn"</span>,</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="st">"[r]"</span>: {</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>   <span class="st">"editor.defaultFormatter"</span>: <span class="st">"REditorSupport.r"</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>},</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="st">"workbench.colorCustomizations"</span>: {</span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>   //  <span class="st">"editorError.foreground"</span>: <span class="st">"#00000000"</span>, // Red Squiggly, I suggest not to change this one…</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>   //  <span class="st">"editorWarning.foreground"</span>: <span class="st">"#00000000"</span>, // Yellow Squiggly, I suggest not to change this one…</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>   <span class="st">"editorInfo.foreground"</span>: <span class="st">"#00000000"</span>, // Blue Squiggly, you could even change it yo something almost completely transparent so it doesn’t bother you as much…</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>An integral part of setting up VS Code for R development is fine-tuning the behavior of the <strong><code>lintr</code></strong> package, which plays a crucial role in maintaining high code quality and adherence to coding standards. By customizing the .lintr configuration, developers can control which linting rules are enforced, tailoring the development environment to their preferences or project-specific guidelines.</p>
+<p>Enhance your R programming experience in VS Code by tweaking some settings in your <strong><code>settings.json</code></strong> file.</p>
+<p>Migrating from RStudio to VS Code for R development not only opens up new possibilities for enhancing your development environment but also requires some adjustments to tailor the experience to your preferences.</p>
+<p>By following the above steps, you’ve now equipped VS Code with powerful tools and configurations to supercharge your <i class="fa-brands fa-r-project" aria-label="r-project"></i> programming. With the <i class="fa-brands fa-r-project" aria-label="r-project"></i> extension, <strong><code>radian</code></strong>, essential packages, and tailored settings, you’re all set to enjoy a streamlined, productive coding experience in <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Whether you’re analyzing data, creating visualizations, or developing statistical models, VS Code is now a formidable ally in your <i class="fa-brands fa-r-project" aria-label="r-project"></i> programming endeavors. Happy coding!</p>
+<p>This is one of the little maintenance chores that comes with upgrading <i class="fa-brands fa-r-project" aria-label="r-project"></i> on Windows is you need to adjust paths.</p>
 </section>
 </section>
 <section id="positron-a-new-yet-familiar-ide-for-and-python" class="level4" data-number="3.2.4">
-<h4 data-number="3.2.4" class="anchored" data-anchor-id="positron-a-new-yet-familiar-ide-for-and-python"><span class="header-section-number">3.2.4</span> Positron: A New, Yet Familiar IDE for <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> and <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>python</strong></h4>
+<h4 data-number="3.2.4" class="anchored" data-anchor-id="positron-a-new-yet-familiar-ide-for-and-python"><span class="header-section-number">3.2.4</span> Positron: A New, Yet Familiar IDE for <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> and <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>Python</strong></h4>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="positron.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-84"><img src="positron.gif" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:70.0%"></a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="positron.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-84" title="Positron"><img src="positron.gif" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:70.0%" alt="Positron"></a></p>
 </figure>
 </div>
+<figcaption>Positron</figcaption>
+</figure>
+</div>
+<p>Positron is a next-generation, open-sorce Integrated Development Environment (IDE) from Posit designed specifically to serve as the central development environment for the modern data scientist.</p>
+<p>Positron builds on over a decade of experience with RStudio and is a fork of Visual Studio Code (<iconify-icon role="img" inline="" icon="logos:visual-studio-code" aria-label="Icon visual-studio-code from logos Iconify.design set." title="Icon visual-studio-code from logos Iconify.design set."></iconify-icon> VS Code), providing a familiar yet powerful interface. It is engineered from the ground up to be a polyglot tool, treating <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>Python</strong> as first class citizens and providing a cohesive experience for the entire data science lifecycle.</p>
+<p>Positron is built on <a href="https://github.com/microsoft/vscode">Code - OSS</a>, the same open-source engine as VS Code, supporting extensions and familiar shortcuts, while bringing the workflow, console and data viewer functionality of RStudio to both <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>Python</strong>. This approach allows it to inherit the core strengths of VS Code while adding native functionality that data scientists and analysts need to be productive.</p>
+<p>The core design principles behind Positron are:</p>
+<ul>
+<li><p><strong>Polyglot</strong> - Work with <i class="fa-brands fa-r-project" aria-label="r-project"></i>, <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>Python</strong>, and other languages in a single, unified environment.</p></li>
+<li><p><strong>Extensible</strong> - Customize your workflow with a vast ecosystem of VS Code-compatible extensions from the Open VSX marketplace.</p></li>
+<li><p><strong>AI done responsibly</strong> - Write code, explore data, and build with AI while ensuring your work is correct, transparent and reproducible.</p></li>
+</ul>
+<section id="hello-positron-ide" class="level5" data-number="3.2.4.1">
+<h5 data-number="3.2.4.1" class="anchored" data-anchor-id="hello-positron-ide"><span class="header-section-number">3.2.4.1</span> Hello Positron IDE:</h5>
+</section>
 </section>
 </section>
 </section>
@@ -4198,9 +4275,9 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </ul>
 </div></div><p>To remove all existing objects from the workspace, which is often recommended when starting a new analysis workflow, you can use the following command:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -4252,8 +4329,8 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>The <i class="fa-brands fa-r-project" aria-label="r-project"></i> language provides a rich set of operators including those for arithmetic, comparison, logical evaluation, indexing, and model specification. The interactive table below summarizes some of the most commonly used operators. Feel free to explore them and their example usages.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-fd6f4a408dab80a7e252" class="reactable html-widget" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-fd6f4a408dab80a7e252">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Category":["Arithmetic","Arithmetic","Arithmetic","Arithmetic","Arithmetic","Relational","Relational","Relational","Relational","Relational","Relational","Logical","Logical","Logical","Indexing","Indexing","Indexing","Grouping","Sequences","Others","Others","Others","Others"],"Operator":["+","-","*","/","^","==","!=","<",">","<=",">=","!","&","|","$","[]","[[]]","{}","a:b","#",";","~","()"],"Description":["Addition","Subtraction","Multiplication","Division","Power","Equal to (do not confuse with =)","Not equal to","Less than","Greater than","Less than or equal to","Greater than or equal to","Logical NOT","Logical AND","Logical OR","Extract a component from a data frame","Subset a data frame, vector, array, or list","Extract a single element from a list","Define code blocks (functions, loops, conditionals)","Generate a sequence from a to b","Commenting (ignored by R)","Alternative way to separate commands","Model formula specification","Function arguments / order of operations"],"Example":["a + b","a - b","a * b","a / b","a ^ b","a == b","a != b","a < b","a > b","a <= b","a >= b","!a","a & b","a | b","df$column","x[1]","lst[[1]]","{ ... }","1:10","# this is a comment","x <- 1; y <- 2","y ~ x1 + x2","mean(x)"]},"columns":[{"id":"Category","name":"Category","type":"character"},{"id":"Operator","name":"Operator","type":"character"},{"id":"Description","name":"Description","type":"character"},{"id":"Example","name":"Example","type":"character"}],"filterable":true,"searchable":true,"highlight":true,"striped":true,"width":"100%","theme":{"borderColor":"var(--rt-border)","stripedColor":"var(--rt-striped)","highlightColor":"var(--rt-highlight)","cellPadding":"8px 12px","style":{"fontFamily":"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto","background":"var(--rt-bg)","color":"var(--rt-text)"},"headerStyle":{"backgroundColor":"var(--rt-header-bg)","fontWeight":"600","borderBottom":"2px solid var(--rt-border)"}},"dataKey":"a533486848479984c94e6b8e1f1425d5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-97625d4bd1106c4a690b" class="reactable html-widget" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-97625d4bd1106c4a690b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Category":["Arithmetic","Arithmetic","Arithmetic","Arithmetic","Arithmetic","Relational","Relational","Relational","Relational","Relational","Relational","Logical","Logical","Logical","Indexing","Indexing","Indexing","Grouping","Sequences","Others","Others","Others","Others"],"Operator":["+","-","*","/","^","==","!=","<",">","<=",">=","!","&","|","$","[]","[[]]","{}","a:b","#",";","~","()"],"Description":["Addition","Subtraction","Multiplication","Division","Power","Equal to (do not confuse with =)","Not equal to","Less than","Greater than","Less than or equal to","Greater than or equal to","Logical NOT","Logical AND","Logical OR","Extract a component from a data frame","Subset a data frame, vector, array, or list","Extract a single element from a list","Define code blocks (functions, loops, conditionals)","Generate a sequence from a to b","Commenting (ignored by R)","Alternative way to separate commands","Model formula specification","Function arguments / order of operations"],"Example":["a + b","a - b","a * b","a / b","a ^ b","a == b","a != b","a < b","a > b","a <= b","a >= b","!a","a & b","a | b","df$column","x[1]","lst[[1]]","{ ... }","1:10","# this is a comment","x <- 1; y <- 2","y ~ x1 + x2","mean(x)"]},"columns":[{"id":"Category","name":"Category","type":"character"},{"id":"Operator","name":"Operator","type":"character"},{"id":"Description","name":"Description","type":"character"},{"id":"Example","name":"Example","type":"character"}],"filterable":true,"searchable":true,"highlight":true,"striped":true,"width":"100%","theme":{"borderColor":"var(--rt-border)","stripedColor":"var(--rt-striped)","highlightColor":"var(--rt-highlight)","cellPadding":"8px 12px","style":{"fontFamily":"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto","background":"var(--rt-bg)","color":"var(--rt-text)"},"headerStyle":{"backgroundColor":"var(--rt-header-bg)","fontWeight":"600","borderBottom":"2px solid var(--rt-border)"}},"dataKey":"a533486848479984c94e6b8e1f1425d5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -4346,23 +4423,23 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>The table below summarizes some commonly used logical test functions and their corresponding coercion functions in <i class="fa-brands fa-r-project" aria-label="r-project"></i> .</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="aaxlgzmiat" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aaxlgzmiat table {
+<div id="owsltopmfp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#owsltopmfp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aaxlgzmiat thead, #aaxlgzmiat tbody, #aaxlgzmiat tfoot, #aaxlgzmiat tr, #aaxlgzmiat td, #aaxlgzmiat th {
+#owsltopmfp thead, #owsltopmfp tbody, #owsltopmfp tfoot, #owsltopmfp tr, #owsltopmfp td, #owsltopmfp th {
   border-style: none;
 }
 
-#aaxlgzmiat p {
+#owsltopmfp p {
   margin: 0;
   padding: 0;
 }
 
-#aaxlgzmiat .gt_table {
+#owsltopmfp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4388,12 +4465,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-left-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_caption {
+#owsltopmfp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aaxlgzmiat .gt_title {
+#owsltopmfp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4405,7 +4482,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-width: 0;
 }
 
-#aaxlgzmiat .gt_subtitle {
+#owsltopmfp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4417,7 +4494,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-top-width: 0;
 }
 
-#aaxlgzmiat .gt_heading {
+#owsltopmfp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4429,13 +4506,13 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_bottom_border {
+#owsltopmfp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_col_headings {
+#owsltopmfp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4450,7 +4527,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_col_heading {
+#owsltopmfp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4470,7 +4547,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   overflow-x: hidden;
 }
 
-#aaxlgzmiat .gt_column_spanner_outer {
+#owsltopmfp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4482,15 +4559,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 4px;
 }
 
-#aaxlgzmiat .gt_column_spanner_outer:first-child {
+#owsltopmfp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aaxlgzmiat .gt_column_spanner_outer:last-child {
+#owsltopmfp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aaxlgzmiat .gt_column_spanner {
+#owsltopmfp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4502,11 +4579,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   width: 100%;
 }
 
-#aaxlgzmiat .gt_spanner_row {
+#owsltopmfp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aaxlgzmiat .gt_group_heading {
+#owsltopmfp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4532,7 +4609,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   text-align: left;
 }
 
-#aaxlgzmiat .gt_empty_group_heading {
+#owsltopmfp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4547,15 +4624,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   vertical-align: middle;
 }
 
-#aaxlgzmiat .gt_from_md > :first-child {
+#owsltopmfp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aaxlgzmiat .gt_from_md > :last-child {
+#owsltopmfp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aaxlgzmiat .gt_row {
+#owsltopmfp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4574,7 +4651,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   overflow-x: hidden;
 }
 
-#aaxlgzmiat .gt_stub {
+#owsltopmfp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4587,7 +4664,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#aaxlgzmiat .gt_stub_row_group {
+#owsltopmfp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4601,15 +4678,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   vertical-align: top;
 }
 
-#aaxlgzmiat .gt_row_group_first td {
+#owsltopmfp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aaxlgzmiat .gt_row_group_first th {
+#owsltopmfp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aaxlgzmiat .gt_summary_row {
+#owsltopmfp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4619,16 +4696,16 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#aaxlgzmiat .gt_first_summary_row {
+#owsltopmfp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_first_summary_row.thick {
+#owsltopmfp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aaxlgzmiat .gt_last_summary_row {
+#owsltopmfp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4638,7 +4715,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_grand_summary_row {
+#owsltopmfp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4648,7 +4725,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#aaxlgzmiat .gt_first_grand_summary_row {
+#owsltopmfp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4658,7 +4735,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-top-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_last_grand_summary_row_top {
+#owsltopmfp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4668,11 +4745,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_striped {
+#owsltopmfp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aaxlgzmiat .gt_table_body {
+#owsltopmfp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4681,7 +4758,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_footnotes {
+#owsltopmfp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4695,7 +4772,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_footnote {
+#owsltopmfp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4704,7 +4781,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#aaxlgzmiat .gt_sourcenotes {
+#owsltopmfp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4718,7 +4795,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#aaxlgzmiat .gt_sourcenote {
+#owsltopmfp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4726,72 +4803,72 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#aaxlgzmiat .gt_left {
+#owsltopmfp .gt_left {
   text-align: left;
 }
 
-#aaxlgzmiat .gt_center {
+#owsltopmfp .gt_center {
   text-align: center;
 }
 
-#aaxlgzmiat .gt_right {
+#owsltopmfp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aaxlgzmiat .gt_font_normal {
+#owsltopmfp .gt_font_normal {
   font-weight: normal;
 }
 
-#aaxlgzmiat .gt_font_bold {
+#owsltopmfp .gt_font_bold {
   font-weight: bold;
 }
 
-#aaxlgzmiat .gt_font_italic {
+#owsltopmfp .gt_font_italic {
   font-style: italic;
 }
 
-#aaxlgzmiat .gt_super {
+#owsltopmfp .gt_super {
   font-size: 65%;
 }
 
-#aaxlgzmiat .gt_footnote_marks {
+#owsltopmfp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aaxlgzmiat .gt_asterisk {
+#owsltopmfp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aaxlgzmiat .gt_indent_1 {
+#owsltopmfp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aaxlgzmiat .gt_indent_2 {
+#owsltopmfp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aaxlgzmiat .gt_indent_3 {
+#owsltopmfp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aaxlgzmiat .gt_indent_4 {
+#owsltopmfp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aaxlgzmiat .gt_indent_5 {
+#owsltopmfp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#aaxlgzmiat .katex-display {
+#owsltopmfp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#aaxlgzmiat div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#owsltopmfp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
