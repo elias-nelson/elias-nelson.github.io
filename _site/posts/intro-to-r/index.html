@@ -4183,8 +4183,47 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p><strong>Extensible</strong> - Customize your workflow with a vast ecosystem of VS Code-compatible extensions from the Open VSX marketplace.</p></li>
 <li><p><strong>AI done responsibly</strong> - Write code, explore data, and build with AI while ensuring your work is correct, transparent and reproducible.</p></li>
 </ul>
+<p><strong>Positron IDE</strong> was first introduced by Posit (formerly RStudio) as a <strong>public beta IDE</strong> since it’s first release from 2023 to 2025. It began as a <strong>public beta</strong> in 2023, transitioned through iterative builds, and has matured into a cross-platform IDE for <iconify-icon role="img" inline="" icon="logos:python" aria-label="Icon python from logos Iconify.design set." title="Icon python from logos Iconify.design set."></iconify-icon> <strong>Python</strong> and <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Version <strong><code>2026.01.0-147</code></strong> is the first stable release under the Elastic License 2.0 making it source-available but not fully open-source.</p>
 <section id="hello-positron-ide-installing" class="level5" data-number="3.2.4.1">
 <h5 data-number="3.2.4.1" class="anchored" data-anchor-id="hello-positron-ide-installing"><span class="header-section-number">3.2.4.1</span> Hello Positron IDE: Installing <img src="utils/upscaled/positron.png" alt="Positron" style="height:1.1em; vertical-align:-0.15em; margin-right:0.25em;"></h5>
+<p>Positron IDE can be installed across major platforms (Windows, macOS, Linux).</p>
+<p>To install a stable release of the <strong>Positron IDE</strong> follow the steps below:</p>
+<ol type="1">
+<li><p>Head over to the <a href="https://positron.posit.co/">official Positron webpage</a></p>
+<p>Click <strong><code>Download</code></strong></p></li>
+<li><p><strong><code>Positron on Desktop or Positron Pro on Posit Workbench:</code></strong></p>
+<p>On the download page you will see these two Positron variants. <strong><code>Positron Desktop</code></strong> is the free standalone IDE you can install on your computer, while <strong><code>Positron Pro</code></strong> is the enterprise-ready version integrated into Posit Workbench that adds secure, scalable, and governed features for teams. In short: <strong>Desktop</strong> is for individual use, <strong>Pro</strong> is for organizations that need centralized management, security and access to big data platforms. Here we will install the free <strong><code>Positron Desktop</code></strong>.</p></li>
+<li><p><strong>Prerequisites:</strong></p>
+<p>If you’re using Windows, you have to make sure that you have the <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/">latest Visual C++ Redistributable</a> installed.</p>
+<p>Visual C++ Redistributable is a <strong>Microsoft runtime library</strong> that contains essential components needed to run applications built with <strong>Visual Studio C++</strong>. <strong>Positron IDE</strong> is partly built usin C++ components. Without the redistributable, certain features or even the installer itself may fail to launch. If the redistributable is missing, Positron may fail to launch and show an error like <strong><code>MSVCP140.dll missing</code></strong> or <strong><code>runtime error</code></strong>.</p>
+<p>To check if the latest Visual C++ is intalled:</p>
+<ul>
+<li><p>Press <iconify-icon role="img" inline="" icon="logos:microsoft-windows-icon" aria-label="Icon microsoft-windows-icon from logos Iconify.design set." title="Icon microsoft-windows-icon from logos Iconify.design set."></iconify-icon> <strong>Windows Key + R</strong> to open the <strong>Run</strong> dialog.</p></li>
+<li><p>Type <strong><code>appwiz.cpl</code></strong> and press <strong><code>Enter↵</code></strong> — this opens <strong><code>Programs and Features</code></strong>.</p></li>
+<li><p>Look for entries like:</p>
+<ul>
+<li><p><strong><code>Microsoft Visual C++ 2015-2022 Redistributable (×64)</code></strong></p></li>
+<li><p><strong><code>Microsoft Visual C++ 2015-2022 Redistributable (×86)</code></strong></p></li>
+</ul></li>
+</ul>
+<p>If you see these, it means the redistribtable is installed. The (×64) version is the one most morden apps (including Positron) need.</p>
+<p>If not installed visit the <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/">link</a> to download.</p>
+<p>One the page navigate to the table with links to the apporiate section. click on the latest versions link.</p>
+<p>You need to download the appropriate Visual Studio C++ for your systems architecture. To check Your <strong>Windows Architecture</strong></p>
+<ol type="1">
+<li><p>Press <iconify-icon role="img" inline="" icon="logos:microsoft-windows-icon" aria-label="Icon microsoft-windows-icon from logos Iconify.design set." title="Icon microsoft-windows-icon from logos Iconify.design set."></iconify-icon> <strong>Windows Key + I</strong> to open <strong><code>Settings</code></strong>.</p></li>
+<li><p>Go to <strong><code>System About</code></strong>.</p></li>
+<li><p>Look for <strong><code>System type</code></strong>.</p>
+<ul>
+<li><p>If it says <strong><code>64-bit operating system, ×64-based processor</code></strong>, you need the <strong><code>×64</code></strong> redistributable.</p></li>
+<li><p>If it says <strong><code>64-bit operating system, ARM-based processor</code></strong>, you need the <strong><code>ARM64</code></strong> redistributable.</p></li>
+<li><p>(Rarely, if it says <strong><code>32-bit operating system</code></strong>, you’d need the <strong><code>×86</code></strong> redistributable, but most modern systems are <strong><code>×64</code></strong> or <strong><code>ARM64</code></strong>.)</p></li>
+</ul></li>
+</ol>
+<p>Click on the appropriate installer link for your architecture. After the ownload is complete double click the installer and install it like any application. You will have to restart your computer was the installation is complete</p></li>
+<li><p>Check the license agreement box and <strong>download</strong> the appropriate installer for your platform.</p>
+<p>For Windows users you have the <strong><code>system level install</code></strong> and <strong><code>user level install</code></strong> installer options. If you’re the only person using the computer and you have admin rights <strong><code>System-level</code></strong> is simpler and more standard. If you’re on a work/school computer without admin rights, or you want to keep things isolated <strong><code>User-level</code></strong> is the safer choice. Both versions of Positron are functionally the same — it’s just about installation scope and permissions.</p></li>
+</ol>
 </section>
 </section>
 </section>
@@ -4331,8 +4370,8 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>The <i class="fa-brands fa-r-project" aria-label="r-project"></i> language provides a rich set of operators including those for arithmetic, comparison, logical evaluation, indexing, and model specification. The interactive table below summarizes some of the most commonly used operators. Feel free to explore them and their example usages.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-4b28b20d7dff4a9f1fac" class="reactable html-widget" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-4b28b20d7dff4a9f1fac">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Category":["Arithmetic","Arithmetic","Arithmetic","Arithmetic","Arithmetic","Relational","Relational","Relational","Relational","Relational","Relational","Logical","Logical","Logical","Indexing","Indexing","Indexing","Grouping","Sequences","Others","Others","Others","Others"],"Operator":["+","-","*","/","^","==","!=","<",">","<=",">=","!","&","|","$","[]","[[]]","{}","a:b","#",";","~","()"],"Description":["Addition","Subtraction","Multiplication","Division","Power","Equal to (do not confuse with =)","Not equal to","Less than","Greater than","Less than or equal to","Greater than or equal to","Logical NOT","Logical AND","Logical OR","Extract a component from a data frame","Subset a data frame, vector, array, or list","Extract a single element from a list","Define code blocks (functions, loops, conditionals)","Generate a sequence from a to b","Commenting (ignored by R)","Alternative way to separate commands","Model formula specification","Function arguments / order of operations"],"Example":["a + b","a - b","a * b","a / b","a ^ b","a == b","a != b","a < b","a > b","a <= b","a >= b","!a","a & b","a | b","df$column","x[1]","lst[[1]]","{ ... }","1:10","# this is a comment","x <- 1; y <- 2","y ~ x1 + x2","mean(x)"]},"columns":[{"id":"Category","name":"Category","type":"character"},{"id":"Operator","name":"Operator","type":"character"},{"id":"Description","name":"Description","type":"character"},{"id":"Example","name":"Example","type":"character"}],"filterable":true,"searchable":true,"highlight":true,"striped":true,"width":"100%","theme":{"borderColor":"var(--rt-border)","stripedColor":"var(--rt-striped)","highlightColor":"var(--rt-highlight)","cellPadding":"8px 12px","style":{"fontFamily":"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto","background":"var(--rt-bg)","color":"var(--rt-text)"},"headerStyle":{"backgroundColor":"var(--rt-header-bg)","fontWeight":"600","borderBottom":"2px solid var(--rt-border)"}},"dataKey":"a533486848479984c94e6b8e1f1425d5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-088f72414bcd05a0fb22" class="reactable html-widget" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-088f72414bcd05a0fb22">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Category":["Arithmetic","Arithmetic","Arithmetic","Arithmetic","Arithmetic","Relational","Relational","Relational","Relational","Relational","Relational","Logical","Logical","Logical","Indexing","Indexing","Indexing","Grouping","Sequences","Others","Others","Others","Others"],"Operator":["+","-","*","/","^","==","!=","<",">","<=",">=","!","&","|","$","[]","[[]]","{}","a:b","#",";","~","()"],"Description":["Addition","Subtraction","Multiplication","Division","Power","Equal to (do not confuse with =)","Not equal to","Less than","Greater than","Less than or equal to","Greater than or equal to","Logical NOT","Logical AND","Logical OR","Extract a component from a data frame","Subset a data frame, vector, array, or list","Extract a single element from a list","Define code blocks (functions, loops, conditionals)","Generate a sequence from a to b","Commenting (ignored by R)","Alternative way to separate commands","Model formula specification","Function arguments / order of operations"],"Example":["a + b","a - b","a * b","a / b","a ^ b","a == b","a != b","a < b","a > b","a <= b","a >= b","!a","a & b","a | b","df$column","x[1]","lst[[1]]","{ ... }","1:10","# this is a comment","x <- 1; y <- 2","y ~ x1 + x2","mean(x)"]},"columns":[{"id":"Category","name":"Category","type":"character"},{"id":"Operator","name":"Operator","type":"character"},{"id":"Description","name":"Description","type":"character"},{"id":"Example","name":"Example","type":"character"}],"filterable":true,"searchable":true,"highlight":true,"striped":true,"width":"100%","theme":{"borderColor":"var(--rt-border)","stripedColor":"var(--rt-striped)","highlightColor":"var(--rt-highlight)","cellPadding":"8px 12px","style":{"fontFamily":"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto","background":"var(--rt-bg)","color":"var(--rt-text)"},"headerStyle":{"backgroundColor":"var(--rt-header-bg)","fontWeight":"600","borderBottom":"2px solid var(--rt-border)"}},"dataKey":"a533486848479984c94e6b8e1f1425d5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -4425,23 +4464,23 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>The table below summarizes some commonly used logical test functions and their corresponding coercion functions in <i class="fa-brands fa-r-project" aria-label="r-project"></i> .</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ibswrxindl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ibswrxindl table {
+<div id="vdeeqjcgur" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vdeeqjcgur table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ibswrxindl thead, #ibswrxindl tbody, #ibswrxindl tfoot, #ibswrxindl tr, #ibswrxindl td, #ibswrxindl th {
+#vdeeqjcgur thead, #vdeeqjcgur tbody, #vdeeqjcgur tfoot, #vdeeqjcgur tr, #vdeeqjcgur td, #vdeeqjcgur th {
   border-style: none;
 }
 
-#ibswrxindl p {
+#vdeeqjcgur p {
   margin: 0;
   padding: 0;
 }
 
-#ibswrxindl .gt_table {
+#vdeeqjcgur .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4467,12 +4506,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-left-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_caption {
+#vdeeqjcgur .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ibswrxindl .gt_title {
+#vdeeqjcgur .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4484,7 +4523,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-width: 0;
 }
 
-#ibswrxindl .gt_subtitle {
+#vdeeqjcgur .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4496,7 +4535,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-top-width: 0;
 }
 
-#ibswrxindl .gt_heading {
+#vdeeqjcgur .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4508,13 +4547,13 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_bottom_border {
+#vdeeqjcgur .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_col_headings {
+#vdeeqjcgur .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4529,7 +4568,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_col_heading {
+#vdeeqjcgur .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4549,7 +4588,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   overflow-x: hidden;
 }
 
-#ibswrxindl .gt_column_spanner_outer {
+#vdeeqjcgur .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4561,15 +4600,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 4px;
 }
 
-#ibswrxindl .gt_column_spanner_outer:first-child {
+#vdeeqjcgur .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ibswrxindl .gt_column_spanner_outer:last-child {
+#vdeeqjcgur .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ibswrxindl .gt_column_spanner {
+#vdeeqjcgur .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4581,11 +4620,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   width: 100%;
 }
 
-#ibswrxindl .gt_spanner_row {
+#vdeeqjcgur .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ibswrxindl .gt_group_heading {
+#vdeeqjcgur .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4611,7 +4650,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   text-align: left;
 }
 
-#ibswrxindl .gt_empty_group_heading {
+#vdeeqjcgur .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4626,15 +4665,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   vertical-align: middle;
 }
 
-#ibswrxindl .gt_from_md > :first-child {
+#vdeeqjcgur .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ibswrxindl .gt_from_md > :last-child {
+#vdeeqjcgur .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ibswrxindl .gt_row {
+#vdeeqjcgur .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4653,7 +4692,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   overflow-x: hidden;
 }
 
-#ibswrxindl .gt_stub {
+#vdeeqjcgur .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4666,7 +4705,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#ibswrxindl .gt_stub_row_group {
+#vdeeqjcgur .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4680,15 +4719,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   vertical-align: top;
 }
 
-#ibswrxindl .gt_row_group_first td {
+#vdeeqjcgur .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ibswrxindl .gt_row_group_first th {
+#vdeeqjcgur .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ibswrxindl .gt_summary_row {
+#vdeeqjcgur .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4698,16 +4737,16 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#ibswrxindl .gt_first_summary_row {
+#vdeeqjcgur .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_first_summary_row.thick {
+#vdeeqjcgur .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ibswrxindl .gt_last_summary_row {
+#vdeeqjcgur .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4717,7 +4756,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_grand_summary_row {
+#vdeeqjcgur .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4727,7 +4766,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#ibswrxindl .gt_first_grand_summary_row {
+#vdeeqjcgur .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4737,7 +4776,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-top-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_last_grand_summary_row_top {
+#vdeeqjcgur .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4747,11 +4786,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_striped {
+#vdeeqjcgur .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ibswrxindl .gt_table_body {
+#vdeeqjcgur .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4760,7 +4799,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_footnotes {
+#vdeeqjcgur .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4774,7 +4813,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_footnote {
+#vdeeqjcgur .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4783,7 +4822,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#ibswrxindl .gt_sourcenotes {
+#vdeeqjcgur .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4797,7 +4836,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#ibswrxindl .gt_sourcenote {
+#vdeeqjcgur .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4805,72 +4844,72 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#ibswrxindl .gt_left {
+#vdeeqjcgur .gt_left {
   text-align: left;
 }
 
-#ibswrxindl .gt_center {
+#vdeeqjcgur .gt_center {
   text-align: center;
 }
 
-#ibswrxindl .gt_right {
+#vdeeqjcgur .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ibswrxindl .gt_font_normal {
+#vdeeqjcgur .gt_font_normal {
   font-weight: normal;
 }
 
-#ibswrxindl .gt_font_bold {
+#vdeeqjcgur .gt_font_bold {
   font-weight: bold;
 }
 
-#ibswrxindl .gt_font_italic {
+#vdeeqjcgur .gt_font_italic {
   font-style: italic;
 }
 
-#ibswrxindl .gt_super {
+#vdeeqjcgur .gt_super {
   font-size: 65%;
 }
 
-#ibswrxindl .gt_footnote_marks {
+#vdeeqjcgur .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ibswrxindl .gt_asterisk {
+#vdeeqjcgur .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ibswrxindl .gt_indent_1 {
+#vdeeqjcgur .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ibswrxindl .gt_indent_2 {
+#vdeeqjcgur .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ibswrxindl .gt_indent_3 {
+#vdeeqjcgur .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ibswrxindl .gt_indent_4 {
+#vdeeqjcgur .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ibswrxindl .gt_indent_5 {
+#vdeeqjcgur .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ibswrxindl .katex-display {
+#vdeeqjcgur .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ibswrxindl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vdeeqjcgur div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

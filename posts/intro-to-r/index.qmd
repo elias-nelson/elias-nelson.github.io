@@ -2064,7 +2064,7 @@ To install a stable release of the **Positron IDE** follow the steps below:
 
 2. **Prerequisites:**
 
-    If you're using Windows, you have to make sure that you have the [latest Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version) installed.
+    If you're using Windows, you have to make sure that you have the [latest Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/) installed.
     
     Visual C++ Redistributable is a **Microsoft runtime library** that contains essential components needed to run applications built with **Visual Studio C++**. **Positron IDE** is partly built usin C++ components. Without the redistributable, certain features or even the installer itself may fail to launch. If the redistributable is missing, Positron may fail to launch and show an error like **`MSVCP140.dll missing`** or **`runtime error`**.  
     
@@ -2082,9 +2082,31 @@ To install a stable release of the **Positron IDE** follow the steps below:
         
     If you see these, it means the redistribtable is installed. The (×64) version is the one most morden apps (including Positron) need.
     
-    If not installed visit 
+    If not installed visit the [link](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/) to download.
+    
+    One the page navigate to the table with links to the apporiate section. click on the latest versions link.
+    
+    You need to download the appropriate Visual Studio C++ for your systems architecture. To check Your **Windows Architecture**
+    
+    1. Press {{< iconify logos:microsoft-windows-icon >}} **Windows Key + I** to open **`Settings`**.
+    
+    2. Go to **`System About`**.
+    
+    3. Look for **`System type`**.
+    
+        - If it says **`64-bit operating system, ×64-based processor`**, you need the **`×64`** redistributable.
+        
+        - If it says **`64-bit operating system, ARM-based processor`**, you need the **`ARM64`** redistributable.
+        
+        - (Rarely, if it says **`32-bit operating system`**, you'd need the **`×86`** redistributable, but most modern systems are **`×64`** or **`ARM64`**.)
+    
+    Click on the appropriate installer link for your architecture. After the ownload is complete double click the installer and install it like any application. You will have to restart your computer was the installation is complete
 
-2. **Download** the correct installer for your OS and architecture
+3. Check the license agreement box and **download** the appropriate installer for your platform. 
+
+    For Windows users you have the **`system level install`** and **`user level install`** installer options. If you're the only person using the computer and you have admin rights **`System-level`** is simpler and more standard. If you're on a work/school computer without admin rights, or you want to keep things isolated **`User-level`** is the safer choice. Both versions of Positron are functionally the same — it's just about installation scope and permissions. 
+
+
 
 ## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
 
