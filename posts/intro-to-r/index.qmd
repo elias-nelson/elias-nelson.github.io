@@ -2020,15 +2020,21 @@ By following the above steps, you’ve now equipped VS Code with powerful tools 
 
 This is one of the little maintenance chores that comes with upgrading {{< fa brands r-project >}} on Windows is you need to adjust paths.
 
-#### Positron: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **Python**
+#### <img src="utils/upscaled/positron.png"
+         alt="Positron"
+         style="height:1.1em; vertical-align:-0.15em; margin-right:0.25em;">: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **Python**
 
-![Positron](positron.gif){fig-align="left" width="70%"}
+![Positron](positron.gif){fig-align="left" width="75%"}
 
 Positron is a next-generation, open-sorce Integrated Development Environment (IDE) from Posit designed specifically to serve as the central development environment for the modern data scientist. 
 
 Positron builds on over a decade of experience with RStudio and is a fork of Visual Studio Code ({{< iconify logos:visual-studio-code >}} VS Code), providing a familiar yet powerful interface. It is engineered from the ground up to be a polyglot tool, treating {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python** as first class citizens and providing a cohesive experience for the entire data science lifecycle.
 
 Positron is built on [Code - OSS](https://github.com/microsoft/vscode), the same open-source engine as VS Code, supporting extensions and familiar shortcuts, while bringing the workflow, console and data viewer functionality of RStudio to both {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python**. This approach allows it to inherit the core strengths of VS Code while adding native functionality that data scientists and analysts need to be productive.
+
+Positron blends the best of Visual Studio Code and RStudio features. So to say that RStudio and VS Code had a marriage and Positron is the child conceived from the union.
+
+Positron, formerly known as RStudio, was rebranded by Posit Software, PBC in 2022 to reflect the company's evolution and expansion beyond {{< fa brands r-project >}} programming. The rebranding was part of a strategic move to adapt to the growing demand for data science tools that cater to a broader audience, including {{< iconify logos:python >}} Python users
 
 The core design principles behind Positron are:
 
@@ -2038,7 +2044,10 @@ The core design principles behind Positron are:
 
 - **AI done responsibly** - Write code, explore data, and build with AI while ensuring your work is correct, transparent and reproducible.
 
-##### Hello Positron IDE: 
+##### Hello Positron IDE: Installing <img src="utils/upscaled/positron.png"
+         alt="Positron"
+         style="height:1.1em; vertical-align:-0.15em; margin-right:0.25em;">
+
 
 ## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
 
