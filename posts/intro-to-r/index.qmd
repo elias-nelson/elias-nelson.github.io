@@ -1424,11 +1424,11 @@ Most {{< fa brands r-project >}} packages are stored on the [**Comprehensive {{<
 
 Not all {{< fa brands r-project >}} packages are available from [**CRAN**](http://cran.r-project.org/), some packages can be downloaded from other sources such as GitHub, Bioconductor
 
-To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one {{< fa brands r-project >}} package from **`CRAN`**.
+To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one compulsory {{< fa brands r-project >}} package from **`CRAN`**.
 
 For integrating {{< fa brands r-project >}} with VS Code, the following package is essential.
 
-Open your {{< fa brands r-project >}} Console and run:
+Open your base {{< fa brands r-project >}} and type and run the following command in the Console:
 
 ```{r}
 #| eval: false
@@ -1442,7 +1442,7 @@ install.packages("languageserver")
 
 This **`languageserver`** package allows VS Code to understand your {{< fa brands r-project >}} code. It enables features such as code completion, inline diagnostics, function documentation, and object inspection.
 
-While not strictly required, you may also choose to install the **`lintr`** package:
+While not strictly required, you may also choose to install two more {{< fa brands r-project >}} packages. While not necessarily required as core packages required for {{< fa brands r-project >}}'s functionality in VS Code, these packages smoothen out more the journey of using {{< fa brands r-project >}} in VS Code. These are the **`lintr`** and **`httpgd`** packages. The **`lintr`** is also available on **`CRAN`** and can be installed in {{< fa brands r-project >}} using the following command:
 
 ```{r}
 #| eval: false
@@ -1465,6 +1465,8 @@ The **`lintr`** package checks your {{< fa brands r-project >}} code for potenti
 </a>
 ```
 :::
+
+The **`httpgd`** package currently isn't **`CRAN`**
 
 Together, these packages provide a solid and beginner-friendly foundation for working with {{< fa brands r-project >}} in VS Code.
 
