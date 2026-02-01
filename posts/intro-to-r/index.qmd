@@ -1466,7 +1466,7 @@ The **`lintr`** package checks your {{< fa brands r-project >}} code for potenti
 ```
 :::
 
-The **`httpgd`** package currently isn't **`CRAN`**
+The **`httpgd`** package however, currently isn't on **`CRAN`**
 
 Together, these packages provide a solid and beginner-friendly foundation for working with {{< fa brands r-project >}} in VS Code.
 
@@ -2026,11 +2026,13 @@ By following the above steps, you’ve now equipped VS Code with powerful tools 
 
 This is one of the little maintenance chores that comes with upgrading {{< fa brands r-project >}} on Windows is you need to adjust paths.
 
-#### <img src="utils/upscaled/positron.png" alt="Positron" style="height:1.1em; vertical-align:-0.15em; margin-right:0.25em;"/>: A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **Python**
+#### <img src="utils/upscaled/positron.png" alt="Positron" style="height:1.1em; vertical-align:-0.15em; margin-right:0.25em;"/>— A New, Yet Familiar IDE for {{< iconify logos:r-lang >}} and {{< iconify logos:python >}} **Python**
 
 ![Positron](positron.gif){fig-align="left" width="75%"}
 
-Positron is a next-generation, open-sorce Integrated Development Environment (IDE) from Posit designed specifically to serve as the central development environment for the modern data scientist.
+Positron is a modern, next-generation Integrated Development Environment (IDE) by **Posit** with data scientists and analysts at its core. It is designed to act as a single, unified workspace for coding, data exploration, visualization, and analysis.
+
+At its heart, Positron brings together more than a decade of lessons learned from RStudio, while embracing the flexibility and extensibility of Visual Studio Code. Technically, Positron is built as a fork of Visual Studio Code ({{< iconify logos:visual-studio-code >}} VS Code), meaning it inherits a familiar interface, keyboard shortcuts, and extension support — all while introducing workflows tailored specifically for data science.
 
 Positron builds on over a decade of experience with RStudio and is a fork of Visual Studio Code ({{< iconify logos:visual-studio-code >}} VS Code), providing a familiar yet powerful interface. It is engineered from the ground up to be a polyglot tool, treating {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python** as first class citizens and providing a cohesive experience for the entire data science lifecycle.
 
