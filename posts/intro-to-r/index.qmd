@@ -1420,7 +1420,7 @@ Think of {{< fa brands r-project >}} as a new smartphone. When you first buy it,
 
 Each package is a small, self-contained toolkit. The more packages you install, the broader the range of tasks you can perform. Packages are also a cornerstone of reproducible research, since they allow others to run the same code using the same tools.
 
-Most {{< fa brands r-project >}} packages are stored on the [**Comprehensive {{< fa brands r-project >}} Archive Network** (**`CRAN`**)](https://cran.r-project.org/web/packages/available_packages_by_name.html), which is the official {{< fa brands r-project >}} package repository. Though it may be possible to install {{< fa brands r-project >}} packages from a local file, but you don't actually need to visit the [**CRAN**](http://cran.r-project.org/) to download an {{< fa brands r-project >}} package; you can download packages straight from {{< fa brans r-project >}}'s command line. To install packages from **`CRAN`**, you use the **`install.packages()`** function. 
+Most {{< fa brands r-project >}} packages are stored on the [**Comprehensive** {{< fa brands r-project >}} **Archive Network** (**`CRAN`**)](https://cran.r-project.org/web/packages/available_packages_by_name.html), which is the official {{< fa brands r-project >}} package repository. Though it may be possible to install {{< fa brands r-project >}} packages from a local file, but you don't actually need to visit the [**CRAN**](http://cran.r-project.org/) to download an {{< fa brands r-project >}} package; you can download packages straight from {{< fa brans r-project >}}'s command line. To install packages from **`CRAN`**, you use the **`install.packages()`** function.
 
 Not all {{< fa brands r-project >}} packages are available from [**CRAN**](http://cran.r-project.org/), some packages can be downloaded from other sources such as GitHub, Bioconductor
 
@@ -2036,79 +2036,92 @@ At its heart, Positron brings together more than a decade of lessons learned fro
 
 Unlike traditional editors that focus on one language at a time, Positron is polyglot by design. Both {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python** are treated as first-class citizens, allowing users to switch seamlessly between languages within the same project. This makes Positron particularly well-suited for modern data science workflows, where multiple languages are often used side-by-side.
 
-Under the hood, Positron is built on [Code - OSS](https://github.com/microsoft/vscode), the same open-source foundation that powers VS Code. This gives it access to a rich ecosystem  of extensions and tools, while Positron layers on features long familiar RStudio users — such as an integrated console, data viewer, and workflow-oriented panels — now available to both {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python** users. In practice, this means you get the flexibility of VS Code without losing the data-centric conveniences that analysts rely on.
+Under the hood, Positron is built on [Code - OSS](https://github.com/microsoft/vscode), the same open-source foundation that powers VS Code. This gives it access to a rich ecosystem of extensions and tools, while Positron layers on features long familiar RStudio users — such as an integrated console, data viewer, and workflow-oriented panels — now available to both {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python** users. In practice, this means you get the flexibility of VS Code without losing the data-centric conveniences that analysts rely on.
 
-You can think of Positron as a thoughtful blend of two worlds: the extensibility of VS Code and the data-focused ergonomics of RStudio. If those two IDEs were ever to “join forces,” Positron would be the natural result. 
+You can think of Positron as a thoughtful blend of two worlds: the extensibility of VS Code and the data-focused ergonomics of RStudio. If those two IDEs were ever to “join forces,” Positron would be the natural result.
 
-Positron, formerly known as RStudio, was rebranded by Posit Software, PBC in 2022 to reflect the company's evolution and expansion beyond {{< fa brands r-project >}} programming. The rebranding was part of a strategic move to adapt to the growing demand for data science tools that cater to a broader audience, including {{< iconify logos:python >}} Python users
+**Positron** should not be confused with **RStudio**, the classic IDE many users already know. In 2022, RStudio, PBC rebranded as Posit to reflect its broader focus beyond R alone. Positron emerged from this evolution as a new IDE built to support both {{< fa brands r-project >}} and {{< iconify logos:python >}} **Python**, aligning with the realities of modern data science teams.
 
-The core design principles behind Positron are:
+Positron is guided by a few key ideas which form its core design principles:
 
--   **Polyglot** - Work with {{< fa brands r-project >}}, {{< iconify logos:python >}} **Python**, and other languages in a single, unified environment.
+-   **Polyglot** - Work with {{< fa brands r-project >}}, {{< iconify logos:python >}} **Python**, and other languages in a single, cohesive environment.
 
--   **Extensible** - Customize your workflow with a vast ecosystem of VS Code-compatible extensions from the Open VSX marketplace.
+-   **Extensible** - Customize and extend Positron using VS Code-compatible extensions available through the Open VSX marketplace.
 
--   **AI done responsibly** - Write code, explore data, and build with AI while ensuring your work is correct, transparent and reproducible.
+-   **AI used responsibly** - Leverage AI-assisted tools while maintaining transparency, correctness, and reproducibility in your work.
 
-**Positron IDE** was first introduced by Posit (formerly RStudio) as a **public beta IDE** since it's first release from 2023 to 2025. It began as a **public beta** in 2023, transitioned through iterative builds, and has matured into a cross-platform IDE for {{< iconify logos:python >}} **Python** and {{< fa brands r-project >}}. Version **`2026.01.0-147`** is the first stable release under the Elastic License 2.0 making it source-available but not fully open-source.
+**Positron** was introduced as **public beta** in 2023 and evolved through several iterative releases between 2023 and 2025. During this period, it matured into a stable, cross-platform IDE for data science. Version **`2026.01.0-147`** marks the first stable release, distributed under the **Elastic License 2.0**. This makes Positron *source-available* — you can inspect the code — but it is not fully open-source in the traditional sense.
 
 ##### Hello Positron IDE: Installing <img src="utils/upscaled/positron.png" alt="Positron" style="height:1.1em; vertical-align:-0.15em; margin-right:0.25em;"/>
 
-Positron IDE can be installed across major platforms (Windows, macOS, Linux).
+Positron IDE is available on all major platforms, including Windows, macOS, and Linux. The steps below walk through installing the stable desktop version, suitable for individual users.
 
-To install a stable release of the **Positron IDE** follow the steps below:
+1.  **Download Positron**
 
-1.  Head over to the [official Positron webpage](https://positron.posit.co/)
+    Visit the [official Positron website](https://positron.posit.co/)
 
     Click **`Download`**
 
-2.  **`Positron on Desktop or Positron Pro on Posit Workbench:`**
+2.  **Choose the right Positron edition**
 
-    On the download page you will see these two Positron variants. **`Positron Desktop`** is the free standalone IDE you can install on your computer, while **`Positron Pro`** is the enterprise-ready version integrated into Posit Workbench that adds secure, scalable, and governed features for teams. In short: **Desktop** is for individual use, **Pro** is for organizations that need centralized management, security and access to big data platforms. Here we will install the free **`Positron Desktop`**.
+    On the download page, you'll see two options:
 
-3.  **Prerequisites:**
+    -   **`Positron Desktop`** — a free, standalone IDE installed directly on your computer.
 
-    If you're using Windows, you have to make sure that you have the [latest Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/) installed.
+    -   **`Positron Pro`** — an enterprise-grade version integrated with Posit Workbench, designed for teams that need centralized security, governance, and access to shared computing resources
 
-    Visual C++ Redistributable is a **Microsoft runtime library** that contains essential components needed to run applications built with **Visual Studio C++**. **Positron IDE** is partly built usin C++ components. Without the redistributable, certain features or even the installer itself may fail to launch. If the redistributable is missing, Positron may fail to launch and show an error like **`MSVCP140.dll missing`** or **`runtime error`**.
+    If you are learning or working independently, Positron Desktop is the correct choice and is what we’ll use here.
 
-    To check if the latest Visual C++ is intalled:
+3.  **Windows Prerequisites: Visual C++ Redistributable**
+
+    If you are installing Positron on Windows, one additional requirement is important to check that you have the [latest Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/) installed.
+
+    Visual C++ Redistributable is a **Microsoft runtime library** that contains essential components needed to run applications built with **Visual Studio C++**. **Positron** is partly built using Visual C++ components and without the redistributable, cthe IDE may fail to install or launch, sometimes showing errors such as:
+
+    -   **`MSVCP140.dll missing`**
+
+    -   **`runtime error`**.
+
+    To check if the latest Visual C++ is installed:
 
     -   Press {{< iconify logos:microsoft-windows-icon >}} **Windows Key + R** to open the **Run** dialog.
 
     -   Type **`appwiz.cpl`** and press **`Enter↵`** — this opens **`Programs and Features`**.
 
-    -   Look for entries like:
+    -   Look for entries such as:
 
         -   **`Microsoft Visual C++ 2015-2022 Redistributable (×64)`**
 
         -   **`Microsoft Visual C++ 2015-2022 Redistributable (×86)`**
 
-    If you see these, it means the redistribtable is installed. The (×64) version is the one most morden apps (including Positron) need.
+    If you see any of these, it means the redistribtable is installed on your platform. The (×64) version is the most common on morden systems.
 
-    If not installed visit the [link](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/) to download.
+    If not installed, download the latest version from 👉 [link](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/).
 
     One the page navigate to the table with links to the apporiate section. click on the latest versions link.
 
     You need to download the appropriate Visual Studio C++ for your systems architecture. To check Your **Windows Architecture**
 
-    1.  Press {{< iconify logos:microsoft-windows-icon >}} **Windows Key + I** to open **`Settings`**.
+    i.  Press {{< iconify logos:microsoft-windows-icon >}} **Windows Key + I** to open **`Settings`**.
 
-    2.  Go to **`System About`**.
+    ii. Go to **`System About`**.
 
-    3.  Look for **`System type`**.
+    iii. Look for **`System type`**.
 
-        -   If it says **`64-bit operating system, ×64-based processor`**, you need the **`×64`** redistributable.
+      -   If it says **`64-bit operating system, ×64-based processor`**, you need the **`×64`** redistributable.
 
-        -   If it says **`64-bit operating system, ARM-based processor`**, you need the **`ARM64`** redistributable.
+      -   If it says **`64-bit operating system, ARM-based processor`**, you need the **`ARM64`** redistributable.
 
-        -   (Rarely, if it says **`32-bit operating system`**, you'd need the **`×86`** redistributable, but most modern systems are **`×64`** or **`ARM64`**.)
+      -   (Rarely, if it says **`32-bit operating system`**, you'd need the **`×86`** redistributable, but most modern systems are **`×64`** or **`ARM64`**.)
+
 
     Click on the appropriate installer link for your architecture. After the ownload is complete double click the installer and install it like any application. You will have to restart your computer was the installation is complete
 
-4.  Check the license agreement box and **download** the appropriate installer for your platform.
+4.  **Download the Positron installer**
 
-    For Windows users you have the **`system level install`** and **`user level install`** installer options. If you're the only person using the computer and you have admin rights **`System-level`** is simpler and more standard. If you're on a work/school computer without admin rights, or you want to keep things isolated **`User-level`** is the safer choice. Both versions of Positron are functionally the same — it's just about installation scope and permissions.
+    Once prerequisites are met, return to the Positron download page, check the license agreement box, and **download** the download the installer for your platform.
+
+    On Windows, you’ll be offered two installer types: the **`system level install`** and **`user level install`** installer options. If you're the only person using the computer and you have admin rights **`System-level`** is simpler and more standard. If you're on a work/school computer without admin rights, or you want to keep things isolated **`User-level`** is the safer choice. Both versions of Positron are functionally the same — it's just about installation scope and permissions.
 
 ## {{< iconify logos:r-lang >}} Programming Basics and Fundamentals
 
