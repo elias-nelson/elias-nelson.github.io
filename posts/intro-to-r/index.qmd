@@ -77,17 +77,6 @@ p {
 }
 ```
 
-```{webr-r}
-#| startover: true
-f1 <- function(x) x
-f1("This prints")
-```
-
-```{webr-r}
-f2 <- function(x) invisible(x)
-f2("This does not print")
-```
-
 ## Introduction
 
 A few months into using {{< fa brands r-project >}} for data analysis, I had a lightbulb moment—I didn’t actually know what {{< fa brands r-project >}} *was*. Sure, I could write some code and get results (output), but that didn’t mean I truly understood what {{< fa brands r-project >}} could *do* or how powerful it really is. I realized I never had a proper introduction to the language.
@@ -1410,7 +1399,7 @@ Since we have already covered how to install {{< fa brands r-project >}} on Wind
 
 For a seamless interaction of {{< fa brands r-project >}} in VS Code we will have to install some essential {{< fa brands r-project >}}.
 
-> ## An important question would be "What Are {{< iconify logos:r-lang >}} Packages"
+> An important question would be "What Are {{< iconify logos:r-lang >}} Packages"
 
 If this is your first encounter with {{< fa brands r-project >}} packages, do not worry. We will explore them in much more detail later in this guide. For now, a simple analogy helps.
 
@@ -1472,6 +1461,8 @@ Together, these packages provide a solid and beginner-friendly foundation for wo
 
 When you run **`install.packages()`** for the first time, {{< fa brands r-project >}} may ask you to choose a **`CRAN`** mirror.
 
+![](utils/upscaled/cran_mirror.png)
+
 **`CRAN`**, short for the *Comprehensive R Archive Network*, is a global network of servers that store {{< fa brands r-project >}} packages. A CRAN mirror is simply a copy of this repository hosted in different locations around the world.
 
 ::: column-margin
@@ -1491,6 +1482,8 @@ When you install a package, {{< fa brands r-project >}} automatically checks for
 During installation, you may see a message asking:
 
 > *“Do you want to install from sources the packages which need compilation?”*
+
+![](utils/upscaled/rpackage_compilation.png)
 
 This question can be confusing for beginners, so let us break it down.
 
@@ -1553,6 +1546,8 @@ On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled 
 :::
 
 Once you click NO, {{< fa brands r-project >}} will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.
+
+![](utils/upscaled/packages_installed.png)
 
 In the next section, we will shift focus to Visual Studio Code itself, where we will install the necessary VS Code extensions and configure the editor for everyday {{< fa brands r-project >}} development.
 
@@ -1742,9 +1737,13 @@ Or if you would prefer the **vanilla** {{< fa brands r-project >}} console run:
 R --vanilla
 ```
 
+::: column-margin
 The **vanilla** {{< fa brands r-project >}} **console** refers to a basic {{< fa brands r-project >}} session that does not load any custom settings ({{< fa brands r-project >}} startup file configurations e.g., **`.Rprofile`**) or libraries.
+:::
 
-Running this command opens R in terminal and you can run {{< fa brands r-project >}} code in the terminal.
+Running this command opens {{< fa brands r-project >}} in terminal and you can run {{< fa brands r-project >}} code in the terminal.
+
+![](utils/upscaled/R_vanilla.png)
 
 ##### Pointing VS Code directly to {{<fa brands r-project  >}} (**`Rpath`** setting)
 
@@ -2108,12 +2107,11 @@ Positron IDE is available on all major platforms, including Windows, macOS, and 
 
     iii. Look for **`System type`**.
 
-      -   If it says **`64-bit operating system, ×64-based processor`**, you need the **`×64`** redistributable.
+    -   If it says **`64-bit operating system, ×64-based processor`**, you need the **`×64`** redistributable.
 
-      -   If it says **`64-bit operating system, ARM-based processor`**, you need the **`ARM64`** redistributable.
+    -   If it says **`64-bit operating system, ARM-based processor`**, you need the **`ARM64`** redistributable.
 
-      -   (Rarely, if it says **`32-bit operating system`**, you'd need the **`×86`** redistributable, but most modern systems are **`×64`** or **`ARM64`**.)
-
+    -   (Rarely, if it says **`32-bit operating system`**, you'd need the **`×86`** redistributable, but most modern systems are **`×64`** or **`ARM64`**.)
 
     Click on the appropriate installer link for your architecture. After the ownload is complete double click the installer and install it like any application. You will have to restart your computer was the installation is complete
 
