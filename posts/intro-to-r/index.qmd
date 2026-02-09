@@ -1127,7 +1127,7 @@ This opens the .Renviron file in RStudio for editing, allowing you to add, modif
 :::
 
 | File | Purpose | Scope | Example Use |
-|------------------|------------------|------------------|------------------|
+|----|----|----|----|
 | **`.Rprofile`** | Run R code automatically at startup | User or project | Set global options, define helper functions, configure project-specific behavior |
 | **`.Rhistory`** | Store console command history | Per directory/session | Recall and reuse previously run commands |
 | **`.Renviron`** | Store environment variables securely | User or project | API keys, authentication tokens, library paths |
