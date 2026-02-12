@@ -1127,7 +1127,7 @@ This opens the .Renviron file in RStudio for editing, allowing you to add, modif
 :::
 
 | File | Purpose | Scope | Example Use |
-|----|----|----|----|
+|------------------|------------------|------------------|------------------|
 | **`.Rprofile`** | Run R code automatically at startup | User or project | Set global options, define helper functions, configure project-specific behavior |
 | **`.Rhistory`** | Store console command history | Per directory/session | Recall and reuse previously run commands |
 | **`.Renviron`** | Store environment variables securely | User or project | API keys, authentication tokens, library paths |
@@ -1397,7 +1397,7 @@ Since we have already covered how to install {{< fa brands r-project >}} on Wind
 
 ##### Setting Up {{< iconify logos:r-lang >}} Packages for VS Code Integration
 
-For a seamless interaction of {{< fa brands r-project >}} in VS Code we will have to install some essential {{< fa brands r-project >}}.
+For a seamless interaction of {{< fa brands r-project >}} in VS Code and prior to installing VS Code itself we will have to install some essential {{< fa brands r-project >}} packages.
 
 > An important question would be "What Are {{< iconify logos:r-lang >}} Packages"
 
@@ -1409,9 +1409,9 @@ Think of {{< fa brands r-project >}} as a new smartphone. When you first buy it,
 
 Each package is a small, self-contained toolkit. The more packages you install, the broader the range of tasks you can perform. Packages are also a cornerstone of reproducible research, since they allow others to run the same code using the same tools.
 
-Most {{< fa brands r-project >}} packages are stored on the [**Comprehensive** {{< fa brands r-project >}} **Archive Network** (**`CRAN`**)](https://cran.r-project.org/web/packages/available_packages_by_name.html), which is the official {{< fa brands r-project >}} package repository. Though it may be possible to install {{< fa brands r-project >}} packages from a local file, but you don't actually need to visit the [**CRAN**](http://cran.r-project.org/) to download an {{< fa brands r-project >}} package; you can download packages straight from {{< fa brans r-project >}}'s command line. To install packages from **`CRAN`**, you use the **`install.packages()`** function.
+Most {{< fa brands r-project >}} packages are stored on the [**Comprehensive** {{< fa brands r-project >}} **Archive Network** (**`CRAN`**)](https://cran.r-project.org/web/packages/available_packages_by_name.html), which is the official {{< fa brands r-project >}} package repository. Though it may be possible to install {{< fa brands r-project >}} packages from a local file, but you don't actually need to visit the [**CRAN**](http://cran.r-project.org/) to download an {{< fa brands r-project >}} package; you can download packages straight from {{< fa brands r-project >}}'s command line. To install packages from **`CRAN`**, you use the **`install.packages()`** function.
 
-Not all {{< fa brands r-project >}} packages are available from [**CRAN**](http://cran.r-project.org/), some packages can be downloaded from other sources such as GitHub, Bioconductor
+Not all {{< fa brands r-project >}} packages are available from [**CRAN**](http://cran.r-project.org/), some packages can be downloaded from other sources such as GitHub, Bioconductor, etc.
 
 To enable {{< fa brands r-project >}} support in VS Code, you will need to install at least one compulsory {{< fa brands r-project >}} package from **`CRAN`**.
 
@@ -1442,7 +1442,7 @@ install.packages("lintr")
 The **`lintr`** package checks your {{< fa brands r-project >}} code for potential issues related to style, syntax, and best practices. When integrated with VS Code, it highlights suggestions as you type, helping you develop good coding habits early on.
 
 ::: column-margin
--   **`lintr`** is optional. If it is not installed, {{< fa brands r-project >}} and VS Code will still work normally.
+-   **`lintr`** is optional. If it is not installed, {{< fa brands r-project >}} in VS Code will still work normally.
 
 ```{=html}
 <a href="https://lintr.r-lib.org" target="_blank" rel="noopener">
@@ -1454,10 +1454,6 @@ The **`lintr`** package checks your {{< fa brands r-project >}} code for potenti
 </a>
 ```
 :::
-
-The **`httpgd`** package however, currently isn't on **`CRAN`**
-
-Together, these packages provide a solid and beginner-friendly foundation for working with {{< fa brands r-project >}} in VS Code.
 
 When you run **`install.packages()`** for the first time, {{< fa brands r-project >}} may ask you to choose a **`CRAN`** mirror.
 
@@ -1471,7 +1467,7 @@ When you run **`install.packages()`** for the first time, {{< fa brands r-projec
 
 You can safely choose any mirror. If you prefer, you may manually select a mirror located in a country close to you, which can sometimes improve download speed.
 
-If you are unsure, selecting **`0-Cloud / CDN (global)`** at https://cloud.r-project.org/ is usually the best option. This is not a single server, but a content delivery network that automatically serves packages from a location close to you.
+If you are unsure, selecting **`0-Cloud / CDN (global)`** at <https://cloud.r-project.org/> is usually the best option. This is not a single server, but a content delivery network that automatically serves packages from a location close to you.
 
 Importantly, all CRAN mirrors contain the same packages. The choice only affects download speed, not package content.
 
@@ -1479,7 +1475,7 @@ Many {{< fa brands r-project >}} packages rely on other packages to function pro
 
 When you install a package, {{< fa brands r-project >}} automatically checks for and installs any required dependencies. This is normal and expected, so do not be alarmed if you see several additional packages being installed.
 
-During installation, you may see a message asking:
+After selecting a CRAN mirror during the installation process, you may also see a message asking:
 
 > *“Do you want to install from sources the packages which need compilation?”*
 
@@ -1513,10 +1509,6 @@ Source packages
 
     -   Linux: system build tools
 
-::: column-margin
--   Do not worry if this sounds unfamiliar. We cover compiler tools such as Rtools and Xcode later in the guide.
-:::
-
 When {{< fa brands r-project >}} asks whether you want to install from source, it is essentially asking whether you want to compile the package yourself or use a ready-made version.
 
 For beginners, the recommended answer is **`NO`**, because:
@@ -1548,6 +1540,193 @@ On Windows and macOS, {{< fa brands r-project >}} usually installs pre-compiled 
 Once you click NO, {{< fa brands r-project >}} will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.
 
 ![](utils/upscaled/packages_installed.png)
+
+Now another important tough optional package we can install is the **`httpgd`** package as previously communicated and unlike the other two packages we have installed; the **`httpgd`** package however, currently isn't on **`CRAN`**. If it was still there the following code should suffice.
+
+```{r}
+# Install httpgd
+install.packages("httpgd")
+```
+
+but the installation fails as below;
+
+![](utils/upscaled/90.%20httpgd_fail.png)
+
+::: column-margin
+**`httpgd`** is an asynchronous HTTP server graphics device for {{< fa brands r-project >}} that allows live {{< fa brand r-project >}} graphics to be accessed via web browsers and IDEs
+:::
+
+The **`httpgd`** package provides a graphics device for {{< fa brands r-project >}} that can be accessed through network protocols such as HTTP and WebSockets, enabling live, interactive graphics in integrated development environments (IDEs) or web applications.
+
+If the above code works then it means the **`httpgd`** package has been put back on CRAN at the time you tried to install it.
+
+Otherwise we will have to install the **`httpgd`** package from source on which requires system build tools to compile the package. Now you may have heard me say that to install {{< fa rands r-project >}} from source. This is usually the first "advanced" hurdle new {{< fa brands r-project >}} users encounter, but bear with me and I try to discuss thisas simple as possible, so it shouldn't be a headache. Though we discuss more in-depth {{< fa brands r-project >}} packages later on but for the sake of this we discuss about installing packages from source here.
+
+To compile packages from source you should first of all install some necessary build tools installed.
+
+**Why Build Tools Are Needed**
+
+-   {{< fa brands r-project >}} packages often contain C, C++, or Fortran code.
+
+-   To compile these parts, your operating system must have a compiler toolchain installed.
+
+For Windows you should install **`Rtools`** following the steps as below:
+
+1.  **Firstly confirm your installed** {{< fa brands r-project >}} **version**.
+
+    -   In {{< fa brands r-project >}}, run:
+
+```{r}
+#| eval: false
+R.version.string
+```
+
+This should give you and output like; **`" R version 4.5.2 (2025-10-31)"`**. Take note of the version.
+
+2.  **Download the matching `Rtools`**
+
+    -   Go to the CRAN **`Rtools`** page: https://cran.r-project.org/bin/windows/Rtools/
+
+    -   Select the installer that matches your {{< fa brands r-project >}} version.
+
+        ![](utils/upscaled/91.%20Rtools_page.png)
+
+    -   Under **`installing Rtools4x`** click on the **`Rtools4x installer`** link. This should prompt the downloading of the installer.
+
+        ![](utils/upscaled/92.%20Rtools_downloadd.png)
+
+3.  **Run the installer**
+
+    -   Accept defaults just as advised on the installation page unless you need a custom installation path.
+
+        ![](utils/upscaled/93.%20Rtools_path.png)
+
+    -   Keep all the additional tasks boxes checked.
+
+        ![](utils/upscaled/94.%20Rtools_additional.png)
+
+    -   Finally, Click install.
+
+        ![](utils/upscaled/95.%20Rtools_install.png)
+
+    -   The installation process will proceed as below;
+
+        ![](utils/upscaled/96.%20Rtools_install_process.png)
+
+4.  **`Verify installation`**
+
+    -   Open {{< fa brands r-project >}} and run.
+
+```{r}
+#| eval: false
+system("make --version")
+```
+
+If you see **`Make`** version info, Rtools is correctly installed.
+
+If you already had {{< fa brands r-project >}} open you may have to quit and reopen, then confirm if **`Rtools`** is installed and detectable from PATH.
+
+🍎 **macOS: Installing `Xcode` Command Line Tools**
+
+1.  **Open Terminal**
+
+    -   Press **`Cmd/⌘ + Space`**, type Terminal, and hit **`Enter↵`**.
+
+2.  **Install the tools**
+
+    -   Run:
+
+```{r}
+#| eval: false
+xcode-select --install
+```
+
+3.  **Confirm installation**
+
+    -   Run:
+
+```{r}
+#| eval: false
+gcc --version
+```
+
+If you see version info, the tools are installed.
+
+**🐧 Linux: Installing Build Essentials**
+
+1.  **Update your package manager**
+
+    -   Ubuntu/Debian:
+
+    ```{r}
+    #| eval: false
+    sudo apt-get update
+    ```
+
+    -   Fedora/RedHat:
+
+```{r}
+#| eval: false
+sudo dnf update
+```
+
+2.  Install build tools
+
+    -   Ubuntu/Debian:
+
+```{r}
+#| eval: false
+sudo apt-get install build-essential r-base-dev
+```
+
+-   Fedora/RedHat:
+
+```{r}
+#| eval: false
+sudo dnf groupinstall "Development Tools"
+
+sudo dnf install R-devel
+```
+
+3.  Verify installation
+
+    -   Run:
+
+```{r}
+#| eval: false
+gcc --version
+```
+
+If you see version info, the compiler is ready.
+
+Once build tools are installed, you can install **`httpgd`**:
+
+First install the **`remotes`** package
+
+```{r}
+#| eval: false
+install.packages("remotes")
+```
+
+Before installing **`httpgd`** we should also pre-install **`unigd`**, which is a dependency of **`httpgd`**.
+
+```{r}
+#| eval: false
+# Install httpgd from GitHub
+remotes::install_github("nx10/unigd")
+```
+
+Then install **`httpgd`** from GitHub using the code below:
+
+```{r}
+#| eval: false
+# Install httpgd from GitHub
+remotes::install_github("nx10/httpgd")
+```
+
+The compilation must take some time but a successful installation will show **`DONE (httpgd)`** as below:
+
+Together, these packages provide a solid and beginner-friendly foundation for working with {{< fa brands r-project >}} in VS Code.
 
 In the next section, we will shift focus to Visual Studio Code itself, where we will install the necessary VS Code extensions and configure the editor for everyday {{< fa brands r-project >}} development.
 
