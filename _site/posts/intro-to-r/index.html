@@ -3639,7 +3639,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Since we have already covered how to install <i class="fa-brands fa-r-project" aria-label="r-project"></i> on Windows and macOS earlier in this guide, we will skip those steps here and focus instead on configuring VS Code to work with <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
 <section id="setting-up-packages-for-vs-code-integration" class="level5 page-columns page-full" data-number="3.2.3.1">
 <h5 data-number="3.2.3.1" class="anchored" data-anchor-id="setting-up-packages-for-vs-code-integration"><span class="header-section-number">3.2.3.1</span> Setting Up <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> Packages for VS Code Integration</h5>
-<p>For a seamless interaction of <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code we will have to install some essential <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
+<p>To ensure a smooth experience using <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code, a few essential <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages must be installed before setting up the editor itself.</p>
 <blockquote class="blockquote">
 <p>An important question would be “What Are <iconify-icon role="img" inline="" icon="logos:r-lang" aria-label="Icon r-lang from logos Iconify.design set." title="Icon r-lang from logos Iconify.design set."></iconify-icon> Packages”</p>
 </blockquote>
@@ -3647,11 +3647,10 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Think of <i class="fa-brands fa-r-project" aria-label="r-project"></i> as a new smartphone. When you first buy it, it comes with basic apps and settings that allow it to function. Over time, you may want to extend its capabilities by installing additional apps from the Google Play Store or Apple App Store.</p>
 <p><i class="fa-brands fa-r-project" aria-label="r-project"></i> packages work in much the same way. <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages are add-ons that give you extra tools—whether you’re cleaning data, creating charts, or building statistical models. Base <i class="fa-brands fa-r-project" aria-label="r-project"></i> comes with many built-in functions and packages that handle common tasks. However, as your work becomes more specialized, you will need additional tools. <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages provide these tools in the form of reusable functions, datasets, and documentation.</p>
 <p>Each package is a small, self-contained toolkit. The more packages you install, the broader the range of tasks you can perform. Packages are also a cornerstone of reproducible research, since they allow others to run the same code using the same tools.</p>
-<p>Most <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages are stored on the <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html"><strong>Comprehensive</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> <strong>Archive Network</strong> (<strong><code>CRAN</code></strong>)</a>, which is the official <i class="fa-brands fa-r-project" aria-label="r-project"></i> package repository. Though it may be possible to install <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages from a local file, but you don’t actually need to visit the <a href="http://cran.r-project.org/"><strong>CRAN</strong></a> to download an <i class="fa-brands fa-r-project" aria-label="r-project"></i> package; you can download packages straight from <i class="fa-brans fa-r-project" aria-label="r-project"></i>’s command line. To install packages from <strong><code>CRAN</code></strong>, you use the <strong><code>install.packages()</code></strong> function.</p>
-<p>Not all <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages are available from <a href="http://cran.r-project.org/"><strong>CRAN</strong></a>, some packages can be downloaded from other sources such as GitHub, Bioconductor</p>
-<p>To enable <i class="fa-brands fa-r-project" aria-label="r-project"></i> support in VS Code, you will need to install at least one compulsory <i class="fa-brands fa-r-project" aria-label="r-project"></i> package from <strong><code>CRAN</code></strong>.</p>
-<p>For integrating <i class="fa-brands fa-r-project" aria-label="r-project"></i> with VS Code, the following package is essential.</p>
-<p>Open your base <i class="fa-brands fa-r-project" aria-label="r-project"></i> and type and run the following command in the Console:</p>
+<p>Most <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages are distributed through the <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html"><strong>Comprehensive</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> <strong>Archive Network</strong> (<strong><code>CRAN</code></strong>)</a>, the official public repository for <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages. Although packages can also be installed from local files or other online sources, you do not need to manually visit the <a href="http://cran.r-project.org/"><strong>CRAN</strong></a> website to download them. Instead, packages can be installed directly from the <i class="fa-brands fa-r-project" aria-label="r-project"></i> console using the <strong><code>install.packages()</code></strong> function.</p>
+<p>Not every <i class="fa-brands fa-r-project" aria-label="r-project"></i> package is hosted on <a href="http://cran.r-project.org/"><strong>CRAN</strong></a>. Some are available from alternative platforms such as <strong>GitHub</strong> or <strong>Bioconductor</strong>, which provide additional or specialized tools.</p>
+<p>To enable <i class="fa-brands fa-r-project" aria-label="r-project"></i> support in VS Code, you will need to install at least one compulsory <i class="fa-brands fa-r-project" aria-label="r-project"></i> package from <strong><code>CRAN</code></strong>. The key package required fr integration is <strong><code>languageserver</code></strong>.</p>
+<p>Open <i class="fa-brands fa-r-project" aria-label="r-project"></i> and run the following command in the Console:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Language Server support</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"languageserver"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -3659,76 +3658,69 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 
 <div class="no-row-height column-margin column-container"><div class="">
 <ul>
-<li>For VS Code, <strong><code>languageserver</code></strong> is essential. Everything else is optional.</li>
+<li>For VS Code, <strong><code>languageserver</code></strong> is required. Everything else is optional (simply recommended).</li>
 </ul>
-</div></div><p>This <strong><code>languageserver</code></strong> package allows VS Code to understand your <i class="fa-brands fa-r-project" aria-label="r-project"></i> code. It enables features such as code completion, inline diagnostics, function documentation, and object inspection.</p>
-<p>While not strictly required, you may also choose to install two more <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages. While not necessarily required as core packages required for <i class="fa-brands fa-r-project" aria-label="r-project"></i>’s functionality in VS Code, these packages smoothen out more the journey of using <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code. These are the <strong><code>lintr</code></strong> and <strong><code>httpgd</code></strong> packages. The <strong><code>lintr</code></strong> is also available on <strong><code>CRAN</code></strong> and can be installed in <i class="fa-brands fa-r-project" aria-label="r-project"></i> using the following command:</p>
+</div></div><p>This <strong><code>languageserver</code></strong> package allows VS Code to understand your <i class="fa-brands fa-r-project" aria-label="r-project"></i> code. It provides important development features such as code completion, inline diagnostics, function documentation, and object inspection.</p>
+<p>While not strictly required, you may also choose to install a few more optional packages that improve the overall <i class="fa-brands fa-r-project" aria-label="r-project"></i> programming experience in VS Code. These packages are not required for <i class="fa-brands fa-r-project" aria-label="r-project"></i> to function in VS Code, but they provide useful quality-of-life features when using <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code.</p>
+<p>Two commonly recommended optional packages are <strong><code>lintr</code></strong> and <strong><code>httpgd</code></strong>. Just as <strong><code>languageserver</code></strong>, the <strong><code>lintr</code></strong> packae is also available on <strong><code>CRAN</code></strong> and can be installed with the following command:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code linting</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code linting support</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"lintr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The <strong><code>lintr</code></strong> package checks your <i class="fa-brands fa-r-project" aria-label="r-project"></i> code for potential issues related to style, syntax, and best practices. When integrated with VS Code, it highlights suggestions as you type, helping you develop good coding habits early on.</p>
+<p>The <strong><code>lintr</code></strong> package checks your <i class="fa-brands fa-r-project" aria-label="r-project"></i> code for potential issues related to style inconsistencies, potential syntax problems, and violations of recommended best practices. When integrated with VS Code, these checks appear as you type, helping you build good coding habits early on.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <ul>
-<li><strong><code>lintr</code></strong> is optional. If it is not installed, <i class="fa-brands fa-r-project" aria-label="r-project"></i> and VS Code will still work normally.</li>
+<li><strong><code>lintr</code></strong> is optional. <i class="fa-brands fa-r-project" aria-label="r-project"></i> will work normally in VS Code without it.</li>
 </ul>
 <a href="https://lintr.r-lib.org" target="_blank" rel="noopener">
   <img src="https://raw.githubusercontent.com/r-lib/lintr/main/man/figures/logo.png" alt="lintr hex logo" class="pkg-hex">
 </a>
-</div></div><p>The <strong><code>httpgd</code></strong> package however, currently isn’t on <strong><code>CRAN</code></strong></p>
-<p>Together, these packages provide a solid and beginner-friendly foundation for working with <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code.</p>
-<p>When you run <strong><code>install.packages()</code></strong> for the first time, <i class="fa-brands fa-r-project" aria-label="r-project"></i> may ask you to choose a <strong><code>CRAN</code></strong> mirror.</p>
+</div></div><p>When you run <strong><code>install.packages()</code></strong> for the first time, <i class="fa-brands fa-r-project" aria-label="r-project"></i> may ask you to select a <strong><code>CRAN</code></strong> mirror.</p>
 <p><a href="utils/upscaled/cran_mirror.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="utils/upscaled/cran_mirror.png" class="img-fluid"></a></p>
-<p><strong><code>CRAN</code></strong>, short for the <em>Comprehensive R Archive Network</em>, is a global network of servers that store <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages. A CRAN mirror is simply a copy of this repository hosted in different locations around the world.</p>
+<p><strong><code>CRAN</code></strong>, short for the <em>Comprehensive R Archive Network</em>, is a global network of servers that store <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages. A CRAN mirror is simply a geographically hosted copy of this repository in different locations around the world.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <ul>
 <li>A <strong><code>CRAN</code></strong> mirror is simply a copy of the same packages hosted in different countries.</li>
 </ul>
 </div></div><p>You can safely choose any mirror. If you prefer, you may manually select a mirror located in a country close to you, which can sometimes improve download speed.</p>
-<p>If you are unsure, selecting <strong><code>0-Cloud / CDN (global)</code></strong> at https://cloud.r-project.org/ is usually the best option. This is not a single server, but a content delivery network that automatically serves packages from a location close to you.</p>
-<p>Importantly, all CRAN mirrors contain the same packages. The choice only affects download speed, not package content.</p>
-<p>Many <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages rely on other packages to function properly. These supporting packages are called dependencies.</p>
-<p>When you install a package, <i class="fa-brands fa-r-project" aria-label="r-project"></i> automatically checks for and installs any required dependencies. This is normal and expected, so do not be alarmed if you see several additional packages being installed.</p>
-<p>During installation, you may see a message asking:</p>
+<p>If you are unsure, selecting <strong><code>0-Cloud [https]</code></strong> at <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a> is usually the best option. This is not a single server, but a content delivery network that automatically connects you to a nearby server and is generally the best default.</p>
+<p>Most importantly, all <strong>CRAN</strong> mirrors contain the same packages. The choice only affects download speed, not package content.</p>
+<p>Many <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages rely on other packages to function properly. These supporting packages are called <strong>dependencies</strong>.</p>
+<p>When installing a package, <i class="fa-brands fa-r-project" aria-label="r-project"></i> automatically installs any required dependencies. Seeing multiple packages install at once is normal and expected, so do not be alarmed if you see several additional packages being installed.</p>
+<p>After selecting a <strong>CRAN</strong> mirror, during the installation process, you may see the prompt:</p>
 <blockquote class="blockquote">
 <p><em>“Do you want to install from sources the packages which need compilation?”</em></p>
 </blockquote>
 <p><a href="utils/upscaled/rpackage_compilation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="utils/upscaled/rpackage_compilation.png" class="img-fluid"></a></p>
-<p>This question can be confusing for beginners, so let us break it down.</p>
+<p>This question relates to the two ways <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages are distributed and can be confusing for beginners, so let us break it down.</p>
 <p><i class="fa-brands fa-r-project" aria-label="r-project"></i> packages are distributed in two main forms:</p>
-<p>Binary packages (pre-compiled)</p>
+<p><strong>Binary packages (recommended for beginners)</strong></p>
 <ul>
-<li><p>Already built for your operating system</p></li>
+<li><p>Already compiled for your operating system</p></li>
 <li><p>install quickly</p></li>
 <li><p>Do not require additional tools</p></li>
-<li><p>Recommended for beginners</p></li>
 </ul>
-<p>Source packages</p>
+<p><strong>Source packages</strong></p>
 <ul>
-<li><p>Contain the original package code</p></li>
+<li><p>Contain original source code</p></li>
 <li><p>Must be compiled on your computer</p></li>
-<li><p>Require additional software (compilers)</p>
+<li><p>Require developer tools (compilers):</p>
 <ul>
 <li><p>Windows: <strong><code>Rtools</code></strong></p></li>
 <li><p>macOS: <strong><code>Xcode</code></strong> Command Line Tools</p></li>
 <li><p>Linux: system build tools</p></li>
 </ul></li>
 </ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<ul>
-<li>Do not worry if this sounds unfamiliar. We cover compiler tools such as Rtools and Xcode later in the guide.</li>
-</ul>
-</div></div><p>When <i class="fa-brands fa-r-project" aria-label="r-project"></i> asks whether you want to install from source, it is essentially asking whether you want to compile the package yourself or use a ready-made version.</p>
-<p>For beginners, the recommended answer is <strong><code>NO</code></strong>, because:</p>
+<p>When <i class="fa-brands fa-r-project" aria-label="r-project"></i> asks whether you want to install from source, it is essentially asking whether you want to compile the package yourself or use a ready-made version.</p>
+<p>For beginners, the recommended answer is usually <strong><code>NO</code></strong>, because:</p>
 <ul>
 <li><p>Binary packages are easier to install</p></li>
-<li><p>No additional software is required</p></li>
+<li><p>No additional developer tools/software is required</p></li>
 <li><p>There is a lower chance of installation errors</p></li>
 </ul>
-<p>When you choose <strong><code>NO</code></strong>, <i class="fa-brands fa-r-project" aria-label="r-project"></i> installs available binary packages automatically and skips source compilation.</p>
+<p>When you select <strong><code>NO</code></strong>, <i class="fa-brands fa-r-project" aria-label="r-project"></i> installs pre-compiled binary versions automatically and skips source compilation.</p>
 <p>Choosing Yes only makes sense if:</p>
 <ul>
 <li><p>You understand what package compilation is</p></li>
@@ -3736,14 +3728,162 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>You are following advanced documentation that explicitly tells you to install from source.</p></li>
 </ul>
 <p>For most beginners, this is not necessary.</p>
-<p>On Windows and macOS, <i class="fa-brands fa-r-project" aria-label="r-project"></i> usually installs pre-compiled binary packages automatically, so unless tools like <strong><code>Rtools</code></strong> or <strong><code>Xcode</code></strong> are installed, this prompt may not appear at all. Do not be concerned if you never see it.</p>
+<p>On Windows and macOS, <i class="fa-brands fa-r-project" aria-label="r-project"></i> usually just installs pre-compiled binary packages automatically, so unless tools like <strong><code>Rtools</code></strong> or <strong><code>Xcode</code></strong> are installed, this prompt may not appear at all. Do not be concerned if you never see it.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <ul>
-<li><strong>Beginner rule of thumb 🧠</strong> If <i class="fa-brands fa-r-project" aria-label="r-project"></i> asks about installing from source and you are unsure, always choose <strong><code>NO</code></strong>.</li>
+<li><strong>Beginner rule of thumb 🧠</strong> If unsure, always choose <strong><code>NO</code></strong> when asked about source installation.</li>
 </ul>
-</div></div><p>Once you click NO, <i class="fa-brands fa-r-project" aria-label="r-project"></i> will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.</p>
+</div></div><p>Once you click <strong>NO</strong>, <i class="fa-brands fa-r-project" aria-label="r-project"></i> will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.</p>
 <p><a href="utils/upscaled/packages_installed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="utils/upscaled/packages_installed.png" class="img-fluid"></a></p>
+<p>Another useful optional package is <strong><code>httpgd</code></strong>, which provides a modern interactive graphics device that works well inside editors like VS Code.</p>
+<p>Normally, installation from <strong>CRAN</strong> would be:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install httpgd:</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"httpgd"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ul>
+<li><strong><code>httpgd</code></strong> is an asynchronous HTTP server graphics device for <i class="fa-brands fa-r-project" aria-label="r-project"></i> that enables live graphics to be viewed inside web browsers and IDEs</li>
+</ul>
+</div></div><p>If this command succeeds, no further action is required.</p>
+<p>However, installation may sometimes fail with a warning similar to the one shown below:</p>
+<p><a href="utils/upscaled/90. httpgd_fail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="utils/upscaled/90. httpgd_fail.png" class="img-fluid"></a></p>
+<p>When a package installation fails, it usually indicates one of the following:</p>
+<ul>
+<li><p>The package is temporarily unavailable as a binary on the main <strong>CRAN</strong> repository.</p></li>
+<li><p>The package has been archived on <strong>CRAN</strong>.</p></li>
+<li><p>Your system must compile the package from source</p></li>
+</ul>
+<p>Archived packages remain available in <strong>CRAN’s</strong> archive directory, but they are no longer installed through the standard <strong><code>install.packages()</code></strong> workflow.</p>
+<p>Common reasons a package becomes archived include:</p>
+<ul>
+<li><p>The package is no longer maintained by its author.</p></li>
+<li><p>It fails <strong>CRAN</strong> quality checks on newer <i class="fa-brands fa-r-project" aria-label="r-project"></i> versions or operating systems.</p></li>
+<li><p>Licensing or <strong>CRAN</strong> policy issues arise.</p></li>
+<li><p>The maintainer has orphaned the package (stopped maintaining it).</p></li>
+</ul>
+<p>In addition, archived packages may depend on older versions of {{fa brands r-project}} or other packages, which can make installation more complex.</p>
+<p>This particular situation introduces the need for build tools</p>
+<p><strong>Why Build Tools Become Necessary</strong> Many <i class="fa-brands fa-r-project" aria-label="r-project"></i> packages often contain compiled code written in C, C++, or FORTRAN. To install such packages from source, your operating system must provide a compiler toolchain, commonly referred to as <em>build tools</em>.</p>
+<p><strong>🖥️ Windows: Installing Rtools</strong></p>
+<p>Windows users need to install <strong><code>Rtools</code></strong> following the steps as below:</p>
+<ol type="1">
+<li><p><strong>Firstly check your</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> <strong>version</strong>.</p>
+<ul>
+<li>In <i class="fa-brands fa-r-project" aria-label="r-project"></i>, run:</li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>R.version.string</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This returns a version string such as:</p>
+<pre><code>"R version 4.5.2 (2025-10-31)"</code></pre>
+<p>Make note of the version.</p>
+<ol start="2" type="1">
+<li><p><strong>Download the matching <code>Rtools</code> version</strong></p>
+<ul>
+<li><p>Visit the CRAN <strong><code>Rtools</code></strong> page: https://cran.r-project.org/bin/windows/Rtools/</p></li>
+<li><p>Choose the installer that corresponds to your installed <i class="fa-brands fa-r-project" aria-label="r-project"></i> version.</p>
+<p><a href="utils/upscaled/91. Rtools_page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="utils/upscaled/91. Rtools_page.png" class="img-fluid"></a></p></li>
+<li><p>Under <strong><code>installing Rtools4x</code></strong>, click the <strong><code>Rtools4x installer</code></strong> link to begin downloading the installer.</p>
+<p><a href="utils/upscaled/92. Rtools_downloadd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="utils/upscaled/92. Rtools_downloadd.png" class="img-fluid"></a></p></li>
+</ul></li>
+<li><p><strong>Run the installer</strong></p>
+<ul>
+<li><p>Accept defaults unless you need a custom installation path.</p>
+<p><a href="utils/upscaled/93. Rtools_path.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="utils/upscaled/93. Rtools_path.png" class="img-fluid"></a></p></li>
+<li><p>Keep all the Additional Tasks options selected. The default configuration is recommended and requires no changes for a standard Rtools installation.</p>
+<p><a href="utils/upscaled/94. Rtools_additional.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="utils/upscaled/94. Rtools_additional.png" class="img-fluid"></a></p></li>
+<li><p>Click install.</p>
+<p><a href="utils/upscaled/95. Rtools_install.png" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="utils/upscaled/95. Rtools_install.png" class="img-fluid"></a></p></li>
+<li><p>The installation process will proceed as below:</p>
+<p><a href="utils/upscaled/96. Rtools_install_process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="utils/upscaled/96. Rtools_install_process.png" class="img-fluid"></a></p></li>
+</ul></li>
+<li><p><strong><code>Verify installation</code></strong></p>
+<ul>
+<li>Open/restart <i class="fa-brands fa-r-project" aria-label="r-project"></i> and run.</li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">"make --version"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you see <strong><code>Make</code></strong> version info, Rtools is correctly installed.</p>
+<p>🍎 <strong>macOS: Installing <code>Xcode</code> Command Line Tools</strong></p>
+<ol type="1">
+<li><p><strong>Open Terminal</strong></p>
+<ul>
+<li>Press <strong><code>Cmd/⌘ + Space</code></strong>, type Terminal, and hit <strong><code>Enter↵</code></strong>.</li>
+</ul></li>
+<li><p><strong>Install the tools</strong></p>
+<ul>
+<li>To install the tools Run:</li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>xcode<span class="sc">-</span>select <span class="sc">--</span>install</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="3" type="1">
+<li><p><strong>Confirm installation</strong></p>
+<ul>
+<li>After installation, verify with:</li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>gcc <span class="sc">--</span>version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you see version info, the tools are installed.</p>
+<p><strong>🐧 Linux: Installing Development Tools</strong></p>
+<ol type="1">
+<li><p><strong>Update your package manager</strong></p>
+<ul>
+<li>Ubuntu or Debian:</li>
+</ul></li>
+</ol>
+<pre><code>sudo apt-get update</code></pre>
+<pre><code>-   Fedora or RedHat:</code></pre>
+<pre><code>sudo dnf update</code></pre>
+<ol start="2" type="1">
+<li><p>Install build tools</p>
+<ul>
+<li>Ubuntu/Debian:</li>
+</ul></li>
+</ol>
+<pre><code>sudo apt-get install build-essential r-base-dev</code></pre>
+<ul>
+<li>Fedora/RedHat:</li>
+</ul>
+<pre><code>sudo dnf groupinstall "Development Tools"
+
+sudo dnf install R-devel</code></pre>
+<ol start="3" type="1">
+<li><p>Verify installation</p>
+<ul>
+<li>Verify installation using:</li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>gcc <span class="sc">--</span>version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you see version info, the compiler is ready.</p>
+<p>Once the build tools are successfully installed, you can proceed with installing <strong><code>httpgd</code></strong>, which enables an interactive graphics device for R in VS Code.</p>
+<p>Begin by installing the <strong><code>remotes</code></strong> package, which allows installation of packages directly from GitHub:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Before installing <strong><code>httpgd</code></strong>, it is recommended to pre-install <strong><code>unigd</code></strong>, a required dependency of:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install unigd from GitHub</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"nx10/unigd"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>You can then install <strong><code>httpgd</code></strong> from GitHub:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install httpgd from GitHub</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"nx10/httpgd"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Compilation may take a few moments. A successful installation will with the message <strong><code>DONE (httpgd)</code></strong> in the comsole.</p>
+<p>Together, these packages provide a solid and beginner-friendly foundation for working with <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code.</p>
 <p>In the next section, we will shift focus to Visual Studio Code itself, where we will install the necessary VS Code extensions and configure the editor for everyday <i class="fa-brands fa-r-project" aria-label="r-project"></i> development.</p>
 </section>
 <section id="installing-and-integrating-vs-code-with" class="level5" data-number="3.2.3.2">
@@ -3755,7 +3895,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Choose the installer that matches your operating system (Windows, Mac or Linux).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/50. download_vscode.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="utils/upscaled/50. download_vscode.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/50. download_vscode.png" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="utils/upscaled/50. download_vscode.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div></li>
 <li><p><strong>Step 2: Start the Installation</strong></p>
@@ -3769,7 +3909,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Read through the license agreement, accept the terms, and click Next to continue.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/51. vscode_license_agreement.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="utils/upscaled/51. vscode_license_agreement.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/51. vscode_license_agreement.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="utils/upscaled/51. vscode_license_agreement.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div></li>
 <li><p><strong>Step 4: Choose the Installation Location</strong></p>
@@ -3777,21 +3917,21 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Click <strong><code>Next</code></strong> to continue.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/52. vscode_install_location.png" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="utils/upscaled/52. vscode_install_location.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/52. vscode_install_location.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="utils/upscaled/52. vscode_install_location.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div></li>
 <li><p><strong>Step 5: Start Menu Folder</strong></p>
 <p>The default <strong><code>Start Menu Folder</code></strong> works well for most users. Leave this unchanged and click <strong><code>Next</code></strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/53. vscode_start_menu.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="utils/upscaled/53. vscode_start_menu.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/53. vscode_start_menu.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="utils/upscaled/53. vscode_start_menu.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div></li>
 <li><p><strong>Step 6: Select Additional Tasks (Recommended Settings)</strong></p>
 <p>This step is easy to rush through, but it is worth paying attention here.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/54. vscode_additional_tasks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="utils/upscaled/54. vscode_additional_tasks.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/54. vscode_additional_tasks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-73"><img src="utils/upscaled/54. vscode_additional_tasks.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>Here is what these options do and why they are useful:</p>
@@ -3809,20 +3949,20 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Click Install to begin the installation process.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/55. vscode_click_install.png" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="utils/upscaled/55. vscode_click_install.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/55. vscode_click_install.png" class="lightbox" data-gallery="quarto-lightbox-gallery-74"><img src="utils/upscaled/55. vscode_click_install.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>You will see a progress screen while VS Code is being installed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/56. installation_process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="utils/upscaled/56. installation_process.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/56. installation_process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-75"><img src="utils/upscaled/56. installation_process.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div></li>
 <li><p><strong>Step 8: Finish and Launch</strong></p>
 <p>Once installation is complete, click <strong><code>Finish</code></strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/57. launch_vscode.png" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="utils/upscaled/57. launch_vscode.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+<p><a href="utils/upscaled/57. launch_vscode.png" class="lightbox" data-gallery="quarto-lightbox-gallery-76"><img src="utils/upscaled/57. launch_vscode.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>VS Code should launch automatically.</p></li>
@@ -3831,7 +3971,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>For now, you can leave everything as-is and simply close the welcome tab.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/59. vscode_welcome.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="utils/upscaled/59. vscode_welcome.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="utils/upscaled/59. vscode_welcome.png" class="lightbox" data-gallery="quarto-lightbox-gallery-77"><img src="utils/upscaled/59. vscode_welcome.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>At this point, Visual Studio Code is successfully installed on your system. Next, we will install the <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r"><i class="fa-brands fa-r-project" aria-label="r-project"></i> extension</a> extension for VS Code, which allows the editor to understand and run <i class="fa-brands fa-r-project" aria-label="r-project"></i> code.</p></li>
@@ -3860,7 +4000,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/60. vscode_extensions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="utils/upscaled/60. vscode_extensions.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="utils/upscaled/60. vscode_extensions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-78"><img src="utils/upscaled/60. vscode_extensions.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div></li>
 <li><p><strong>Install the</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> <strong>extension:</strong></p>
@@ -3872,14 +4012,14 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Once installed, VS Code now understands <i class="fa-brands fa-r-project" aria-label="r-project"></i> code.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/61. RExtension.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="utils/upscaled/61. RExtension.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="utils/upscaled/61. RExtension.png" class="lightbox" data-gallery="quarto-lightbox-gallery-79"><img src="utils/upscaled/61. RExtension.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div></li>
 <li><p><strong>Confirm the extension is active</strong></p>
 <p>After installation, you should notice a new <i class="fa-brands fa-r-project" aria-label="r-project"></i> icon appear in the Activity Bar, usally just below the Extensions icon. This confirms that the <i class="fa-brands fa-r-project" aria-label="r-project"></i> is active and ready to use</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/61. RExtension2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-73"><img src="utils/upscaled/61. RExtension2.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="utils/upscaled/61. RExtension2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-80"><img src="utils/upscaled/61. RExtension2.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div></li>
 </ol>
@@ -3904,19 +4044,19 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Under <strong><code>System variables</code></strong>, select <strong><code>Path</code></strong>, click <strong><code>Edit</code></strong> → <strong><code>New</code></strong>, paste the path you copied (<strong><code>C:\Program Files\R\R-x.x.x\bin</code></strong>). Click <strong><code>OK</code></strong> to save.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/71. add_R_to_PATH.png" class="lightbox" data-gallery="quarto-lightbox-gallery-74"><img src="utils/upscaled/71. add_R_to_PATH.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
+<p><a href="utils/upscaled/71. add_R_to_PATH.png" class="lightbox" data-gallery="quarto-lightbox-gallery-81"><img src="utils/upscaled/71. add_R_to_PATH.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
 </figure>
 </div>
 <p>Once this is done, typing <i class="fa-brands fa-r-project" aria-label="r-project"></i> in a terminal should work anywhere on your system.</p>
 <p>To show a quick demonstration of what this means. Open <strong><code>Command Prompt</code></strong> to run R in the terminal you can simply run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Or if you would prefer the <strong>vanilla</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> console run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>R -<span class="at">-vanilla</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>R -<span class="at">-vanilla</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>The <strong>vanilla</strong> <i class="fa-brands fa-r-project" aria-label="r-project"></i> <strong>console</strong> refers to a basic <i class="fa-brands fa-r-project" aria-label="r-project"></i> session that does not load any custom settings (<i class="fa-brands fa-r-project" aria-label="r-project"></i> startup file configurations e.g., <strong><code>.Rprofile</code></strong>) or libraries.</p>
 </div></div><p>Running this command opens <i class="fa-brands fa-r-project" aria-label="r-project"></i> in terminal and you can run <i class="fa-brands fa-r-project" aria-label="r-project"></i> code in the terminal.</p>
-<p><a href="utils/upscaled/R_vanilla.png" class="lightbox" data-gallery="quarto-lightbox-gallery-75"><img src="utils/upscaled/R_vanilla.png" class="img-fluid"></a></p>
+<p><a href="utils/upscaled/R_vanilla.png" class="lightbox" data-gallery="quarto-lightbox-gallery-82"><img src="utils/upscaled/R_vanilla.png" class="img-fluid"></a></p>
 </section>
 <section id="pointing-vs-code-directly-to-rpath-setting" class="level5" data-number="3.2.3.4">
 <h5 data-number="3.2.3.4" class="anchored" data-anchor-id="pointing-vs-code-directly-to-rpath-setting"><span class="header-section-number">3.2.3.4</span> Pointing VS Code directly to <i class="fa-brands fa-r-project" aria-label="r-project"></i> (<strong><code>Rpath</code></strong> setting)</h5>
@@ -3934,7 +4074,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/75. Rpath.png" class="lightbox" data-gallery="quarto-lightbox-gallery-76"><img src="utils/upscaled/75. Rpath.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
+<p><a href="utils/upscaled/75. Rpath.png" class="lightbox" data-gallery="quarto-lightbox-gallery-83"><img src="utils/upscaled/75. Rpath.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
 </figure>
 </div>
 <p>This removes any ambiguity and ensures VS Code always uses the correct <i class="fa-brands fa-r-project" aria-label="r-project"></i> installation.</p></li>
@@ -3954,7 +4094,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/70. powershell_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-77"><img src="utils/upscaled/70. powershell_terminal.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
+<p><a href="utils/upscaled/70. powershell_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-84"><img src="utils/upscaled/70. powershell_terminal.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
 </figure>
 </div></li>
 </ul>
@@ -3962,17 +4102,17 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>Click the dropdown arrow next to the <strong><code>+</code></strong> button in the and select <strong><code>Command Prompt</code></strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/72. vscode_cmd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-78"><img src="utils/upscaled/72. vscode_cmd.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
+<p><a href="utils/upscaled/72. vscode_cmd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-85"><img src="utils/upscaled/72. vscode_cmd.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
 </figure>
 </div></li>
 <li><p>In the terminal type:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>and press <strong><code>Enter↵</code></strong> to start an <i class="fa-brands fa-r-projct" aria-label="r-projct"></i> <strong><code>session</code></strong>.</p>
-<p><a href="utils/upscaled/73. vscode_R_session.png" class="lightbox" data-gallery="quarto-lightbox-gallery-79"><img src="utils/upscaled/73. vscode_R_session.png" class="img-fluid"></a></p></li>
+<p><a href="utils/upscaled/73. vscode_R_session.png" class="lightbox" data-gallery="quarto-lightbox-gallery-86"><img src="utils/upscaled/73. vscode_R_session.png" class="img-fluid"></a></p></li>
 <li><p>Alternatively, from the same dropdown menu next to the <strong><code>+</code></strong> button, select <strong><code>R Terminal</code></strong>. This launches an <i class="fa-brands fa-r-project" aria-label="r-project"></i> session automatically and is often the easiest option for beginners.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/74. vscode_R_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-80"><img src="utils/upscaled/74. vscode_R_terminal.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
+<p><a href="utils/upscaled/74. vscode_R_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-87"><img src="utils/upscaled/74. vscode_R_terminal.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a></p>
 </figure>
 </div></li>
 <li><p>Here you can run code as we did before in the base <i class="fa-brands fa-r-project" aria-label="r-project"></i> Console or in RStudio’s Console pane. You can simply run a simple <strong><code>print("Hello, World")</code></strong> program as we did previously. Go ahead and also try a simple arithmetic computation after that.</p></li>
@@ -4007,7 +4147,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>Type <strong><code>cmd</code></strong> in the <strong><code>Run Dialog Box</code></strong></p></li>
 <li><p>Press <strong><code>Enter↵</code></strong> or click <strong><code>OK</code></strong></p></li>
 <li><p>In the Command Prompt terminal, type:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>then press <strong><code>Enter↵</code></strong>.</p>
 <ul>
 <li><p>If Python is installed, you’ll see a version number e.g., <strong><code>Python 3.12.7</code></strong>.</p></li>
@@ -4019,7 +4159,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p><strong>Tip:</strong> Use your mouse to copy and paste commands — standard <strong><code>Ctrl/⌘ + C</code></strong> and <strong><code>Ctrl/⌘+ V</code></strong> keyboard shortcuts may not work in some terminals.</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/63. python_not_installed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-81"><img src="utils/upscaled/63. python_not_installed.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
+<p><a href="utils/upscaled/63. python_not_installed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-88"><img src="utils/upscaled/63. python_not_installed.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 <p>On macOS</p>
@@ -4027,7 +4167,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>Press <strong><code>⌘ + Space</code></strong></p></li>
 <li><p>Search for Terminal and press <strong><code>Enter↵</code></strong>.</p></li>
 <li><p>Run the same command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 <p>If Python is not installed follow the steps below to install it:</p>
 <ol type="1">
@@ -4035,19 +4175,19 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>Click <strong><code>Download</code></strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/64. python_download.png" class="lightbox" data-gallery="quarto-lightbox-gallery-82"><img src="utils/upscaled/64. python_download.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="utils/upscaled/64. python_download.png" class="lightbox" data-gallery="quarto-lightbox-gallery-89"><img src="utils/upscaled/64. python_download.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div></li>
 <li><p>Choose the installer for your operating system</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/65. python_OS.png" class="lightbox" data-gallery="quarto-lightbox-gallery-83"><img src="utils/upscaled/65. python_OS.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="utils/upscaled/65. python_OS.png" class="lightbox" data-gallery="quarto-lightbox-gallery-90"><img src="utils/upscaled/65. python_OS.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>For <strong>Windows</strong> users click the <strong><code>Windows</code></strong> link and then click on the <strong><code>Download Windows installer (xx-bit)</code></strong> for your appropriate bit type under the <strong><code>Stable Releases</code></strong> under <em>Stable Releases</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/66. download_python_windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-84"><img src="utils/upscaled/66. download_python_windows.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="utils/upscaled/66. download_python_windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-91"><img src="utils/upscaled/66. download_python_windows.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>For other users (macOS or Linux) follow the links provided to download python.</p></li>
@@ -4055,7 +4195,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>For Windows users simply double-click the <strong><code>.exe</code></strong> installer to begin the installation process.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/76. python_install_prompt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-85"><img src="utils/upscaled/76. python_install_prompt.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
+<p><a href="utils/upscaled/76. python_install_prompt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-92"><img src="utils/upscaled/76. python_install_prompt.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 <p>Before clicking Install Now, check the following options:</p>
@@ -4085,13 +4225,13 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li><p>Click <strong><code>Install Now</code></strong> and let the installation complete.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/67. python_install_process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-86"><img src="utils/upscaled/67. python_install_process.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
+<p><a href="utils/upscaled/67. python_install_process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-93"><img src="utils/upscaled/67. python_install_process.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
 </figure>
 </div></li>
 <li><p>Click close once the installation is successful as below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="utils/upscaled/68. python_install_complete.png" class="lightbox" data-gallery="quarto-lightbox-gallery-87"><img src="utils/upscaled/68. python_install_complete.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
+<p><a href="utils/upscaled/68. python_install_complete.png" class="lightbox" data-gallery="quarto-lightbox-gallery-94"><img src="utils/upscaled/68. python_install_complete.png" class="shadowed img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
 </figure>
 </div></li>
 </ol>
@@ -4100,12 +4240,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <ol type="1">
 <li><p>Open the <strong><code>Command Prompt</code></strong> terminal while in VS Code as we did before.</p></li>
 <li><p>Firstly make sure you are using an updated version pip. the safest is to upgrade pip, setuptools and wheel. Outdated packaging tools often can cause errors. In your opened command prompt terminal run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> pip install -<span class="at">-upgrade</span> pip setuptools wheel</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> pip install -<span class="at">-upgrade</span> pip setuptools wheel</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>After making sure you have updated packing tools, run the following command to install <strong><code>radian</code></strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>pip install radian</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>pip install radian</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>The installation process should take a whille but a successful installation of <strong><code>radian</code></strong> will look like:</p></li>
 <li><p>To further confirm <strong><code>radians</code></strong> installation run the command below in the same terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>radian -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>radian -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If everything was successful, this will print the version of radian installed, including the paths to <i class="fa-brands fa-r-project" aria-label="r-project"></i> and python executables and their corresponding versions installed. This is where you may also notice that the manual addition of <i class="fa-brands fa-r-project" aria-label="r-project"></i> to <strong><code>PATH</code></strong> and python’s automatic addition during installment saves us from future headaches and errors that we my have faced such as here. Radian is just a front-end; it needs <i class="fa-brands fa-r-project" aria-label="r-project"></i> to run, hence it has to be added to <strong><code>PATH</code></strong>.</p></li>
 <li><p>Many people prefer using the <strong><code>radian</code></strong> as an alternative Console for <i class="fa-brands fa-r-project" aria-label="r-project"></i>. You can configure VS Code to use radian by setting the path to the <strong><code>radian</code></strong> executable in your <strong><code>setting.json</code></strong>. To set <strong><code>radian</code></strong> as your default <i class="fa-brands fa-r-project" aria-label="r-project"></i> terminal in VS Code settings</p>
 <p>For windows the radian executable should be located in your Python <strong><code>Scripts</code></strong> folder (i.e., <strong><code>"C:\Users\ENTOMOLOGY LAB\AppData\Local\Programs\Python\Python314\Scripts\radian.exe"</code></strong>). While on a n a Mac, this is typically <strong><code>"/usr/local/bin/radian"</code></strong>, while for Linux <strong><code>"/usr/bin/radian"</code></strong>.</p></li>
@@ -4117,39 +4257,39 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li>Search for <strong><code>settings.json</code></strong>.</li>
 </ul>
 <p>For windows add the following line:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.windows"</span>: <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">ENTOMOLOGY LAB</span><span class="sc">\\</span><span class="st">AppData</span><span class="sc">\\</span><span class="st">Local</span><span class="sc">\\</span><span class="st">Programs</span><span class="sc">\\</span><span class="st">Python</span><span class="sc">\\</span><span class="st">Python314</span><span class="sc">\\</span><span class="st">Scripts</span><span class="sc">\\</span><span class="st">radian.exe"</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.windows"</span>: <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">ENTOMOLOGY LAB</span><span class="sc">\\</span><span class="st">AppData</span><span class="sc">\\</span><span class="st">Local</span><span class="sc">\\</span><span class="st">Programs</span><span class="sc">\\</span><span class="st">Python</span><span class="sc">\\</span><span class="st">Python314</span><span class="sc">\\</span><span class="st">Scripts</span><span class="sc">\\</span><span class="st">radian.exe"</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <p>For Mac:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.mac"</span>: <span class="st">"/usr/local/bin/radian"</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.mac"</span>: <span class="st">"/usr/local/bin/radian"</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For Linux</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.linux"</span>: <span class="st">"/usr/bin/radian"</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"r.term.linux"</span>: <span class="st">"/usr/bin/radian"</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The <strong><code>radian</code></strong> terminal provides syntax highlighting, multiline editing, and autocompletion in the console. Standard <i class="fa-brands fa-r-project" aria-label="r-project"></i> terminal lacks these features. Radian makes the interactive <i class="fa-brands fa-r-project" aria-label="r-project"></i> much more usable with modern terminal features.</p>
 <p>There are a few more recommended VS Code settings for <i class="fa-brands fa-r-project" aria-label="r-project"></i>. These settings help to optimize your workflow when working with <i class="fa-brands fa-r-project" aria-label="r-project"></i> in VS Code. You can add these settings in your <strong><code>settings.json</code></strong> file as we did with the <strong><code>radian</code></strong> executable:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="st">"r.bracketedPaste"</span>: true,</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="st">"r.sessionWatcher"</span>: true,</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="st">"r.alwaysUseActiveTerminal"</span>: true,</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="st">"r.removeLeadingComments"</span>: true,</span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="st">"r.plot.useHttpgd"</span>: true,</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="st">"editor.wordWrap"</span>: <span class="st">"wordWrapColumn"</span>,</span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="st">"[r]"</span>: {</span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>   <span class="st">"editor.defaultFormatter"</span>: <span class="st">"REditorSupport.r"</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>},</span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="st">"workbench.colorCustomizations"</span>: {</span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>   //  <span class="st">"editorError.foreground"</span>: <span class="st">"#00000000"</span>, // Red Squiggly, I suggest not to change this one…</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>   //  <span class="st">"editorWarning.foreground"</span>: <span class="st">"#00000000"</span>, // Yellow Squiggly, I suggest not to change this one…</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>   <span class="st">"editorInfo.foreground"</span>: <span class="st">"#00000000"</span>, // Blue Squiggly, you could even change it yo something almost completely transparent so it doesn’t bother you as much…</span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="st">"r.bracketedPaste"</span>: true,</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="st">"r.sessionWatcher"</span>: true,</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="st">"r.alwaysUseActiveTerminal"</span>: true,</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="st">"r.removeLeadingComments"</span>: true,</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="st">"r.plot.useHttpgd"</span>: true,</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="st">"editor.wordWrap"</span>: <span class="st">"wordWrapColumn"</span>,</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="st">"[r]"</span>: {</span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a>   <span class="st">"editor.defaultFormatter"</span>: <span class="st">"REditorSupport.r"</span></span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a>},</span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a><span class="st">"workbench.colorCustomizations"</span>: {</span>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a>   //  <span class="st">"editorError.foreground"</span>: <span class="st">"#00000000"</span>, // Red Squiggly, I suggest not to change this one…</span>
+<span id="cb52-15"><a href="#cb52-15" aria-hidden="true" tabindex="-1"></a>   //  <span class="st">"editorWarning.foreground"</span>: <span class="st">"#00000000"</span>, // Yellow Squiggly, I suggest not to change this one…</span>
+<span id="cb52-16"><a href="#cb52-16" aria-hidden="true" tabindex="-1"></a>   <span class="st">"editorInfo.foreground"</span>: <span class="st">"#00000000"</span>, // Blue Squiggly, you could even change it yo something almost completely transparent so it doesn’t bother you as much…</span>
+<span id="cb52-17"><a href="#cb52-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb52-18"><a href="#cb52-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-19"><a href="#cb52-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>An integral part of setting up VS Code for R development is fine-tuning the behavior of the <strong><code>lintr</code></strong> package, which plays a crucial role in maintaining high code quality and adherence to coding standards. By customizing the .lintr configuration, developers can control which linting rules are enforced, tailoring the development environment to their preferences or project-specific guidelines.</p>
 <p>Enhance your R programming experience in VS Code by tweaking some settings in your <strong><code>settings.json</code></strong> file.</p>
 <p>Migrating from RStudio to VS Code for R development not only opens up new possibilities for enhancing your development environment but also requires some adjustments to tailor the experience to your preferences.</p>
@@ -4163,7 +4303,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <figure class="figure">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="positron.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-88" title="Positron"><img src="positron.gif" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:75.0%" alt="Positron"></a></p>
+<p><a href="positron.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-95" title="Positron"><img src="positron.gif" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:75.0%" alt="Positron"></a></p>
 </figure>
 </div>
 <figcaption>Positron</figcaption>
@@ -4324,9 +4464,9 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </ul>
 </div></div><p>To remove all existing objects from the workspace, which is often recommended when starting a new analysis workflow, you can use the following command:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -4378,8 +4518,8 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>The <i class="fa-brands fa-r-project" aria-label="r-project"></i> language provides a rich set of operators including those for arithmetic, comparison, logical evaluation, indexing, and model specification. The interactive table below summarizes some of the most commonly used operators. Feel free to explore them and their example usages.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-5e574a97cc5aecb2041a" class="reactable html-widget" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-5e574a97cc5aecb2041a">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Category":["Arithmetic","Arithmetic","Arithmetic","Arithmetic","Arithmetic","Relational","Relational","Relational","Relational","Relational","Relational","Logical","Logical","Logical","Indexing","Indexing","Indexing","Grouping","Sequences","Others","Others","Others","Others"],"Operator":["+","-","*","/","^","==","!=","<",">","<=",">=","!","&","|","$","[]","[[]]","{}","a:b","#",";","~","()"],"Description":["Addition","Subtraction","Multiplication","Division","Power","Equal to (do not confuse with =)","Not equal to","Less than","Greater than","Less than or equal to","Greater than or equal to","Logical NOT","Logical AND","Logical OR","Extract a component from a data frame","Subset a data frame, vector, array, or list","Extract a single element from a list","Define code blocks (functions, loops, conditionals)","Generate a sequence from a to b","Commenting (ignored by R)","Alternative way to separate commands","Model formula specification","Function arguments / order of operations"],"Example":["a + b","a - b","a * b","a / b","a ^ b","a == b","a != b","a < b","a > b","a <= b","a >= b","!a","a & b","a | b","df$column","x[1]","lst[[1]]","{ ... }","1:10","# this is a comment","x <- 1; y <- 2","y ~ x1 + x2","mean(x)"]},"columns":[{"id":"Category","name":"Category","type":"character"},{"id":"Operator","name":"Operator","type":"character"},{"id":"Description","name":"Description","type":"character"},{"id":"Example","name":"Example","type":"character"}],"filterable":true,"searchable":true,"highlight":true,"striped":true,"width":"100%","theme":{"borderColor":"var(--rt-border)","stripedColor":"var(--rt-striped)","highlightColor":"var(--rt-highlight)","cellPadding":"8px 12px","style":{"fontFamily":"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto","background":"var(--rt-bg)","color":"var(--rt-text)"},"headerStyle":{"backgroundColor":"var(--rt-header-bg)","fontWeight":"600","borderBottom":"2px solid var(--rt-border)"}},"dataKey":"a533486848479984c94e6b8e1f1425d5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1a691323201bbb3b6aa5" class="reactable html-widget" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1a691323201bbb3b6aa5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Category":["Arithmetic","Arithmetic","Arithmetic","Arithmetic","Arithmetic","Relational","Relational","Relational","Relational","Relational","Relational","Logical","Logical","Logical","Indexing","Indexing","Indexing","Grouping","Sequences","Others","Others","Others","Others"],"Operator":["+","-","*","/","^","==","!=","<",">","<=",">=","!","&","|","$","[]","[[]]","{}","a:b","#",";","~","()"],"Description":["Addition","Subtraction","Multiplication","Division","Power","Equal to (do not confuse with =)","Not equal to","Less than","Greater than","Less than or equal to","Greater than or equal to","Logical NOT","Logical AND","Logical OR","Extract a component from a data frame","Subset a data frame, vector, array, or list","Extract a single element from a list","Define code blocks (functions, loops, conditionals)","Generate a sequence from a to b","Commenting (ignored by R)","Alternative way to separate commands","Model formula specification","Function arguments / order of operations"],"Example":["a + b","a - b","a * b","a / b","a ^ b","a == b","a != b","a < b","a > b","a <= b","a >= b","!a","a & b","a | b","df$column","x[1]","lst[[1]]","{ ... }","1:10","# this is a comment","x <- 1; y <- 2","y ~ x1 + x2","mean(x)"]},"columns":[{"id":"Category","name":"Category","type":"character"},{"id":"Operator","name":"Operator","type":"character"},{"id":"Description","name":"Description","type":"character"},{"id":"Example","name":"Example","type":"character"}],"filterable":true,"searchable":true,"highlight":true,"striped":true,"width":"100%","theme":{"borderColor":"var(--rt-border)","stripedColor":"var(--rt-striped)","highlightColor":"var(--rt-highlight)","cellPadding":"8px 12px","style":{"fontFamily":"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto","background":"var(--rt-bg)","color":"var(--rt-text)"},"headerStyle":{"backgroundColor":"var(--rt-header-bg)","fontWeight":"600","borderBottom":"2px solid var(--rt-border)"}},"dataKey":"a533486848479984c94e6b8e1f1425d5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -4472,23 +4612,23 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>The table below summarizes some commonly used logical test functions and their corresponding coercion functions in <i class="fa-brands fa-r-project" aria-label="r-project"></i> .</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="xrdduzuclq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xrdduzuclq table {
+<div id="gnzbrtatrp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gnzbrtatrp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xrdduzuclq thead, #xrdduzuclq tbody, #xrdduzuclq tfoot, #xrdduzuclq tr, #xrdduzuclq td, #xrdduzuclq th {
+#gnzbrtatrp thead, #gnzbrtatrp tbody, #gnzbrtatrp tfoot, #gnzbrtatrp tr, #gnzbrtatrp td, #gnzbrtatrp th {
   border-style: none;
 }
 
-#xrdduzuclq p {
+#gnzbrtatrp p {
   margin: 0;
   padding: 0;
 }
 
-#xrdduzuclq .gt_table {
+#gnzbrtatrp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4514,12 +4654,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-left-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_caption {
+#gnzbrtatrp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xrdduzuclq .gt_title {
+#gnzbrtatrp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4531,7 +4671,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-width: 0;
 }
 
-#xrdduzuclq .gt_subtitle {
+#gnzbrtatrp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4543,7 +4683,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-top-width: 0;
 }
 
-#xrdduzuclq .gt_heading {
+#gnzbrtatrp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4555,13 +4695,13 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_bottom_border {
+#gnzbrtatrp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_col_headings {
+#gnzbrtatrp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4576,7 +4716,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_col_heading {
+#gnzbrtatrp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4596,7 +4736,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   overflow-x: hidden;
 }
 
-#xrdduzuclq .gt_column_spanner_outer {
+#gnzbrtatrp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4608,15 +4748,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 4px;
 }
 
-#xrdduzuclq .gt_column_spanner_outer:first-child {
+#gnzbrtatrp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xrdduzuclq .gt_column_spanner_outer:last-child {
+#gnzbrtatrp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xrdduzuclq .gt_column_spanner {
+#gnzbrtatrp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4628,11 +4768,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   width: 100%;
 }
 
-#xrdduzuclq .gt_spanner_row {
+#gnzbrtatrp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xrdduzuclq .gt_group_heading {
+#gnzbrtatrp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4658,7 +4798,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   text-align: left;
 }
 
-#xrdduzuclq .gt_empty_group_heading {
+#gnzbrtatrp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4673,15 +4813,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   vertical-align: middle;
 }
 
-#xrdduzuclq .gt_from_md > :first-child {
+#gnzbrtatrp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xrdduzuclq .gt_from_md > :last-child {
+#gnzbrtatrp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xrdduzuclq .gt_row {
+#gnzbrtatrp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4700,7 +4840,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   overflow-x: hidden;
 }
 
-#xrdduzuclq .gt_stub {
+#gnzbrtatrp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -4713,7 +4853,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#xrdduzuclq .gt_stub_row_group {
+#gnzbrtatrp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4727,15 +4867,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   vertical-align: top;
 }
 
-#xrdduzuclq .gt_row_group_first td {
+#gnzbrtatrp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xrdduzuclq .gt_row_group_first th {
+#gnzbrtatrp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xrdduzuclq .gt_summary_row {
+#gnzbrtatrp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4745,16 +4885,16 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#xrdduzuclq .gt_first_summary_row {
+#gnzbrtatrp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_first_summary_row.thick {
+#gnzbrtatrp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xrdduzuclq .gt_last_summary_row {
+#gnzbrtatrp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4764,7 +4904,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_grand_summary_row {
+#gnzbrtatrp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4774,7 +4914,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#xrdduzuclq .gt_first_grand_summary_row {
+#gnzbrtatrp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4784,7 +4924,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-top-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_last_grand_summary_row_top {
+#gnzbrtatrp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4794,11 +4934,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_striped {
+#gnzbrtatrp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xrdduzuclq .gt_table_body {
+#gnzbrtatrp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4807,7 +4947,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-bottom-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_footnotes {
+#gnzbrtatrp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4821,7 +4961,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_footnote {
+#gnzbrtatrp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4830,7 +4970,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#xrdduzuclq .gt_sourcenotes {
+#gnzbrtatrp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4844,7 +4984,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   border-right-color: #D3D3D3;
 }
 
-#xrdduzuclq .gt_sourcenote {
+#gnzbrtatrp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4852,72 +4992,72 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   padding-right: 5px;
 }
 
-#xrdduzuclq .gt_left {
+#gnzbrtatrp .gt_left {
   text-align: left;
 }
 
-#xrdduzuclq .gt_center {
+#gnzbrtatrp .gt_center {
   text-align: center;
 }
 
-#xrdduzuclq .gt_right {
+#gnzbrtatrp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xrdduzuclq .gt_font_normal {
+#gnzbrtatrp .gt_font_normal {
   font-weight: normal;
 }
 
-#xrdduzuclq .gt_font_bold {
+#gnzbrtatrp .gt_font_bold {
   font-weight: bold;
 }
 
-#xrdduzuclq .gt_font_italic {
+#gnzbrtatrp .gt_font_italic {
   font-style: italic;
 }
 
-#xrdduzuclq .gt_super {
+#gnzbrtatrp .gt_super {
   font-size: 65%;
 }
 
-#xrdduzuclq .gt_footnote_marks {
+#gnzbrtatrp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xrdduzuclq .gt_asterisk {
+#gnzbrtatrp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xrdduzuclq .gt_indent_1 {
+#gnzbrtatrp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xrdduzuclq .gt_indent_2 {
+#gnzbrtatrp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xrdduzuclq .gt_indent_3 {
+#gnzbrtatrp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xrdduzuclq .gt_indent_4 {
+#gnzbrtatrp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xrdduzuclq .gt_indent_5 {
+#gnzbrtatrp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xrdduzuclq .katex-display {
+#gnzbrtatrp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xrdduzuclq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gnzbrtatrp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
