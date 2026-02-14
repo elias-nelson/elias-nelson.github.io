@@ -181,7 +181,7 @@ While installing [{{< fa brands r-project >}}](https://www.r-project.org/ "R") a
 
 Whichever path you choose, this post is designed to accommodate you. Whether you install {{< fa brands r-project >}} locally or use an online platform, the examples and instructions provided here will guide you seamlessly through your {{< fa brands r-project >}} programming journey.
 
-### *Downloading and Installing* {{< iconify logos:r-lang >}}
+### Downloading and Installing {{< iconify logos:r-lang >}}
 
 Now that we’ve covered an overview of {{< fa brands r-project >}} and some of its history, it's time to get your own copy of {{< fa brands r-project >}} so you can start using it. The easiest way to do this is by downloading a precompiled binary distribution of R, which includes the base system and contributed packages, and installing it on your computer. While it's also possible to install [{{< fa brands r-project >}} from source](https://docs.posit.co/resources/install-r-source.html), this is more complex and generally not necessary for most users. I recommend sticking to the precompiled binaries, which are easy to install and are available for a range of operating systems, including Windows, macOS, and Linux. In this guide, we’ll focus on installing R on Windows and macOS.
 
@@ -259,7 +259,7 @@ You now have {{< fa brands r-project >}} installed on your macOS system!
 
 With these steps completed, you’re ready to start programming in {{< fa brands r-project >}}! Next, we’ll move on to setting up a suitable Integrated Development Environment (IDE) to enhance your experience with {{< fa brands r-project >}}.
 
-### *Exploring IDE Options for* {{< iconify logos:r-lang >}}*: Elevate Your* {{< iconify logos:r-lang >}} *Programming with RStudio, VS Code, or Positron*
+### Exploring IDE Options for {{< iconify logos:r-lang >}}: Elevate Your {{< iconify logos:r-lang >}} Programming with RStudio, VS Code, or Positron
 
 #### Getting Started With the {{< iconify logos:r-lang >}} Interface
 
@@ -1429,7 +1429,7 @@ install.packages("languageserver")
 
 This **`languageserver`** package allows VS Code to understand your {{< fa brands r-project >}} code. It provides important development features such as code completion, inline diagnostics, function documentation, and object inspection.
 
-While not strictly required, you may also choose to install a few more optional packages that improve the overall {{< fa brands r-project >}} programming experience in VS Code. These packages are not required for {{< fa brands r-project >}} to function in VS Code, but they provide useful quality-of-life features when using {{< fa brands r-project >}} in VS Code. 
+While not strictly required, you may also choose to install a few more optional packages that improve the overall {{< fa brands r-project >}} programming experience in VS Code. These packages are not required for {{< fa brands r-project >}} to function in VS Code, but they provide useful quality-of-life features when using {{< fa brands r-project >}} in VS Code.
 
 Two commonly recommended optional packages are **`lintr`** and **`httpgd`**. Just as **`languageserver`**, the **`lintr`** packae is also available on **`CRAN`** and can be installed with the following command:
 
@@ -1457,7 +1457,7 @@ The **`lintr`** package checks your {{< fa brands r-project >}} code for potenti
 
 When you run **`install.packages()`** for the first time, {{< fa brands r-project >}} may ask you to select a **`CRAN`** mirror.
 
-![](utils/upscaled/cran_mirror.png)
+![](utils/upscaled/cran_mirror.png){.shadowed fig-align="center"}
 
 **`CRAN`**, short for the *Comprehensive R Archive Network*, is a global network of servers that store {{< fa brands r-project >}} packages. A CRAN mirror is simply a geographically hosted copy of this repository in different locations around the world.
 
@@ -1479,7 +1479,7 @@ After selecting a **CRAN** mirror, during the installation process, you may see 
 
 > *“Do you want to install from sources the packages which need compilation?”*
 
-![](utils/upscaled/rpackage_compilation.png)
+![](utils/upscaled/rpackage_compilation.png){.shadowed fig-align="center"}
 
 This question relates to the two ways {{< fa brands r-project >}} packages are distributed and can be confusing for beginners, so let us break it down.
 
@@ -1537,7 +1537,7 @@ On Windows and macOS, {{< fa brands r-project >}} usually just installs pre-comp
 
 Once you click **NO**, {{< fa brands r-project >}} will start installing the packages until you should see a message indicating that the downloaded binary packages have been installed successfully.
 
-![](utils/upscaled/packages_installed.png)
+![](utils/upscaled/packages_installed.png){.shadowed fig-align="center"}
 
 Another useful optional package is **`httpgd`**, which provides a modern interactive graphics device that works well inside editors like VS Code.
 
@@ -1550,41 +1550,40 @@ install.packages("httpgd")
 ```
 
 ::: column-margin
-- **`httpgd`** is an asynchronous HTTP server graphics device for {{< fa brands r-project >}} that enables live graphics to be viewed inside web browsers and IDEs
+-   **`httpgd`** is an asynchronous HTTP server graphics device for {{< fa brands r-project >}} that enables live graphics to be viewed inside web browsers and IDEs
 :::
 
 If this command succeeds, no further action is required.
 
 However, installation may sometimes fail with a warning similar to the one shown below:
 
-![](utils/upscaled/90.%20httpgd_fail.png)
+![](utils/upscaled/90.%20httpgd_fail.png){.shadowed fig-align="center"}
 
 When a package installation fails, it usually indicates one of the following:
 
-- The package is temporarily unavailable as a binary on the main **CRAN** repository.
+-   The package is temporarily unavailable as a binary on the main **CRAN** repository.
 
-- The package has been archived on **CRAN**.
+-   The package has been archived on **CRAN**.
 
-- Your system must compile the package from source
+-   Your system must compile the package from source
 
-Archived packages remain available in  **CRAN's** archive directory, but they are no longer installed through the standard **`install.packages()`** workflow.
+Archived packages remain available in **CRAN's** archive directory, but they are no longer installed through the standard **`install.packages()`** workflow.
 
 Common reasons a package becomes archived include:
 
-- The package is no longer maintained by its author.
+-   The package is no longer maintained by its author.
 
-- It fails **CRAN** quality checks on newer {{< fa brands r-project >}} versions or operating systems.
+-   It fails **CRAN** quality checks on newer {{< fa brands r-project >}} versions or operating systems.
 
-- Licensing or **CRAN** policy issues arise.
+-   Licensing or **CRAN** policy issues arise.
 
-- The maintainer has orphaned the package (stopped maintaining it).
+-   The maintainer has orphaned the package (stopped maintaining it).
 
 In addition, archived packages may depend on older versions of {{fa brands r-project}} or other packages, which can make installation more complex.
 
 This particular situation introduces the need for build tools
 
-**Why Build Tools Become Necessary**
-Many {{< fa brands r-project >}} packages often contain compiled code written in C, C++, or FORTRAN. To install such packages from source, your operating system must provide a compiler toolchain, commonly referred to as *build tools*.
+**Why Build Tools Become Necessary** Many {{< fa brands r-project >}} packages often contain compiled code written in C, C++, or FORTRAN. To install such packages from source, your operating system must provide a compiler toolchain, commonly referred to as *build tools*.
 
 **🖥️ Windows: Installing Rtools**
 
@@ -1594,59 +1593,59 @@ Windows users need to install **`Rtools`** following the steps as below:
 
     -   In {{< fa brands r-project >}}, run:
 
-```{r}
-#| eval: false
-R.version.string
-```
+        ```{r}
+        #| eval: false
+        R.version.string
+        ```
 
-This returns a version string such as: 
+        This returns a version string such as:
 
-```
-"R version 4.5.2 (2025-10-31)"
-```
-Make note of the version.
+        ```         
+        "R version 4.5.2 (2025-10-31)"
+        ```
+
+        Make note of the version.
 
 2.  **Download the matching `Rtools` version**
 
-    -   Visit the CRAN **`Rtools`** page:
-    https://cran.r-project.org/bin/windows/Rtools/
+    -   Visit the CRAN **`Rtools`** page: <https://cran.r-project.org/bin/windows/Rtools/>
 
     -   Choose the installer that corresponds to your installed {{< fa brands r-project >}} version.
 
-        ![](utils/upscaled/91.%20Rtools_page.png)
+        ![](utils/upscaled/91.%20Rtools_page.png){.shadowed fig-align="center" width="90%"}
 
     -   Under **`installing Rtools4x`**, click the **`Rtools4x installer`** link to begin downloading the installer.
 
-        ![](utils/upscaled/92.%20Rtools_downloadd.png)
+        ![](utils/upscaled/92.%20Rtools_downloadd.png){.shadowed fig-align="center"}
 
 3.  **Run the installer**
 
     -   Accept defaults unless you need a custom installation path.
 
-        ![](utils/upscaled/93.%20Rtools_path.png)
+        ![](utils/upscaled/93.%20Rtools_path.png){.shadowed fig-align="center" width="90%"}
 
     -   Keep all the Additional Tasks options selected. The default configuration is recommended and requires no changes for a standard Rtools installation.
 
-        ![](utils/upscaled/94.%20Rtools_additional.png)
+        ![](utils/upscaled/94.%20Rtools_additional.png){.shadowed fig-align="center" width="90%"}
 
     -   Click install.
 
-        ![](utils/upscaled/95.%20Rtools_install.png)
+        ![](utils/upscaled/95.%20Rtools_install.png){.shadowed fig-align="center" width="90%"}
 
     -   The installation process will proceed as below:
 
-        ![](utils/upscaled/96.%20Rtools_install_process.png)
+        ![](utils/upscaled/96.%20Rtools_install_process.png){.shadowed fig-align="center" width="90%"}
 
 4.  **`Verify installation`**
 
     -   Open/restart {{< fa brands r-project >}} and run.
 
-```{r}
-#| eval: false
-system("make --version")
-```
+        ```{r}
+        #| eval: false
+        system("make --version")
+        ```
 
-If you see **`Make`** version info, Rtools is correctly installed.
+        If you see **`Make`** version info, Rtools is correctly installed.
 
 🍎 **macOS: Installing `Xcode` Command Line Tools**
 
@@ -1658,21 +1657,21 @@ If you see **`Make`** version info, Rtools is correctly installed.
 
     -   To install the tools Run:
 
-```{r}
-#| eval: false
-xcode-select --install
-```
+        ``` bash
+        xcode-select --install
+        ```
+
+<!-- -->
 
 3.  **Confirm installation**
 
     -   After installation, verify with:
 
-```{r}
-#| eval: false
-gcc --version
-```
+        ``` bash
+        gcc --version
+        ```
 
-If you see version info, the tools are installed.
+        If you see version info, the tools are installed.
 
 **🐧 Linux: Installing Development Tools**
 
@@ -1680,40 +1679,43 @@ If you see version info, the tools are installed.
 
     -   Ubuntu or Debian:
 
-```
-sudo apt-get update
-```
+        ``` bash
+        sudo apt-get update
+        ```
 
     -   Fedora or RedHat:
 
-```
-sudo dnf update
-```
+        ``` bash
+        sudo dnf update
+        ```
+
+<!-- -->
 
 2.  Install build tools
 
     -   Ubuntu/Debian:
 
-```
-sudo apt-get install build-essential r-base-dev
-```
+        ``` bash
+        sudo apt-get install build-essential r-base-dev
+        ```
 
--   Fedora/RedHat:
+    -   Fedora/RedHat:
 
-```
-sudo dnf groupinstall "Development Tools"
+        ``` bash
+        sudo dnf groupinstall "Development Tools"
 
-sudo dnf install R-devel
-```
+        sudo dnf install R-devel
+        ```
+
+<!-- -->
 
 3.  Verify installation
 
     -   Verify installation using:
 
-```{r}
-#| eval: false
-gcc --version
-```
+        ``` bash
+        gcc --version
+        ```
 
 If you see version info, the compiler is ready.
 
@@ -1892,9 +1894,9 @@ This extension adds {{< fa brands r-project >}}-specific features such as:
 
     ![](utils/upscaled/61.%20RExtension2.png){.shadowed fig-align="center"}
 
-##### Making {{< iconify logos:r-lang >}} discoverable by {{< iconify logos:visual-studio-code >}} (Adding {{< iconify logos:r-lang >}} to **`PATH`**)
+##### Making {{< iconify logos:r-lang >}} discoverable by {{< iconify logos:visual-studio-code >}} VS Code: Adding {{< iconify logos:r-lang >}} to **`PATH`**
 
-For VS Code (and your system terminal) to run R, it needs to know where the R executable lives. This is handled through a system setting called PATH.
+For VS Code (and your system terminal) to run {{< fa brands r-project >}}, it needs to know where the {{< fa brands r-project >}} executable lives. This is handled through a system setting called **`PATH`**.
 
 > Think of **`PATH`** as a list of folders your computer searches when you type a command like {{< fa brands r-project >}} into a terminal.
 
@@ -1940,7 +1942,7 @@ The **vanilla** {{< fa brands r-project >}} **console** refers to a basic {{< fa
 
 Running this command opens {{< fa brands r-project >}} in terminal and you can run {{< fa brands r-project >}} code in the terminal.
 
-![](utils/upscaled/R_vanilla.png)
+![](utils/upscaled/R_vanilla.png){.shadowed fig-align="center" width="90%"}
 
 ##### Pointing VS Code directly to {{<fa brands r-project  >}} (**`Rpath`** setting)
 

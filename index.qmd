@@ -1,7 +1,7 @@
 ---
 title: "Hi, I'm Elias Nelson."
 subtitle: |
-  A Spatial data scientist and soil scientist exploring digital soil mapping, geostatistics, and machine learning to understand landscapes and support data-driven decisions. My work bridges soil science, geoinformatics, spatial epidemiology, and spatial econometrics, using open-source tools across {{< iconify logos:r-lang >}}, {{< iconify logos:python >}} Python, {{< iconify logos:julia >}}, and web technologies.
+  A Spatial data scientist and soil scientist exploring digital soil mapping, geostatistics, and machine learning to understand landscapes and support data-driven decisions. My work bridges soil science, geoinformatics, spatial epidemiology, and spatial econometrics, using open-source tools across {{< iconify logos:r-lang >}}, {{< iconify logos:python >}} **Python**, {{< iconify logos:julia >}}, and web technologies.
 
   This blog shares practical knowledge, methods, and reproducible workflows to make spatial data science more accessible. I’m open to interdisciplinary collaborations and data-driven projects.
 
