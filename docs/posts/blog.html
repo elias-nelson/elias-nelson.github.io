@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-lightbox","listing-format","listing-editor","listing-_quarto-vars","listing-language","listing-comments","listing-title","listing-subtitle","listing-author","listing-date","listing-categories","listing-keywords","listing-image","listing-license","listing-citation","listing-copyright","listing-bibliography","listing-webr","listing-filters","listing-css","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-image-alt"],
+      searchColumns: ["listing-project","listing-website","listing-lightbox","listing-format","listing-editor","listing-_quarto-vars","listing-language","listing-comments","listing-title","listing-subtitle","listing-author","listing-date","listing-categories","listing-keywords","listing-image","listing-license","listing-citation","listing-copyright","listing-bibliography","listing-webr","listing-filters","listing-css","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -156,13 +156,17 @@ window.Quarto = {
 <link rel="stylesheet" href="posts.css">
 <meta property="og:title" content=" Posts – ENK">
 <meta property="og:description" content="<em>“Many people tend to look at programming styles and languages like religions: if you belong to one, you cannot belong to others. But this analogy is another fallacy.">
-<meta property="og:image" content="../posts/not-so-basic-base-r-functions/thumbnail.jpg">
+<meta property="og:image" content="https://elias-nelson.github.io/posts/intro-to-r/logos/Rhex2.png">
 <meta property="og:site_name" content="ENK">
-<meta property="og:image:alt" content="Six not-so-basic base R functions">
+<meta property="og:image:alt" content="An Introduction to R">
+<meta property="og:image:height" content="742">
+<meta property="og:image:width" content="742">
 <meta name="twitter:title" content=" Posts – ENK">
 <meta name="twitter:description" content="<em>“Many people tend to look at programming styles and languages like religions: if you belong to one, you cannot belong to others. But this analogy is another fallacy.">
-<meta name="twitter:image" content="../posts/not-so-basic-base-r-functions/thumbnail.jpg">
-<meta name="twitter:image:alt" content="Six not-so-basic base R functions">
+<meta name="twitter:image" content="https://elias-nelson.github.io/posts/intro-to-r/logos/Rhex2.png">
+<meta name="twitter:image:alt" content="An Introduction to R">
+<meta name="twitter:image-height" content="742">
+<meta name="twitter:image-width" content="742">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -470,38 +474,6 @@ window.Quarto = {
       </div>
     </a>
   
-    
-
-    <a href="../posts\not-so-basic-base-r-functions\" class="post-card">
-      <div class="image_area">
-        <img src="../posts/not-so-basic-base-r-functions/thumbnail.jpg" alt="Six not-so-basic base R functions" class="thumbnail">
-      </div>
-
-      <div class="post-content">
-        <h2>Six not-so-basic base R functions</h2>
-
-      
-
-        <div class="meta">
-          <i class="bi bi-calendar"></i>
-          <span class="date">Jan 17, 2024</span> •
-          <i class="bi bi-clock"></i>
-          <span class="reading-time">11 min</span>
-        </div>
-        
-        <!-- Category Badges -->
-        <div class="mb-1">
-        <i class="bi bi-tags pe-2"></i>
-          
-          
-            <span class="badge bg-secondary me-1 mb-1">reference</span>
-          
-        </div>
-
-        <p>There are so many goodies in base R. Let's explore some functions you may not know.</p>
-      </div>
-    </a>
-  
 </div>
 
 <div class="listing-no-matching d-none">No matching items</div>
@@ -585,7 +557,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/elias-nelson\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

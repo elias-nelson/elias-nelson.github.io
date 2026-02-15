@@ -80,11 +80,15 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../../assets/styles/styles.css">
 <meta property="og:title" content="greekElectionsR – ENK">
 <meta property="og:description" content="Provides data related to the Greek parliament from 1981 to 2019, including MPs, election results, and parliamentary votes.">
-<meta property="og:image" content="../../../assets/images/greekElections.png">
+<meta property="og:image" content="https://elias-nelson.github.io/assets/images/greekElections.png">
 <meta property="og:site_name" content="ENK">
+<meta property="og:image:height" content="1800">
+<meta property="og:image:width" content="1800">
 <meta name="twitter:title" content="greekElectionsR – ENK">
 <meta name="twitter:description" content="Provides data related to the Greek parliament from 1981 to 2019, including MPs, election results, and parliamentary votes.">
-<meta name="twitter:image" content="../../../assets/images/greekElections.png">
+<meta name="twitter:image" content="https://elias-nelson.github.io/assets/images/greekElections.png">
+<meta name="twitter:image-height" content="1800">
+<meta name="twitter:image-width" content="1800">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -435,7 +439,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/elias-nelson\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

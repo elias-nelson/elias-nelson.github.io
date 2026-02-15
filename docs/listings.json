@@ -8,8 +8,7 @@
   {
     "listing": "/posts/blog.html",
     "items": [
-      "/posts/intro-to-r/index.html",
-      "/posts/not-so-basic-base-r-functions/index.html"
+      "/posts/intro-to-r/index.html"
     ]
   }
 ]
